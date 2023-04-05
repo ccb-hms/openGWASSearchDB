@@ -6,7 +6,7 @@
 
 By combining the software-generated mappings with these tables one can search over traits by leveraging the EFO class hierarchy. 
 
-`src/example_query.py` contains a simple function that allows querying the generated database for OpenGWAS records related to a user-given trait. Executing this script will perform example queries for three traits and print the results. 
+`src/example_query.py` contains a simple function to query the generated database for OpenGWAS records related to a user-given trait. Executing this script will perform example queries for three traits and print the results. 
 
 For example, when searching for OpenGWAS records about `pancreas disease` our approach finds more records than a keyword-based search over OpenGWAS traits:
 
