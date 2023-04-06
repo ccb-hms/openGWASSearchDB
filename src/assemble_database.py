@@ -5,7 +5,7 @@ from pathlib import Path
 from text2term import Mapper
 from generate_semql_ontology_tables import get_semsql_ontology_tables
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 
 # Assemble a SQLite database that contains:
@@ -63,7 +63,7 @@ def map_traits_to_efo(metadata_file, ontology_version):
                               max_mappings=1, min_score=0.6, mapper=Mapper.TFIDF,
                               save_mappings=True, output_file="../resources/opengwas_efo_mappings.csv",
                               base_iris=("http://www.ebi.ac.uk/efo/", "http://purl.obolibrary.org/obo/MONDO",
-                                         "http://purl.obolibrary.org/obo/HP"))
+                                         "http://purl.obolibrary.org/obo/HP", "http://www.orpha.net/ORDO"))
 
 
 if __name__ == "__main__":
