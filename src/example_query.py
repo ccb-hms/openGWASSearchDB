@@ -1,7 +1,73 @@
 import sqlite3
 import pandas as pd
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
+
+
+"""
+This SQL query searches for OpenGWAS record identifiers and their associated traits, which we simply call "resources" 
+for succinctness, based on mappings obtained by mapping the traits to the Experimental Factor Ontology (EFO) using text2term. 
+
+    If include_subclasses=False, the query finds resources annotated with the given search term only.
+
+    If include_subclasses=True, the query finds resources annotated with the given search term or its subclasses in the 
+        ontology. This is done by including resources annotated with terms that are the 'subject' of a relationship 
+        pair where the 'object' (i.e., parent) is the given search term. 
+    
+    If direct_subclasses_only=True, the query considers only the direct subclasses, given in the efo_edges table. 
+    
+    If direct_subclasses_only=False, the query considers all indirect, inferred subclasses, given in the efo_entailed_edges table.   
+    
+The SQL queries for all possible arguments are given below.
+
+---
+arguments:
+    search_term='EFO:0009605'
+    include_subclasses=False
+
+SQL:
+    SELECT DISTINCT 
+        m.`Source Term ID` AS 'OpenGWAS ID', 
+        m.`Source Term` AS 'OpenGWAS Trait',
+        m.`Mapped Term Label` AS 'Ontology Term', 
+        m.`Mapped Term CURIE` AS 'Ontology Term ID',
+        m.`Mapping Score` AS 'Mapping Confidence'
+    FROM `opengwas_trait_mappings` m
+    LEFT JOIN `efo_edges` ee ON (m.`Mapped Term CURIE` = ee.subject)
+    WHERE (m.`Mapped Term CURIE` = 'EFO:0009605')
+
+---
+arguments:
+    search_term='EFO:0009605'
+    include_subclasses=True
+    direct_subclasses_only=True
+
+SQL:
+    SELECT DISTINCT m.`Source Term ID` AS 'OpenGWAS ID', 
+        m.`Source Term` AS 'OpenGWAS Trait',
+        m.`Mapped Term Label` AS 'Ontology Term', 
+        m.`Mapped Term CURIE` AS 'Ontology Term ID',
+        m.`Mapping Score` AS 'Mapping Confidence'
+    FROM `opengwas_trait_mappings` m
+    LEFT JOIN `efo_edges` ee ON (m.`Mapped Term CURIE` = ee.subject)
+    WHERE (m.`Mapped Term CURIE` = 'EFO:0009605' OR ee.object = 'EFO:0009605')
+
+---
+arguments:
+    search_term='EFO:0009605'
+    include_subclasses=True
+    direct_subclasses_only=False
+
+SQL:
+    SELECT DISTINCT m.`Source Term ID` AS 'OpenGWAS ID', 
+        m.`Source Term` AS 'OpenGWAS Trait',
+        m.`Mapped Term Label` AS 'Ontology Term', 
+        m.`Mapped Term CURIE` AS 'Ontology Term ID',
+        m.`Mapping Score` AS 'Mapping Confidence'
+    FROM `opengwas_trait_mappings` m
+    LEFT JOIN `efo_entailed_edges` ee ON (m.`Mapped Term CURIE` = ee.subject)
+    WHERE (m.`Mapped Term CURIE` = 'EFO:0009605' OR ee.object = 'EFO:0009605')
+"""
 
 
 def resources_annotated_with_term(cursor, search_term, include_subclasses=True, direct_subclasses_only=False):
@@ -24,16 +90,19 @@ def resources_annotated_with_term(cursor, search_term, include_subclasses=True, 
             ontology_table = "efo_entailed_edges"
     else:
         ontology_table = "efo_edges"
-    results = cursor.execute('''
-                 SELECT DISTINCT m.`Source Term ID` AS "OpenGWAS ID", 
-                    m.`Source Term` AS "OpenGWAS Trait",
-                    m.`Mapped Term Label` AS "Ontology Term", m.`Mapped Term CURIE` AS "Ontology Term ID",
-                    m.`Mapping Score` AS "Mapping Confidence"
-                 FROM `opengwas_trait_mappings` m
-                 LEFT JOIN ''' + ontology_table + ''' ee ON (m.`Mapped Term CURIE` = ee.subject)
-                 WHERE (m.`Mapped Term CURIE` = \'''' + search_term + '''\'''' +
-                             (''' OR ee.object = \'''' + search_term + '''\'''' if include_subclasses else '''''')
-                             + ''')''').fetchall()
+
+    query = '''SELECT DISTINCT 
+                    m.`Source Term ID` AS 'OpenGWAS ID', 
+                    m.`Source Term` AS 'OpenGWAS Trait',
+                    m.`Mapped Term Label` AS 'Ontology Term', 
+                    m.`Mapped Term CURIE` AS 'Ontology Term ID',
+                    m.`Mapping Score` AS 'Mapping Confidence'
+                FROM `opengwas_trait_mappings` m
+                LEFT JOIN ''' + ontology_table + ''' ee ON (m.`Mapped Term CURIE` = ee.subject)
+                WHERE (m.`Mapped Term CURIE` = \'''' + search_term + '''\'''' + \
+            (''' OR ee.object = \'''' + search_term + '''\'''' if include_subclasses else '''''') +\
+            ''')'''
+    results = cursor.execute(query).fetchall()
     results_columns = [x[0] for x in cursor.description]
     results_df = pd.DataFrame(results, columns=results_columns)
     results_df = results_df.sort_values(by=['OpenGWAS ID'])
