@@ -3,9 +3,9 @@ import text2term
 import pandas as pd
 from pathlib import Path
 from text2term import Mapper
-from generate_semql_ontology_tables import get_semsql_ontology_tables
+from generate_semql_ontology_tables import get_semsql_tables_for_ontology
 
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 
 # Assemble a SQLite database that contains:
@@ -14,7 +14,7 @@ __version__ = "0.2.1"
 # 3) SemanticSQL tables of EFO that enable searching over traits by leveraging the EFO class hierarchy
 def assemble_database(metadata_file):
     # Get SemanticSQL EFO tables
-    edges_df, entailed_edges_df, labels_df, ontology_version = get_semsql_ontology_tables(
+    edges_df, entailed_edges_df, labels_df, ontology_version = get_semsql_tables_for_ontology(
         ontology_url="https://s3.amazonaws.com/bbop-sqlite/efo.db",
         ontology_name="EFO",
         tables_output_folder="../resources/",
