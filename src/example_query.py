@@ -1,7 +1,8 @@
+import os
 import sqlite3
 import pandas as pd
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 
 """
@@ -109,21 +110,38 @@ def resources_annotated_with_term(cursor, search_term, include_subclasses=True, 
     return results_df
 
 
+def do_example_query(cursor, search_term, include_subclasses, direct_subclasses_only):
+    df = resources_annotated_with_term(cursor,
+                                       search_term=search_term,
+                                       include_subclasses=include_subclasses,
+                                       direct_subclasses_only=direct_subclasses_only)
+    print("Resources annotated with " + search_term + ": " + ("0" if df.empty else str(df.shape[0])))
+    if not df.empty:
+        print(df.head().to_string() + "\n")
+
+    # Write out query results
+    output_folder = "../test/example_query/"
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    output_file = output_folder + "search_term_" + search_term
+    if include_subclasses:
+        if direct_subclasses_only:
+            output_file += "_" + "incl_direct_subclasses"
+        else:
+            output_file += "_" + "incl_inferred_subclasses"
+    output_file += ".tsv"
+    with open(output_file, 'w') as f:
+        f.write("# search_term='%s'\n" % search_term)
+        f.write("# include_subclasses=%s\n" % include_subclasses)
+        f.write("# direct_subclasses_only=%s\n" % str(direct_subclasses_only))
+    df.to_csv(output_file, sep="\t", index=False, mode='a')
+    return df
+
+
 def do_example_queries(cursor, search_term='EFO:0009605'):  # EFO:0009605 'pancreas disease'
-    df1 = resources_annotated_with_term(cursor, search_term=search_term, include_subclasses=False)
-    print("Resources annotated with " + search_term + ": " + ("0" if df1.empty else str(df1.shape[0])))
-    if not df1.empty:
-        print(df1.head().to_string() + "\n")
-
-    df2 = resources_annotated_with_term(cursor, search_term=search_term, include_subclasses=True, direct_subclasses_only=True)
-    print("Resources annotated with " + search_term + " or its direct (asserted) subclasses: " + ("0" if df2.empty else str(df2.shape[0])))
-    if not df2.empty:
-        print(df2.head().to_string() + "\n")
-
-    df3 = resources_annotated_with_term(cursor, search_term=search_term, include_subclasses=True, direct_subclasses_only=False)
-    print("Resources annotated with " + search_term + " or its indirect (inferred) subclasses: " + ("0" if df3.empty else str(df3.shape[0])))
-    if not df3.empty:
-        print(df3.head().to_string() + "\n")
+    do_example_query(cursor, search_term=search_term, include_subclasses=False, direct_subclasses_only=False)
+    do_example_query(cursor, search_term=search_term, include_subclasses=True, direct_subclasses_only=True)
+    do_example_query(cursor, search_term=search_term, include_subclasses=True, direct_subclasses_only=False)
 
 
 if __name__ == '__main__':

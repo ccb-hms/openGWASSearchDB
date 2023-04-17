@@ -1,0 +1,62 @@
+# search_term='EFO:0005741'
+# include_subclasses=True
+# direct_subclasses_only=True
+OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
+UKB-b-188	Private healthcare	nosocomial infection	MONDO:0043544	0.6158340077041717
+UKB-b-266	Current eye infection	eye infectious disorder	MONDO:0043885	0.7601765801872165
+UKB-b-3683	Diagnoses - main ICD10: B34.9 Viral infection, unspecified	viral disease	EFO:0000763	0.6056173534965787
+finn-a-AB1_BACT_BIR_OTHER_INF_AGENTS	Bacterial, viral and other infectious agents	bacterial disease	EFO:0000771	0.7066980900295479
+finn-a-AB1_INFECTIONS	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.956393720719561
+finn-a-AB1_MYCOSES	Mycoses	fungal infectious disease	MONDO:0002041	0.9716970135915064
+finn-a-AB1_OTHER_BACTERIAL	Other bacterial diseases	bacterial disease	EFO:0000771	0.9237024235972899
+finn-a-AB1_OTHER_INFECTIONS	Other infectious diseases	infectious disease	EFO:0005741	0.9379649901269483
+finn-a-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.9149904484209596
+finn-a-AB1_SEQULEAE_OF_INFECTIONS_AND_PARASITES	Sequelae of infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7520859531568983
+finn-a-ACUTE_RESPIRATORY_INFECTIONS	Asthma/COPD-related acute respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.6689334655404316
+finn-a-ASHMA_INFECTIONS	Asthma-related infections	Prosthesis-Related Infections	EFO:1001406	0.6023164999931242
+finn-a-ASTHMA_ACUTE_RESPIRATORY_INFECTIONS	Asthma-related acute respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.7207243464112307
+finn-a-BACT_INTEST_INFECTION_NOS	Other specified/unspecified bacterial intestinal infections	bacterial disease	EFO:0000771	0.7816446774498187
+finn-a-I_INFECT_PARASIT	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.956393720719561
+finn-a-J10_ACUTELOWERNAS	Unspecified acute lower respiratory infection	respiratory tract infectious disorder	MONDO:0024355	0.7208163067103942
+finn-a-J10_LOWERINF	Other acute lower respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.7822038943475687
+finn-a-J10_UPPERINFEC	Acute upper respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.8366696933656524
+finn-a-L12_INFECT_SKIN	Infections of the skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.9062300974099651
+finn-a-L12_INFECT_SKIN_NAS	Other and unspecified local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.846082025802494
+finn-a-L12_INFECT_SKIN_OTHER	Other local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.846082025802494
+finn-b-AB1_BACTINF_NOS	Bacterial infection, other or unspecified	bacterial disease	EFO:0000771	0.9894969494121606
+finn-b-AB1_BACT_BIR_OTHER_INF_AGENTS	Bacterial, viral and other infectious agents	bacterial disease	EFO:0000771	0.7066980900295479
+finn-b-AB1_BACT_INTEST_OTH	Other bacterial intestinal infections	bacterial disease	EFO:0000771	0.7816446774498187
+finn-b-AB1_CHLAMYDIA_OTHER	Other sexually transmitted chlamydial diseases	sexually transmitted disease	MONDO:0021681	0.7830695165105668
+finn-b-AB1_INFECTIONS	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.956393720719561
+finn-b-AB1_MYCOSES	Mycoses	fungal infectious disease	MONDO:0002041	0.9716970135915064
+finn-b-AB1_OTHER_BACTERIAL	Other bacterial diseases	bacterial disease	EFO:0000771	0.9237024235972899
+finn-b-AB1_OTHER_BACT_INOTHER	Other bacterial agents as the cause of diseases classified to other chapters	bacterial disease	EFO:0000771	0.6436127461137602
+finn-b-AB1_OTHER_INFECTIONS	Other infectious diseases	infectious disease	EFO:0005741	0.9379649901269483
+finn-b-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.9149904484209596
+finn-b-AB1_PARASITIC_NOS	Unspecified parasitic disease	parasitic infection	EFO:0001067	0.9887442017759638
+finn-b-AB1_SEQULAE_INF_NOS	Sequelae of other and unspecified infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7520859531568983
+finn-b-AB1_SEQULEAE_OF_INFECTIONS_AND_PARASITES	Sequelae of infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7520859531568983
+finn-b-AB1_SEXUAL_TRANSMISSION_NOS	Other predominantly sexually transmitted diseases, not elsewhere classified	sexually transmitted disease	MONDO:0021681	0.7796353865526089
+finn-b-AB1_VIRAL_INOTHER	Viral agents as the cause of diseases classified to other chapters	viral disease	EFO:0000763	0.6150951858579127
+finn-b-AB1_VIRAL_NOS	Other viral diseases, not elsewhere classified	viral disease	EFO:0000763	0.9149904484209596
+finn-b-AB1_VIRAL_OTHER_INTEST_INFECTIONS	Viral and other specified intestinal infections	viral disease	EFO:0000763	0.7664013811506318
+finn-b-ASTHMA_ACUTE_RESPIRATORY_INFECTIONS	Asthma-related acute respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.7207243464112307
+finn-b-ASTHMA_INFECTIONS	Asthma-related infections	Prosthesis-Related Infections	EFO:1001406	0.6023164999931242
+finn-b-BACT_INTEST_INFECTION_NOS	Other specified/unspecified bacterial intestinal infections	bacterial disease	EFO:0000771	0.7816446774498187
+finn-b-D3_HAEMORRHAGICNAS	Otherand unspecified haemorrhagic conditions	hemorrhagic fever	MONDO:0600002	0.6156480046160183
+finn-b-J10_ACUTELOWERNAS	Unspecified acute lower respiratory infection	respiratory tract infectious disorder	MONDO:0024355	0.7208163067103942
+finn-b-J10_LOWERINF	Other acute lower respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.7822038943475687
+finn-b-J10_UPPERINFEC	Acute upper respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.8366696933656524
+finn-b-L12_INFECT_SKIN	Infections of the skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.9062300974099651
+finn-b-L12_INFECT_SKIN_NAS	Other and unspecified local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.846082025802494
+finn-b-L12_INFECT_SKIN_OTHER	Other local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.846082025802494
+finn-b-O15_PUERP_INFECT_OTHER	Other puerperal infections	Puerperal Infection	EFO:1001407	0.9920489751299311
+finn-b-Z21_CARRIER_INFECTIOUS_DISEA	Carrier of infectious disease	infectious disease	EFO:0005741	0.757731206550451
+finn-b-Z21_CONTACT_W_EXPOS_COMMUNICAB_DISEA	Contact with and exposure to communicable diseases	infectious disease	EFO:0005741	0.6780454400246341
+finn-b-Z21_SPECIAL_SCREEN_EXAM_INFECTIOUS_PARASITIC_DISEA	Special screening examination for infectious and parasitic diseases	parasitic infection	EFO:0001067	0.661199978473619
+prot-c-2828_82_2	HAI-1	nosocomial infection	MONDO:0043544	0.9493606877979037
+ukb-d-AB1_OTHER_BACTERIAL	Other bacterial diseases	bacterial disease	EFO:0000771	0.9237024235972899
+ukb-d-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.9149904484209596
+ukb-d-I_INFECT_PARASIT	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.956393720719561
+ukb-e-41_AFR	Bacterial infection NOS	bacterial disease	EFO:0000771	0.8778557623548162
+ukb-e-4674_AFR	Private healthcare	nosocomial infection	MONDO:0043544	0.6158340077041717

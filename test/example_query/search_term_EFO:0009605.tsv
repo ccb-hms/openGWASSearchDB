@@ -1,0 +1,8 @@
+# search_term='EFO:0009605'
+# include_subclasses=False
+# direct_subclasses_only=False
+OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
+PROT-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.611352143644495
+finn-a-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9368470932944827
+finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.7366564928341415
+finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9368470932944827

@@ -1,0 +1,12 @@
+# search_term='EFO:0009605'
+# include_subclasses=True
+# direct_subclasses_only=True
+OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
+PROT-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.611352143644495
+bbj-a-140	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.9893401476670206
+ebi-a-GCST90016675	Pancreas fat	pancreatic neoplasm	EFO:0003860	0.8639012272056258
+ebi-a-GCST90016676	Pancreas iron content	pancreatic neoplasm	EFO:0003860	0.6749540951084209
+finn-a-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9368470932944827
+finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.7366564928341415
+finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9368470932944827
+ieu-a-822	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.9893401476670206
