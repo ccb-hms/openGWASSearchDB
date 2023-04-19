@@ -5,7 +5,7 @@ from pathlib import Path
 from text2term import Mapper
 from generate_semql_ontology_tables import get_semsql_tables_for_ontology
 
-__version__ = "0.2.2"
+__version__ = "0.2.3"
 
 
 # Assemble a SQLite database that contains:
@@ -14,7 +14,7 @@ __version__ = "0.2.2"
 # 3) SemanticSQL tables of EFO that enable searching over traits by leveraging the EFO class hierarchy
 def assemble_database(metadata_file):
     # Get SemanticSQL EFO tables
-    edges_df, entailed_edges_df, labels_df, ontology_version = get_semsql_tables_for_ontology(
+    edges_df, entailed_edges_df, labels_df, dbxrefs_df, ontology_version = get_semsql_tables_for_ontology(
         ontology_url="https://s3.amazonaws.com/bbop-sqlite/efo.db",
         ontology_name="EFO",
         tables_output_folder="../resources/",
@@ -39,6 +39,7 @@ def assemble_database(metadata_file):
     import_df_to_db(db_connection, data_frame=edges_df, table_name="efo_edges", table_columns=semsql_tbl_cols)
     import_df_to_db(db_connection, data_frame=entailed_edges_df, table_name="efo_entailed_edges", table_columns=semsql_tbl_cols)
     import_df_to_db(db_connection, data_frame=labels_df, table_name="efo_labels", table_columns=semsql_tbl_cols)
+    import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name="efo_dbxrefs", table_columns=semsql_tbl_cols)
 
     # Map the traits to EFO and add the resulting mappings table to the database
     mappings = map_traits_to_efo(metadata_file, ontology_version)
