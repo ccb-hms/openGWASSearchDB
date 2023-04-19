@@ -1,9 +1,10 @@
 import os
 import sqlite3
 import urllib.request
+import bioregistry
 import pandas as pd
 
-__version__ = "0.3.1"
+__version__ = "0.4.0"
 
 ontologies = {
     "EFO": "https://s3.amazonaws.com/bbop-sqlite/efo.db",
@@ -77,6 +78,8 @@ def _get_edges_table(cursor):
     edge_data = cursor.fetchall()
     edges_df = pd.DataFrame(edge_data, columns=edge_columns)
     edges_df = edges_df.drop(columns=["predicate"])
+    edges_df = edges_df.drop_duplicates()
+    edges_df = fix_identifiers(edges_df, columns=["subject", "object"])
     return edges_df
 
 
@@ -86,6 +89,8 @@ def _get_entailed_edges_table(cursor):
     entailed_edge_data = cursor.fetchall()
     entailed_edges_df = pd.DataFrame(entailed_edge_data, columns=entailed_edge_columns)
     entailed_edges_df = entailed_edges_df.drop(columns=["predicate"])
+    entailed_edges_df = entailed_edges_df.drop_duplicates()
+    entailed_edges_df = fix_identifiers(entailed_edges_df, columns=["subject", "object"])
     return entailed_edges_df
 
 
@@ -99,6 +104,8 @@ def _get_labels_table(cursor):
     labels_df = labels_df.drop(columns=["stanza", "predicate", "object", "datatype", "language"])
     labels_df = labels_df[labels_df["subject"].str.startswith("_:") == False]  # remove blank nodes
     labels_df = labels_df.rename(columns={'value': 'object'})  # rename label value column to the same as other tables
+    labels_df = labels_df.drop_duplicates()
+    labels_df = fix_identifiers(labels_df, columns=["subject"])
     return labels_df
 
 
@@ -110,7 +117,30 @@ def _get_db_cross_references_table(cursor):
     db_xrefs = db_xrefs.drop(columns=["stanza", "predicate", "object", "datatype", "language"])
     db_xrefs = db_xrefs[db_xrefs["subject"].str.startswith("_:") == False]  # remove blank nodes
     db_xrefs = db_xrefs.rename(columns={'value': 'object'})  # rename dbxref value column to the same as other tables
+    db_xrefs = db_xrefs.drop_duplicates()
+    db_xrefs = fix_identifiers(db_xrefs, columns=["subject"])
     return db_xrefs
+
+
+def fix_identifiers(df, columns=()):
+    for column in columns:
+        df[column] = df[column].apply(get_curie_id_for_term)
+    return df
+
+
+def get_curie_id_for_term(term):
+    if "<" in term or "http" in term:
+        term = term.replace("<", "")
+        term = term.replace(">", "")
+        curie = bioregistry.curie_from_iri(term)
+        if curie is None:
+            if "http://dbpedia.org" in term:
+                return "DBR:" + term.rsplit('/', 1)[1]
+            else:
+                return term
+        return curie.upper()
+    else:
+        return term
 
 
 def save_table(df, output_filename, tables_output_folder):
