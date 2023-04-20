@@ -4,7 +4,7 @@ import urllib.request
 import bioregistry
 import pandas as pd
 
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 ontologies = {
     "EFO": "https://s3.amazonaws.com/bbop-sqlite/efo.db",
@@ -104,8 +104,10 @@ def _get_labels_table(cursor):
     labels_df = labels_df.drop(columns=["stanza", "predicate", "object", "datatype", "language"])
     labels_df = labels_df[labels_df["subject"].str.startswith("_:") == False]  # remove blank nodes
     labels_df = labels_df.rename(columns={'value': 'object'})  # rename label value column to the same as other tables
-    labels_df = labels_df.drop_duplicates()
+    labels_df = labels_df.drop_duplicates(subset=["subject"])  # remove all but one label for each subject/term
     labels_df = fix_identifiers(labels_df, columns=["subject"])
+    labels_df["object"] = labels_df["object"].str.strip()
+    labels_df['iri'] = labels_df['subject'].apply(get_iri)
     return labels_df
 
 
@@ -120,6 +122,14 @@ def _get_db_cross_references_table(cursor):
     db_xrefs = db_xrefs.drop_duplicates()
     db_xrefs = fix_identifiers(db_xrefs, columns=["subject"])
     return db_xrefs
+
+
+def get_iri(curie):
+    if "DBR" in curie:
+        curie = curie.split(":")[1]
+        return "http://dbpedia.org/resource/" + curie
+    else:
+        return bioregistry.get_iri(curie)
 
 
 def fix_identifiers(df, columns=()):
