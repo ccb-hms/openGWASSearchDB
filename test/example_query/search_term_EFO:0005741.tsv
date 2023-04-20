@@ -1,6 +1,3 @@
-# search_term='EFO:0005741'
-# include_subclasses=False
-# direct_subclasses_only=False
 OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
 finn-a-AB1_OTHER_INFECTIONS	Other infectious diseases	infectious disease	EFO:0005741	0.9379649901269483
 finn-b-AB1_OTHER_INFECTIONS	Other infectious diseases	infectious disease	EFO:0005741	0.9379649901269483

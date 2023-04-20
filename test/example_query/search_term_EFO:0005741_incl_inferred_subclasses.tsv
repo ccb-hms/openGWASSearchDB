@@ -1,6 +1,3 @@
-# search_term='EFO:0005741'
-# include_subclasses=True
-# direct_subclasses_only=False
 OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
 PROT-a-2379	Major prion protein	prion disease	EFO:0004720	0.6486864910117575
 PROT-a-2455	Poliovirus receptor	poliovirus infection	MONDO:0024618	0.7053450230768421
@@ -53,6 +50,7 @@ finn-a-AB1_OTHER_SPIROCHAETAL	Other spirochaetal diseases	Spirochaetales Infecti
 finn-a-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.9149904484209596
 finn-a-AB1_PEDICULOSIS_ACARIASIS_OTHERINFEST	Pediculosis, acariasis and other infestations	lice infestation	MONDO:0003472	0.6722899591356961
 finn-a-AB1_SEQULEAE_OF_INFECTIONS_AND_PARASITES	Sequelae of infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7520859531568983
+finn-a-AB1_TUBERCULOSIS	Tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.9895044884734134
 finn-a-AB1_VIRAL_CNS	Viral infections of the central nervous system	viral infection of central nervous system	MONDO:0024318	0.96500488312766
 finn-a-AB1_VIRAL_HEPATITIS	Viral hepatitis	viral human hepatitis infection	EFO:0004196	0.9970067881260781
 finn-a-ACUTE_RESPIRATORY_INFECTIONS	Asthma/COPD-related acute respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.6689334655404316
@@ -78,6 +76,7 @@ finn-a-H8_EXT_INFNAS	Other infective otitis externa	otitis externa	EFO:0009560	0
 finn-a-H8_EXT_NAS	Otitis externa, unspecified	otitis externa	EFO:0009560	0.9964550896811901
 finn-a-H8_EXT_OTH	Other otitis externa (chronic)	otitis externa	EFO:0009560	0.8213925216276015
 finn-a-HEPATITIS_CHRONIC_VIRAL	Chronic viral hepatitis	chronic hepatitis C virus infection	EFO:0004220	0.9447899776445687
+finn-a-IBD_TUBERCULOSIS	Tuberculosis, IBD comorbidity	Tuberculosis	ORPHANET.ORDO:3389	0.6439834909979378
 finn-a-IBD_VIRAL_HEPATITIS	Viral hepatitis, IBD co-morbidity	animal viral hepatitis	EFO:0007540	0.6326181973499904
 finn-a-INFLUENZA	All influenza (not pneumonia)	influenza	EFO:0007328	0.7604758918344163
 finn-a-I_INFECT_PARASIT	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.956393720719561
@@ -107,6 +106,8 @@ finn-a-PNEUMOBACTKNOWN	Bacterial pneumonia (organism specified)	bacterial pneumo
 finn-a-PNEUMO_SEPTHICHE	Pneumococcal septichemia	pneumococcal pneumonia	EFO:1001474	0.7123654190615406
 finn-a-PULM_PNEUMONIA_SEPSIS	COPD/asthma/ILD related pneumonia or pneumonia derived septichaemia	pneumonia	EFO:0003106	0.7306489175865818
 finn-a-SEPTICHE_PNEUMONIA	Pneumonia derived septichemia	pneumonia	EFO:0003106	0.6348127974064444
+finn-a-TBC_RESP	Respiratory tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.7741849838701923
+finn-a-TUBERCULOSIS	Tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.9895044884734134
 finn-a-VIRALPNEUMOKNOWN	Viral pneumonia (known virus, not influenza)	influenza	EFO:0007328	0.6549437239183187
 finn-a-VIRALPNEUMONAS	Viral pneumonia (unknown virus, not influenza)	influenza	EFO:0007328	0.6364861801584369
 finn-b-AB1_AMOEBIASIS	Amoebiasis	amebiasis	EFO:0007144	0.9966649982215581
@@ -156,6 +157,7 @@ finn-b-AB1_PEDICULOSIS_ACARIASIS_OTHERINFEST	Pediculosis, acariasis and other in
 finn-b-AB1_PNEUMOCYSTOSIS	Pneumocystosis	pneumocystosis	EFO:0007448	0.9914402574275445
 finn-b-AB1_POLIOMYELITIS	Acute poliomyelitis	poliomyelitis	EFO:0007450	0.9925940022628071
 finn-b-AB1_PROTOZOAL	Protozoal diseases	protozoa infectious disease	MONDO:0002428	0.7586123417398369
+finn-b-AB1_RESP_TUBERCU	Respiratry tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.7643921137881647
 finn-b-AB1_RUBELLA	Rubella [German measles]	rubella	EFO:1002026	0.7601646329957432
 finn-b-AB1_SALMONELLA_OTH	Other salmonella infections	Salmonella Infections	EFO:1001418	0.9919077439400888
 finn-b-AB1_SCARLET_FEVER	Scarlet fever	scarlet fever	EFO:0007477	0.9937705280907211
@@ -163,6 +165,7 @@ finn-b-AB1_SCHISTOSOMIASIS	Schistosomiasis [bilharziasis]	schistosomiasis	EFO:10
 finn-b-AB1_SEPSIS	Septicaemia	Pasteurella hemorrhagic septicemia	EFO:1001091	0.7002032749476158
 finn-b-AB1_SEQULAE_INF_NOS	Sequelae of other and unspecified infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7520859531568983
 finn-b-AB1_SEQULAE_POLIO	Sequelae of poliomyelitis	postpoliomyelitis syndrome	EFO:0007454	0.8433897043104454
+finn-b-AB1_SEQULAE_TUBERCU	Sequelae of tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.71836346316258
 finn-b-AB1_SEQULEAE_OF_INFECTIONS_AND_PARASITES	Sequelae of infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7520859531568983
 finn-b-AB1_SEXUAL_TRANSMISSION_NOS	Other predominantly sexually transmitted diseases, not elsewhere classified	sexually transmitted disease	MONDO:0021681	0.7796353865526089
 finn-b-AB1_SPIROCHE_OTHER	Spirochaetal infections, other/unspecified	Spirochaetales Infections	EFO:0009567	0.9182061003495194
@@ -171,6 +174,8 @@ finn-b-AB1_STREPTSTAPHYCOCC_INOTHER	Streptococcus and staphylococcus as the caus
 finn-b-AB1_SYPHILIS	Syphilis	syphilis	EFO:0007504	0.993023337130483
 finn-b-AB1_TOXOPLASMOSIS	Toxoplasmosis	toxoplasmosis	EFO:0007517	0.9905788527812784
 finn-b-AB1_TRICHOMONIASIS	Trichomoniasis	Trichomonas vaginitis	EFO:0007521	0.8079863195776877
+finn-b-AB1_TUBERCULOSIS	Tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.9895044884734134
+finn-b-AB1_TUBERCU_OTH_ORG	Tuberculosis of other organs	Tuberculosis	ORPHANET.ORDO:3389	0.8083454629541258
 finn-b-AB1_TULARAEMIA	Tularaemia	Tularemia	EFO:1001444	0.6796810009843517
 finn-b-AB1_VARICELLA	Varicella [chickenpox]	chickenpox	EFO:0007204	0.8195943136603597
 finn-b-AB1_VIRAAL_CONJUNCT	Viral conjunctivitis	acute hemorrhagic conjunctivitis	EFO:0007131	0.9964105923645545
@@ -250,6 +255,7 @@ finn-b-PNEUMOBACTKNOWN	Bacterial pneumonia (organism specified)	bacterial pneumo
 finn-b-PNEUMO_SEPTHICHE	Pneumococcal septichemia	pneumococcal pneumonia	EFO:1001474	0.7123654190615406
 finn-b-PULM_PNEUMONIA_SEPSIS	COPD/asthma/ILD related pneumonia or pneumonia derived septichaemia	pneumonia	EFO:0003106	0.7306489175865818
 finn-b-SEPTICHE_PNEUMONIA	Pneumonia derived septichemia (SEPTICHE_PNEUMONIA)	pneumonia	EFO:0003106	0.718943401645541
+finn-b-TBC_RESP	Respiratory tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.7741849838701923
 finn-b-VIRALPNEUMOKNOWN	Viral pneumonia (known virus, not influenza)	influenza	EFO:0007328	0.6549437239183187
 finn-b-VIRALPNEUMONAS	Viral pneumonia (unknown virus, not influenza)	influenza	EFO:0007328	0.6364861801584369
 finn-b-Z21_ANKLE_FOOT	Ankle and foot	osteomyelitis	EFO:0003102	0.7075856519058176

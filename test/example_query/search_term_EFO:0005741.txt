@@ -1,0 +1,6 @@
+# query parameters:
+search_term='EFO:0005741'
+include_subclasses=False
+direct_subclasses_only=False
+
+# query results count: 4

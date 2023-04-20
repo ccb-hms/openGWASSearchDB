@@ -1,6 +1,3 @@
-# search_term='EFO:0004324'
-# include_subclasses=True
-# direct_subclasses_only=True
 OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
 EBI-a-GCST004904	Body mass index	body mass index	EFO:0004340	0.9945495709539472
 EBI-a-GCST006368	Body mass index	body mass index	EFO:0004340	0.9945495709539472

@@ -2,7 +2,7 @@ import os
 import sqlite3
 import pandas as pd
 
-__version__ = "0.1.4"
+__version__ = "0.2.0"
 
 
 """
@@ -116,25 +116,25 @@ def do_example_query(cursor, search_term, include_subclasses, direct_subclasses_
                                        include_subclasses=include_subclasses,
                                        direct_subclasses_only=direct_subclasses_only)
     print("Resources annotated with " + search_term + ": " + ("0" if df.empty else str(df.shape[0])))
-    if not df.empty:
-        print(df.head().to_string() + "\n")
-
-    # Write out query results
     output_folder = "../test/example_query/"
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
     output_file = output_folder + "search_term_" + search_term
-    if include_subclasses:
-        if direct_subclasses_only:
-            output_file += "_" + "incl_direct_subclasses"
-        else:
-            output_file += "_" + "incl_inferred_subclasses"
-    output_file += ".tsv"
-    with open(output_file, 'w') as f:
-        f.write("# search_term='%s'\n" % search_term)
-        f.write("# include_subclasses=%s\n" % include_subclasses)
-        f.write("# direct_subclasses_only=%s\n" % str(direct_subclasses_only))
-    df.to_csv(output_file, sep="\t", index=False, mode='a')
+    if not df.empty:
+        print(df.head().to_string() + "\n")
+        if include_subclasses:
+            if direct_subclasses_only:
+                output_file += "_" + "incl_direct_subclasses"
+            else:
+                output_file += "_" + "incl_inferred_subclasses"
+        df.to_csv(output_file + ".tsv", sep="\t", index=False)  # write out query results
+
+    with open(output_file + ".txt", 'w') as f:  # write out query parameters and results count
+        f.write("# query parameters:\n")
+        f.write("search_term='%s'\n" % search_term)
+        f.write("include_subclasses=%s\n" % include_subclasses)
+        f.write("direct_subclasses_only=%s\n\n" % str(direct_subclasses_only))
+        f.write("# query results count: %s" % str(df.shape[0]))
     return df
 
 

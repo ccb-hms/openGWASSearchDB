@@ -1,6 +1,3 @@
-# search_term='EFO:0009605'
-# include_subclasses=True
-# direct_subclasses_only=False
 OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
 EBI-a-GCST005047	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
 EBI-a-GCST005413	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
@@ -9,6 +6,7 @@ EBI-a-GCST005898	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.982854
 EBI-a-GCST006867	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
 PROT-a-1558	Insulin	pancreatic insulinoma	MONDO:0024677	0.8459588008768792
 PROT-a-1560	Insulin-like 3	pancreatic insulinoma	MONDO:0024677	0.638690114974342
+PROT-a-1751	Gastric triacylglycerol lipase	Pancreatic triacylglycerol lipase deficiency	ORPHANET.ORDO:309031	0.7169663116076476
 PROT-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.611352143644495
 PROT-a-2846	Somatostatin-28	somatostatinoma	EFO:1001187	0.7398155918560742
 PROT-a-592	Colipase	pancreatic triacylglycerol lipase deficiency	MONDO:0013700	0.7726875420358776
