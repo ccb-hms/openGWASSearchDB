@@ -4,7 +4,7 @@ import urllib.request
 import bioregistry
 import pandas as pd
 
-__version__ = "0.4.1"
+__version__ = "0.4.2"
 
 ontologies = {
     "EFO": "https://s3.amazonaws.com/bbop-sqlite/efo.db",
@@ -33,7 +33,7 @@ def get_semsql_tables_for_ontologies(tables_output_folder='../ontology-tables',
         save_table(all_labels, "ontology_labels.tsv", tables_output_folder)
         save_table(all_edges, "ontology_edges.tsv", tables_output_folder)
         save_table(all_entailed_edges, "ontology_entailed_edges.tsv", tables_output_folder)
-        save_table(all_dbxrefs, "ontology_db_cross_references.tsv", tables_output_folder)
+        save_table(all_dbxrefs, "ontology_dbxrefs.tsv", tables_output_folder)
     return all_edges, all_entailed_edges, all_labels, all_dbxrefs
 
 
