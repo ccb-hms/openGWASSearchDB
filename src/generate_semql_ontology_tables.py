@@ -95,9 +95,12 @@ def _get_entailed_edges_table(cursor):
 
 
 def _get_labels_table(cursor):
-    # Get rdfs:label statements for ontology classes
-    cursor.execute("SELECT * FROM statements WHERE predicate='rdfs:label' AND subject IN "
-                   "(SELECT subject FROM statements WHERE predicate='rdf:type' AND object='owl:Class')")
+    # Get rdfs:label statements for ontology classes that are not deprecated
+    labels_query = "SELECT * FROM statements WHERE predicate='rdfs:label' AND subject IN " +\
+                   "(SELECT subject FROM statements WHERE predicate='rdf:type' AND object='owl:Class') " +\
+                   "AND subject NOT IN " + \
+                   "(SELECT subject FROM statements WHERE predicate='owl:deprecated' AND value='true')"
+    cursor.execute(labels_query)
     labels_columns = [x[0] for x in cursor.description]
     labels_data = cursor.fetchall()
     labels_df = pd.DataFrame(labels_data, columns=labels_columns)
