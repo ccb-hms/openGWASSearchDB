@@ -1,22 +1,24 @@
 import os
 import sqlite3
 import text2term
+import ieugwaspy
 import pandas as pd
 from pathlib import Path
 from text2term import Mapper
 from generate_semql_ontology_tables import get_semsql_tables_for_ontology
 from mapping_report_generator import MappingReportGenerator
 
-__version__ = "0.2.3"
+__version__ = "0.3.0"
 
 
 # Assemble a SQLite database that contains:
 # 1) The original OpenGWAS metadata table containing all traits and associated OpenGWAS DB record identifiers
 # 2) text2term-generated mappings of traits in the OpenGWAS database to terms in the Experimental Factor Ontology (EFO)
 # 3) SemanticSQL tables of EFO that enable searching over traits by leveraging the EFO class hierarchy
-def assemble_database(metadata_file):
+def assemble_database():
     _clean_existing_resources()
     target_ontology_name = "EFO"
+
     # Get SemanticSQL EFO tables
     edges_df, entailed_edges_df, labels_df, dbxrefs_df, ontology_version = get_semsql_tables_for_ontology(
         ontology_url="https://s3.amazonaws.com/bbop-sqlite/efo.db",
@@ -30,13 +32,15 @@ def assemble_database(metadata_file):
     Path(db_name).touch()
     db_connection = sqlite3.connect(db_name)
 
+    # Fetch OpenGWAS metadata directly from OpenGWAS
+    metadata_file, metadata_df = fetch_opengwas_metadata()
+
     # Add OpenGWAS metadata table to the database
     metadata_tbl_cols = "idx,sex,category,population,group_name,build,author,year,trait,pmid,id,sample_size," \
                         "mr,nsnp,priority,ncase,ncontrol,ontology,subcategory,consortium,note,unit,access,batch," \
                         "units,sd,study_design,covariates,imputation_panel,qc_prior_to_upload,doi," \
                         "coverage,beta_transformation"
-    import_df_to_db(db_connection, data_frame=pd.read_csv(metadata_file, dtype='unicode'),
-                    table_name="opengwas_metadata", table_columns=metadata_tbl_cols)
+    import_df_to_db(db_connection, data_frame=metadata_df, table_name="opengwas_metadata", table_columns=metadata_tbl_cols)
 
     # Add SemanticSQL tables to the database
     semsql_tbl_cols = "subject,object"
@@ -73,12 +77,21 @@ def import_df_to_db(connection, data_frame, table_name, table_columns):
 
 # Map traits in OpenGWAS metadata to terms in EFO
 def map_traits_to_efo(metadata_file, ontology_url):
-    return text2term.map_file(input_file=metadata_file, csv_columns=("trait", "id"), separator=",",
+    return text2term.map_file(input_file=metadata_file, csv_columns=("trait", "id"), separator="\t",
                               target_ontology=ontology_url, excl_deprecated=True, save_graphs=False,
                               max_mappings=1, min_score=0.6, mapper=Mapper.TFIDF,
                               save_mappings=True, output_file="../resources/opengwas_efo_mappings.csv",
                               base_iris=("http://www.ebi.ac.uk/efo/", "http://purl.obolibrary.org/obo/MONDO",
                                          "http://purl.obolibrary.org/obo/HP", "http://www.orpha.net/ORDO"))
+
+
+# Fetch the OpenGWAS metadata directly from OpenGWAS using ieugwaspy package
+def fetch_opengwas_metadata(metadata_output_file="../resources/opengwas_metadata.tsv"):
+    metadata_dict = ieugwaspy.gwasinfo()
+    metadata_df = pd.DataFrame.from_dict(metadata_dict, orient='index')
+    metadata_df = metadata_df[metadata_df["id"].str.contains("eqtl-a") == False]  # Remove eqtl records
+    metadata_df.to_csv(metadata_output_file, index=False, sep="\t")
+    return metadata_output_file, metadata_df
 
 
 def _clean_existing_resources():
@@ -88,7 +101,8 @@ def _clean_existing_resources():
     _delete_file("../resources/efo_dbxrefs.tsv")
     _delete_file("../resources/efo_labels.tsv")
     _delete_file("../resources/opengwas_efo_mappings.csv")
-    _delete_file("../resources/opengwas_efo_mappings_counts.csv")
+    _delete_file("../resources/opengwas_efo_mappings_counts.tsv")
+    _delete_file("../resources/opengwas_metadata.tsv")
     _delete_file("../opengwas_trait_search.db")
 
 
@@ -98,5 +112,4 @@ def _delete_file(file):
 
 
 if __name__ == "__main__":
-    opengwas_metadata_20220125 = "../resources/opengwas_metadata_20220125.csv"  # TODO: fetch directly from OpenGWAS
-    assemble_database(metadata_file=opengwas_metadata_20220125)
+    assemble_database()

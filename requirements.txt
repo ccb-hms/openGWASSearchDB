@@ -2,3 +2,4 @@ text2term~=2.1.0
 pandas~=1.5.3
 bioregistry==0.8.12
 Owlready2~=0.40
+ieugwaspy~=0.1.8
