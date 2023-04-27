@@ -3,4 +3,4 @@ search_term='EFO:0004324'
 include_subclasses=True
 direct_subclasses_only=False
 
-# query results count: 118
+# query results count: 217

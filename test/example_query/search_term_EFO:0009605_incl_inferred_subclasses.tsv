@@ -1,111 +1,88 @@
 OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
-EBI-a-GCST005047	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-EBI-a-GCST005413	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-EBI-a-GCST005536	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-EBI-a-GCST005898	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-EBI-a-GCST006867	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-PROT-a-1558	Insulin	pancreatic insulinoma	MONDO:0024677	0.8459588008768792
-PROT-a-1560	Insulin-like 3	pancreatic insulinoma	MONDO:0024677	0.638690114974342
-PROT-a-1751	Gastric triacylglycerol lipase	Pancreatic triacylglycerol lipase deficiency	ORPHANET.ORDO:309031	0.7169663116076476
-PROT-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.611352143644495
-PROT-a-2846	Somatostatin-28	somatostatinoma	EFO:1001187	0.7398155918560742
-PROT-a-592	Colipase	pancreatic triacylglycerol lipase deficiency	MONDO:0013700	0.7726875420358776
-UKB-a-208	Illnesses of father: Diabetes	diabetes mellitus	EFO:0000400	0.6160008461144414
-UKB-a-216	Illnesses of mother: Diabetes	diabetes mellitus	EFO:0000400	0.6065302608647863
-UKB-a-306	Diabetes diagnosed by doctor	diabetes mellitus	EFO:0000400	0.6461988279051116
-UKB-b-10753	Diabetes diagnosed by doctor	diabetes mellitus	EFO:0000400	0.6461988279051116
-UKB-b-16451	Illnesses of mother: Diabetes	diabetes mellitus	EFO:0000400	0.6065302608647863
-UKB-b-19388	Diagnoses - main ICD10: K85 Acute pancreatitis	acute pancreatitis	EFO:1000652	0.6776544324356649
-UKB-b-20211	Illnesses of father: Diabetes	diabetes mellitus	EFO:0000400	0.6160008461144414
-UKB-b-7435	Age diabetes diagnosed	diabetes mellitus	EFO:0000400	0.7038701141113981
-bbj-a-140	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.9893401476670206
-bbj-a-153	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-bbj-a-77	Type 2 Diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ebi-a-GCST007515	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ebi-a-GCST007516	Type 2 diabetes (adjusted for BMI)	type 2 diabetes mellitus	MONDO:0005148	0.6344331936020644
-ebi-a-GCST007517	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ebi-a-GCST007518	Type 2 diabetes (adjusted for BMI)	type 2 diabetes mellitus	MONDO:0005148	0.6344331936020644
-ebi-a-GCST008048	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ebi-a-GCST010118	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ebi-a-GCST010681	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-ebi-a-GCST90000529	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-ebi-a-GCST90016675	Pancreas fat	pancreatic neoplasm	EFO:0003860	0.8639012272056258
-ebi-a-GCST90016676	Pancreas iron content	pancreatic neoplasm	EFO:0003860	0.6749540951084209
-finn-a-ALCOPANCACU	Acohol-induced acute pancreatitis	acute pancreatitis	EFO:1000652	0.7296114509260104
-finn-a-ALCOPANCCHRON	Alcohol-induced chronic pancreatitis	chronic pancreatitis	EFO:0000342	0.7299199358153657
-finn-a-C3_PANCREAS	Malignant neoplasm of pancreas	Malignant Pancreatic Neoplasm	EFO:1000359	0.9920104187854932
-finn-a-C3_PANCREAS_EXALLC	Malignant neoplasm of pancreas (ICD C excluded)	Malignant Pancreatic Neoplasm	EFO:1000359	0.9108674383546664
-finn-a-DIABETES_FG	Diabetes, varying definitions	diabetes mellitus	EFO:0000400	0.6487576204618758
-finn-a-DIAB_MED	Diabetes medication	diabetes mellitus	EFO:0000400	0.7297052345487621
-finn-a-DIAB_MED_OTHER	Other (not insulin) diabetes medications	insulin-resistant diabetes mellitus	EFO:0010164	0.6726356716781614
-finn-a-DM_KETOACIDOSIS	Diabetic ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.9924689045572218
-finn-a-DM_OTHER_WIDE	Other diabetes, wide definition	diabetes mellitus	EFO:0000400	0.997024720357153
-finn-a-E4_DIABETES	Diabetes mellitus	diabetes mellitus	EFO:0000400	0.9924439289057224
-finn-a-E4_DM1	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-finn-a-E4_DM1COMA	Type 1 diabetes with coma	type 1 diabetes mellitus	MONDO:0005147	0.7648882216125037
-finn-a-E4_DM1KETO	Type 1 diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.8007412045536684
-finn-a-E4_DM2	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-finn-a-E4_DM2COMA	Type 2 diabetes with coma	type 2 diabetes mellitus	MONDO:0005148	0.7668526132589899
-finn-a-E4_DM2KETO	Type 2 diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.7993625680465616
-finn-a-E4_DMNAS	Unspecified diabetes	diabetes mellitus	EFO:0000400	0.997024720357153
-finn-a-INSULINS	Insulin medication	pancreatic insulinoma	MONDO:0024677	0.6004406305259993
-finn-a-K11_ACUTPANC	Acute pancreatitis	acute pancreatitis	EFO:1000652	0.9926234162742751
-finn-a-K11_CHRONPANC	Chronic pancreatitis	chronic pancreatitis	EFO:0000342	0.9909406210530642
-finn-a-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9368470932944827
-finn-a-PANCREATITIS	Acute pancreatis (for exclusion)	acute pancreatitis	EFO:1000652	0.6967829657224526
-finn-a-T1D	Type1 diabetes, definitions combined	type 1 diabetes mellitus	MONDO:0005147	0.7042926917739374
-finn-a-T1D_STRICT1	Type 1 diabetes, strict definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.678977168054097
-finn-a-T1D_WIDE	Type 1 diabetes, wide definition	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-finn-a-T1D_WIDE1	Type 1 diabetes, wide definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.678977168054097
-finn-a-T1D_WIDE2	Type 1 diabetes, wide definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.6508662914706119
-finn-a-T2D	Type 2 diabetes, definitions combined	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-finn-a-T2D_WIDE	Type 2 diabetes, wide definition	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-finn-b-ALCOPANCACU	Acohol-induced acute pancreatitis	acute pancreatitis	EFO:1000652	0.7296114509260104
-finn-b-ALCOPANCCHRON	Alcohol-induced chronic pancreatitis	chronic pancreatitis	EFO:0000342	0.7299199358153657
-finn-b-C3_PANCREAS	Malignant neoplasm of pancreas	Malignant Pancreatic Neoplasm	EFO:1000359	0.9920104187854932
-finn-b-C3_PANCREAS_EXALLC	Malignant neoplasm of pancreas (all cancers excluded)	Malignant Pancreatic Neoplasm	EFO:1000359	0.9187954828734983
-finn-b-CD2_BENIGN_PANCREAS	Benign neoplasm: Pancreas	benign neoplasm of pancreas	MONDO:0021470	0.9915823423552412
-finn-b-CD2_BENIGN_PANCREAS_EXALLC	Benign neoplasm: Pancreas (all cancers excluded)	benign neoplasm of pancreas	MONDO:0021470	0.9094615678922919
-finn-b-DIABETES_FG	Diabetes, varying definitions	diabetes mellitus	EFO:0000400	0.6487576204618758
-finn-b-DM_KETOACIDOSIS	Diabetic ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.9924689045572218
-finn-b-DM_OTHER_WIDE	Other diabetes, wide definition	diabetes mellitus	EFO:0000400	0.997024720357153
-finn-b-E4_DIABETES	Diabetes mellitus	diabetes mellitus	EFO:0000400	0.9924439289057224
-finn-b-E4_DM1	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-finn-b-E4_DM1COMA	Type 1 diabetes with coma	type 1 diabetes mellitus	MONDO:0005147	0.7648882216125037
-finn-b-E4_DM1KETO	Type 1 diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.8007412045536684
-finn-b-E4_DM2	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-finn-b-E4_DM2COMA	Type 2 diabetes with coma	type 2 diabetes mellitus	MONDO:0005148	0.7668526132589899
-finn-b-E4_DM2KETO	Type 2 diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.7993625680465616
-finn-b-E4_DMNAS	Unspecified diabetes	diabetes mellitus	EFO:0000400	0.997024720357153
-finn-b-E4_DMNASKETO	Unspecified diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.8510305866593934
-finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.7366564928341415
-finn-b-K11_ACUTPANC	Acute pancreatitis	acute pancreatitis	EFO:1000652	0.9926234162742751
-finn-b-K11_CHRONPANC	Chronic pancreatitis	chronic pancreatitis	EFO:0000342	0.9909406210530642
-finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9368470932944827
-finn-b-O15_PREG_DM	Diabetes mellitus in pregnancy	diabetes mellitus	EFO:0000400	0.7817654357709142
-finn-b-T1D	Type1 diabetes, definitions combined	type 1 diabetes mellitus	MONDO:0005147	0.7042926917739374
-finn-b-T1D_STRICT	Type 1 diabetes, strict definition	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-finn-b-T1D_STRICT1	Type 1 diabetes, strict definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.678977168054097
-finn-b-T1D_STRICT2	Type 1 diabetes, strict definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.6508662914706119
-finn-b-T1D_WIDE	Type 1 diabetes, wide definition	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-finn-b-T1D_WIDE1	Type 1 diabetes, wide definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.678977168054097
-finn-b-T1D_WIDE2	Type 1 diabetes, wide definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.6508662914706119
-finn-b-T2D	Type 2 diabetes, definitions combined	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-finn-b-T2D_WIDE	Type 2 diabetes, wide definition	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ieu-a-1090	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ieu-a-23	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ieu-a-284	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-ieu-a-290	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9824514311941456
-ieu-a-822	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.9893401476670206
-ieu-a-976	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-met-a-631	Bilirubin (E,Z or Z,E)*	Zollinger-Ellison Syndrome	EFO:0007549	0.6472129258277708
-prot-c-3037_62_1	IL-1b	idiopathic type 1 diabetes	EFO:0009757	0.7042834296761938
-prot-c-3729_16_2	Somatostatin-28	somatostatinoma	EFO:1001187	0.7398155918560742
-prot-c-3839_60_2	AIP	autoimmune pancreatitis	MONDO:0015175	0.9994840152161425
-prot-c-4851_25_1	IL-1a	autoimmune type 1 diabetes	EFO:0009756	0.7015992384794318
-prot-c-4883_56_2	Insulin	pancreatic insulinoma	MONDO:0024677	0.8459588008768792
-ukb-e-2443_AFR	Diabetes diagnosed by doctor	diabetes mellitus	EFO:0000400	0.6461988279051116
-ukb-e-250.2_AFR	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9828540074627197
-ukb-e-250_AFR	Diabetes mellitus	diabetes mellitus	EFO:0000400	0.9924439289057224
-ukb-e-2976_CSA	Age diabetes diagnosed	diabetes mellitus	EFO:0000400	0.7038701141113981
-ukb-e-E11_AFR	E11 Non-insulin-dependent diabetes mellitus	type 2 diabetes mellitus	MONDO:0005148	0.8254222642016096
+bbj-a-140	Pancreatic cancer	Malignant Pancreatic Neoplasm	EFO:1000359	0.9871726750100718
+bbj-a-153	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+bbj-a-77	Type 2 Diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST005047	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST005413	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST005536	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9841938829853175
+ebi-a-GCST005898	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST006867	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST007515	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST007516	Type 2 diabetes (adjusted for BMI)	type 2 diabetes mellitus	MONDO:0005148	0.6444765401217123
+ebi-a-GCST007517	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST007518	Type 2 diabetes (adjusted for BMI)	type 2 diabetes mellitus	MONDO:0005148	0.6444765401217123
+ebi-a-GCST008048	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST010118	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ebi-a-GCST010681	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9841938829853175
+ebi-a-GCST90000529	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9841938829853175
+ebi-a-GCST90016675	Pancreas fat	pancreatic neoplasm	EFO:0003860	0.8640053185003989
+ebi-a-GCST90016676	Pancreas iron content	pancreatic neoplasm	EFO:0003860	0.6744599674991091
+finn-b-ALCOPANCACU	Acohol-induced acute pancreatitis	acute pancreatitis	EFO:1000652	0.7306000676290179
+finn-b-ALCOPANCCHRON	Alcohol-induced chronic pancreatitis	chronic pancreatitis	EFO:0000342	0.7309576167676498
+finn-b-C3_PANCREAS	Malignant neoplasm of pancreas	Malignant Pancreatic Neoplasm	EFO:1000359	0.9901045818484373
+finn-b-C3_PANCREAS_EXALLC	Malignant neoplasm of pancreas (all cancers excluded)	Malignant Pancreatic Neoplasm	EFO:1000359	0.9197649253293911
+finn-b-CD2_BENIGN_PANCREAS	Benign neoplasm: Pancreas	benign neoplasm of pancreas	MONDO:0021470	0.9902103597485192
+finn-b-CD2_BENIGN_PANCREAS_EXALLC	Benign neoplasm: Pancreas (all cancers excluded)	benign neoplasm of pancreas	MONDO:0021470	0.9124895344395951
+finn-b-DIABETES_FG	Diabetes, varying definitions	diabetes mellitus	EFO:0000400	0.6551205113359584
+finn-b-DM_KETOACIDOSIS	Diabetic ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.993015583944188
+finn-b-DM_OTHER_WIDE	Other diabetes, wide definition	diabetes mellitus	EFO:0000400	0.9964456894841882
+finn-b-E4_DIABETES	Diabetes mellitus	diabetes mellitus	EFO:0000400	0.9924078024023701
+finn-b-E4_DM1	Type 1 diabetes	type 1 diabetes mellitus	MONDO:0005147	0.9841938829853175
+finn-b-E4_DM1COMA	Type 1 diabetes with coma	type 1 diabetes mellitus	MONDO:0005147	0.7695763924107819
+finn-b-E4_DM1KETO	Type 1 diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.8061009160470402
+finn-b-E4_DM1NOCOMP	Type 1 diabetes without complications	type 1 diabetes mellitus	MONDO:0005147	0.6029197884592837
+finn-b-E4_DM2	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+finn-b-E4_DM2COMA	Type 2 diabetes with coma	type 2 diabetes mellitus	MONDO:0005148	0.7714925825180816
+finn-b-E4_DM2KETO	Type 2 diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.8047640243055609
+finn-b-E4_DM2NOCOMP	Type 2 diabetes without complications	type 2 diabetes mellitus	MONDO:0005148	0.6051801909805847
+finn-b-E4_DMNAS	Unspecified diabetes	diabetes mellitus	EFO:0000400	0.9964456894841882
+finn-b-E4_DMNASKETO	Unspecified diabetes with ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.8537722374755273
+finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.7408638022650404
+finn-b-K11_ACUTPANC	Acute pancreatitis	acute pancreatitis	EFO:1000652	0.9907074790970343
+finn-b-K11_CHRONPANC	Chronic pancreatitis	chronic pancreatitis	EFO:0000342	0.9894635339937312
+finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.934514484644577
+finn-b-O15_PREG_DM	Diabetes mellitus in pregnancy	diabetes mellitus	EFO:0000400	0.7863001961366479
+finn-b-T1D	Type1 diabetes, definitions combined	type 1 diabetes mellitus	MONDO:0005147	0.7087242461609028
+finn-b-T1D_STRICT	Type 1 diabetes, strict definition	type 1 diabetes mellitus	MONDO:0005147	0.9841938829853175
+finn-b-T1D_STRICT1	Type 1 diabetes, strict definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.6818586611409913
+finn-b-T1D_STRICT2	Type 1 diabetes, strict definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.6541723110752942
+finn-b-T1D_WIDE	Type 1 diabetes, wide definition	type 1 diabetes mellitus	MONDO:0005147	0.9841938829853175
+finn-b-T1D_WIDE1	Type 1 diabetes, wide definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.6818586611409913
+finn-b-T1D_WIDE2	Type 1 diabetes, wide definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.6541723110752942
+finn-b-T2D	Type 2 diabetes, definitions combined	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+finn-b-T2D_WIDE	Type 2 diabetes, wide definition	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ieu-a-1090	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ieu-a-23	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ieu-a-24	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ieu-a-25	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ieu-a-26	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+ieu-a-822	Pancreatic cancer	Malignant Pancreatic Neoplasm	EFO:1000359	0.9871726750100718
+ieu-a-976	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.9846153320844877
+met-a-631	Bilirubin (E,Z or Z,E)*	Zollinger-Ellison Syndrome	EFO:0007549	0.6470225151736367
+prot-a-1558	Insulin	pancreatic insulinoma	MONDO:0024677	0.8462624924142433
+prot-a-1560	Insulin-like 3	pancreatic insulinoma	MONDO:0024677	0.6397215906971303
+prot-a-1751	Gastric triacylglycerol lipase	Pancreatic triacylglycerol lipase deficiency	ORPHANET.ORDO:309031	0.7204315810138577
+prot-a-2315	Inactive pancreatic lipase-related protein 1	pancreatic triacylglycerol lipase deficiency	MONDO:0013700	0.6010007049261513
+prot-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.6157063078445665
+prot-a-2846	Somatostatin-28	somatostatinoma	EFO:1001187	0.7466339015974183
+prot-a-592	Colipase	pancreatic triacylglycerol lipase deficiency	MONDO:0013700	0.7747005682013556
+prot-c-3037_62_1	IL-1b	idiopathic type 1 diabetes	EFO:0009757	0.7044711125831641
+prot-c-3729_16_2	Somatostatin-28	somatostatinoma	EFO:1001187	0.7466339015974183
+prot-c-3839_60_2	AIP	autoimmune pancreatitis	MONDO:0015175	0.9994853699593101
+prot-c-4851_25_1	IL-1a	autoimmune type 1 diabetes	EFO:0009756	0.7018441147366947
+prot-c-4883_56_2	Insulin	pancreatic insulinoma	MONDO:0024677	0.8462624924142433
+ukb-a-208	Illnesses of father: Diabetes	diabetes mellitus	EFO:0000400	0.6291658917730322
+ukb-a-216	Illnesses of mother: Diabetes	diabetes mellitus	EFO:0000400	0.6210343563585791
+ukb-a-306	Diabetes diagnosed by doctor	diabetes mellitus	EFO:0000400	0.6605762858748718
+ukb-b-10753	Diabetes diagnosed by doctor	diabetes mellitus	EFO:0000400	0.6605762858748718
+ukb-b-16451	Illnesses of mother: Diabetes	diabetes mellitus	EFO:0000400	0.6210343563585791
+ukb-b-19388	Diagnoses - main ICD10: K85 Acute pancreatitis	acute pancreatitis	EFO:1000652	0.6865664399554705
+ukb-b-20211	Illnesses of father: Diabetes	diabetes mellitus	EFO:0000400	0.6291658917730322
+ukb-b-7435	Age diabetes diagnosed	diabetes mellitus	EFO:0000400	0.7163636109301583
+ukb-e-2443_AFR	Diabetes diagnosed by doctor	diabetes mellitus	EFO:0000400	0.6605762858748718
+ukb-e-2443_CSA	Diabetes diagnosed by doctor	diabetes mellitus	EFO:0000400	0.6605762858748718
+ukb-e-250_AFR	Diabetes mellitus	diabetes mellitus	EFO:0000400	0.9924078024023701
+ukb-e-250_CSA	Diabetes mellitus	diabetes mellitus	EFO:0000400	0.9924078024023701
+ukb-e-2976_CSA	Age diabetes diagnosed	diabetes mellitus	EFO:0000400	0.7163636109301583
+ukb-e-E11_AFR	E11 Non-insulin-dependent diabetes mellitus	type 2 diabetes mellitus	MONDO:0005148	0.8280260928677716
+ukb-e-E11_CSA	E11 Non-insulin-dependent diabetes mellitus	type 2 diabetes mellitus	MONDO:0005148	0.8280260928677716
