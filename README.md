@@ -4,7 +4,7 @@ This project aims to facilitate search for GWAS records in the OpenGWAS database
 `src/assemble_database.py` generates the SQLite3 database `opengwas_trait_search.db` that contains:
 - The original OpenGWAS metadata table with all traits and associated OpenGWAS DB record identifiers
 - [text2term](https://github.com/ccb-hms/ontology-mapper)-generated mappings of OpenGWAS traits to Experimental Factor Ontology (EFO) terms
-- Tables that specify all EFO terms—their labels, identifiers and mapping counts—and all asserted and inferred hierarchical (SubclassOf) relationships between EFO terms. These tables are extracted from a [SemanticSQL](https://github.com/INCATools/semantic-sql) EFO build. 
+- Tables that specify EFO terms—their labels, identifiers and mapping counts—and the asserted and inferred hierarchical (SubclassOf) relationships between EFO terms (extracted from a [SemanticSQL](https://github.com/INCATools/semantic-sql) EFO build). 
 
 
 
@@ -31,7 +31,7 @@ The inputs to _text2term_ are the metadata table and the EFO ontology, and the t
 - use the TFIDF mapper (`mapper=Mapper.TFIDF`), which computes TFIDF-based vector representations of traits and then uses cosine distance to determine how close each trait is to each ontology term. 
 - exclude terms that have been marked as deprecated (`excl_deprecated=True`) such that we only map to terms that are current and expected to be in EFO's future releases.
 
-EFO contains terms and relationships between terms that exist in external ontologies such as MONDO, ChEBI, etc. Since our goal is to map phenotypes to appropriate terms in ontologies, if they exist, we further configured text2term to:
+EFO specifies relationships between terms that exist in external ontologies such as MONDO, ChEBI, etc. Since our goal is to map phenotypes to appropriate ontology terms, when they exist, we also configured _text2term_ to:
 
 - only map to terms from ontologies that describe phenotypes: EFO itself, the Monarch Disease Ontology (MONDO), the Human Phenotype Ontology (HPO), and the Orphanet Rare Disease Ontology (ORDO). This is done using the parameter `base_iris` which limits search to terms in the given namespace(s). 
 
