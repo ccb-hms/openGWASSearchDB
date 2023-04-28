@@ -8,7 +8,7 @@ from text2term import Mapper
 from generate_semql_ontology_tables import get_semsql_tables_for_ontology
 from mapping_report_generator import MappingReportGenerator
 
-__version__ = "0.3.0"
+__version__ = "0.3.1"
 
 
 # Assemble a SQLite database that contains:
@@ -26,6 +26,7 @@ def assemble_database():
         tables_output_folder="../resources/",
         db_output_folder="../resources/",
         save_tables=True)
+    print("...working with EFO v" + ontology_version)
 
     # Create SQLite database
     db_name = '../opengwas_trait_search.db'
@@ -77,16 +78,19 @@ def import_df_to_db(connection, data_frame, table_name, table_columns):
 
 # Map traits in OpenGWAS metadata to terms in EFO
 def map_traits_to_efo(metadata_file, ontology_url):
-    return text2term.map_file(input_file=metadata_file, csv_columns=("trait", "id"), separator="\t",
-                              target_ontology=ontology_url, excl_deprecated=True, save_graphs=False,
-                              max_mappings=1, min_score=0.6, mapper=Mapper.TFIDF,
-                              save_mappings=True, output_file="../resources/opengwas_efo_mappings.csv",
-                              base_iris=("http://www.ebi.ac.uk/efo/", "http://purl.obolibrary.org/obo/MONDO",
-                                         "http://purl.obolibrary.org/obo/HP", "http://www.orpha.net/ORDO"))
+    print("Mapping traits in the OpenGWAS metadata to EFO...")
+    mappings = text2term.map_file(input_file=metadata_file, csv_columns=("trait", "id"), separator="\t",
+                                  target_ontology=ontology_url, excl_deprecated=True, save_graphs=False,
+                                  max_mappings=1, min_score=0.6, mapper=Mapper.TFIDF,
+                                  save_mappings=True, output_file="../resources/opengwas_efo_mappings.csv",
+                                  base_iris=("http://www.ebi.ac.uk/efo/", "http://purl.obolibrary.org/obo/MONDO",
+                                             "http://purl.obolibrary.org/obo/HP", "http://www.orpha.net/ORDO"))
+    return mappings
 
 
 # Fetch the OpenGWAS metadata directly from OpenGWAS using ieugwaspy package
 def fetch_opengwas_metadata(metadata_output_file="../resources/opengwas_metadata.tsv"):
+    print("Fetching OpenGWAS metadata...")
     metadata_dict = ieugwaspy.gwasinfo()
     metadata_df = pd.DataFrame.from_dict(metadata_dict, orient='index')
     metadata_df = metadata_df[metadata_df["id"].str.contains("eqtl-a") == False]  # Remove eqtl records
@@ -95,7 +99,7 @@ def fetch_opengwas_metadata(metadata_output_file="../resources/opengwas_metadata
 
 
 def _clean_existing_resources():
-    # _delete_file("../resources/efo.db")
+    _delete_file("../resources/efo.db")
     _delete_file("../resources/efo_edges.tsv")
     _delete_file("../resources/efo_entailed_edges.tsv")
     _delete_file("../resources/efo_dbxrefs.tsv")
