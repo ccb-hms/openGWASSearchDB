@@ -1,5 +1,5 @@
-text2term~=2.1.0
-pandas~=1.5.3
-bioregistry==0.8.12
-Owlready2~=0.40
+text2term~=2.2.1
+pandas~=2.0.1
+bioregistry~=0.9.2
+Owlready2~=0.41
 ieugwaspy~=0.1.8

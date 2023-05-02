@@ -1,122 +1,122 @@
-OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
-bbj-a-1	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-bbj-a-2	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-bbj-a-3	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-bbj-a-70	Height	body height	EFO:0004339	0.9916273108021794
-ebi-a-GCST002783	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ebi-a-GCST004904	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ebi-a-GCST006368	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ebi-a-GCST006655	Breast size	breast size	EFO:0004884	0.9927719820682233
-ebi-a-GCST006802	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ebi-a-GCST008025	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ebi-a-GCST90002224	Height	body height	EFO:0004339	0.9916273108021794
-ebi-a-GCST90002409	Childhood body mass index	body mass index	EFO:0004340	0.7080199509053029
-ebi-a-GCST90017133	Neck circumference	neck circumference	EFO:0011043	0.9927939188221886
-ebi-a-GCST90017134	Neck circumference	neck circumference	EFO:0011043	0.9927939188221886
-ebi-a-GCST90017135	Neck circumference	neck circumference	EFO:0011043	0.9927939188221886
-ieu-a-100	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-101	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-102	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-103	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-1032	Height	body height	EFO:0004339	0.9916273108021794
-ieu-a-1033	Height	body height	EFO:0004339	0.9916273108021794
-ieu-a-1034	Height	body height	EFO:0004339	0.9916273108021794
-ieu-a-104	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-105	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-106	Weight	body weight	EFO:0004338	0.9960330715517485
-ieu-a-107	Weight	body weight	EFO:0004338	0.9960330715517485
-ieu-a-1089	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-a-2	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-a-48	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-49	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-50	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-51	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-52	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-53	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-54	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-55	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-56	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-57	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-58	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-59	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-60	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-61	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-62	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-63	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-64	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-65	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-66	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-67	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-68	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-69	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-70	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-71	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ieu-a-785	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-a-835	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-a-85	Extreme body mass index	body mass index	EFO:0004340	0.7788862630596689
-ieu-a-86	Extreme height	body height	EFO:0004339	0.6535077712544355
-ieu-a-89	Height	body height	EFO:0004339	0.9916273108021794
-ieu-a-94	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-a-95	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-a-96	Height	body height	EFO:0004339	0.9916273108021794
-ieu-a-97	Height	body height	EFO:0004339	0.9916273108021794
-ieu-a-974	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-a-98	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-a-99	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ieu-b-40	body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-b-4813	Height	body height	EFO:0004339	0.9916273108021794
-ieu-b-4814	Height	body height	EFO:0004339	0.9916273108021794
-ieu-b-4815	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ieu-b-4816	Body mass index	body mass index	EFO:0004340	0.9943017839449017
-ukb-a-248	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-a-249	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-a-382	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ukb-a-388	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ukb-a-389	Standing height	body height	EFO:0004339	0.7078300106432325
-ukb-b-10787	Standing height	body height	EFO:0004339	0.7078300106432325
-ukb-b-11842	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-b-12039	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-b-13330	Food weight	body weight	EFO:0004338	0.7552318001780525
-ukb-b-15590	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ukb-b-19953	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-b-2303	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-b-9405	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ukb-d-20536_2	Weight change during worst episode of depression: Lost weight	body weight	EFO:0004338	0.642091617988495
-ukb-d-3160_irnt	Weight, manual entry	body weight	EFO:0004338	0.6225061667961244
-ukb-e-100001_AFR	Food weight	body weight	EFO:0004338	0.7552318001780525
-ukb-e-100001_CSA	Food weight	body weight	EFO:0004338	0.7552318001780525
-ukb-e-21001_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-21001_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-21001_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-21001_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-21002_AFR	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-21002_CSA	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-21002_EAS	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-21002_MID	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-23098_AFR	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-23098_CSA	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-23098_EAS	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-23098_MID	Weight	body weight	EFO:0004338	0.9960330715517485
-ukb-e-23104_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-23104_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-23104_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-23104_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.8383061977729755
-ukb-e-3077_AFR	Seating box height	body height	EFO:0004339	0.6448868799934108
-ukb-e-3077_CSA	Seating box height	body height	EFO:0004339	0.6448868799934108
-ukb-e-3077_EAS	Seating box height	body height	EFO:0004339	0.6448868799934108
-ukb-e-3077_MID	Seating box height	body height	EFO:0004339	0.6448868799934108
-ukb-e-48_AFR	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ukb-e-48_CSA	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ukb-e-48_EAS	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ukb-e-48_MID	Waist circumference	waist circumference	EFO:0004342	0.9919822997406766
-ukb-e-49_AFR	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ukb-e-49_CSA	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ukb-e-49_EAS	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ukb-e-49_MID	Hip circumference	hip circumference	EFO:0005093	0.9932493968809266
-ukb-e-50_AFR	Standing height	body height	EFO:0004339	0.7078300106432325
-ukb-e-50_CSA	Standing height	body height	EFO:0004339	0.7078300106432325
-ukb-e-50_EAS	Standing height	body height	EFO:0004339	0.7078300106432325
-ukb-e-51_AFR	Seated height	body height	EFO:0004339	0.7929469349800976
-ukb-e-51_CSA	Seated height	body height	EFO:0004339	0.7929469349800976
-ukb-e-51_EAS	Seated height	body height	EFO:0004339	0.7929469349800976
-ukb-e-51_MID	Seated height	body height	EFO:0004339	0.7929469349800976
+OpenGWASID	OpenGWASTrait	OntologyTerm	OntologyTermID	MappingConfidence
+bbj-a-1	Body mass index	body mass index	EFO:0004340	0.994277953438675
+bbj-a-2	Body mass index	body mass index	EFO:0004340	0.994277953438675
+bbj-a-3	Body mass index	body mass index	EFO:0004340	0.994277953438675
+bbj-a-70	Height	body height	EFO:0004339	0.9916254800004596
+ebi-a-GCST002783	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ebi-a-GCST004904	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ebi-a-GCST006368	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ebi-a-GCST006655	Breast size	breast size	EFO:0004884	0.9928304635684143
+ebi-a-GCST006802	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ebi-a-GCST008025	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ebi-a-GCST90002224	Height	body height	EFO:0004339	0.9916254800004596
+ebi-a-GCST90002409	Childhood body mass index	body mass index	EFO:0004340	0.70800298173747
+ebi-a-GCST90017133	Neck circumference	neck circumference	EFO:0011043	0.9926010643228119
+ebi-a-GCST90017134	Neck circumference	neck circumference	EFO:0011043	0.9926010643228119
+ebi-a-GCST90017135	Neck circumference	neck circumference	EFO:0011043	0.9926010643228119
+ieu-a-100	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-101	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-102	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-103	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-1032	Height	body height	EFO:0004339	0.9916254800004596
+ieu-a-1033	Height	body height	EFO:0004339	0.9916254800004596
+ieu-a-1034	Height	body height	EFO:0004339	0.9916254800004596
+ieu-a-104	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-105	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-106	Weight	body weight	EFO:0004338	0.9960041057409017
+ieu-a-107	Weight	body weight	EFO:0004338	0.9960041057409017
+ieu-a-1089	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-a-2	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-a-48	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-49	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-50	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-51	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-52	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-53	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-54	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-55	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-56	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-57	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-58	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-59	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-60	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-61	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-62	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-63	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-64	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-65	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-66	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-67	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-68	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-69	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-70	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-71	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ieu-a-785	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-a-835	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-a-85	Extreme body mass index	body mass index	EFO:0004340	0.7788675954335603
+ieu-a-86	Extreme height	body height	EFO:0004339	0.6535065647092563
+ieu-a-89	Height	body height	EFO:0004339	0.9916254800004596
+ieu-a-94	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-a-95	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-a-96	Height	body height	EFO:0004339	0.9916254800004596
+ieu-a-97	Height	body height	EFO:0004339	0.9916254800004596
+ieu-a-974	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-a-98	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-a-99	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ieu-b-40	body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-b-4813	Height	body height	EFO:0004339	0.9916254800004596
+ieu-b-4814	Height	body height	EFO:0004339	0.9916254800004596
+ieu-b-4815	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ieu-b-4816	Body mass index	body mass index	EFO:0004340	0.994277953438675
+ukb-a-248	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-a-249	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-a-382	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ukb-a-388	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ukb-a-389	Standing height	body height	EFO:0004339	0.707828703805082
+ukb-b-10787	Standing height	body height	EFO:0004339	0.707828703805082
+ukb-b-11842	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-b-12039	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-b-13330	Food weight	body weight	EFO:0004338	0.7552098371508256
+ukb-b-15590	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ukb-b-19953	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-b-2303	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-b-9405	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ukb-d-20536_2	Weight change during worst episode of depression: Lost weight	body weight	EFO:0004338	0.642072945210568
+ukb-d-3160_irnt	Weight, manual entry	body weight	EFO:0004338	0.6224880635861072
+ukb-e-100001_AFR	Food weight	body weight	EFO:0004338	0.7552098371508256
+ukb-e-100001_CSA	Food weight	body weight	EFO:0004338	0.7552098371508256
+ukb-e-21001_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-21001_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-21001_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-21001_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-21002_AFR	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-21002_CSA	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-21002_EAS	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-21002_MID	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-23098_AFR	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-23098_CSA	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-23098_EAS	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-23098_MID	Weight	body weight	EFO:0004338	0.9960041057409017
+ukb-e-23104_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-23104_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-23104_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-23104_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.8382861060247877
+ukb-e-3077_AFR	Seating box height	body height	EFO:0004339	0.6448856893646371
+ukb-e-3077_CSA	Seating box height	body height	EFO:0004339	0.6448856893646371
+ukb-e-3077_EAS	Seating box height	body height	EFO:0004339	0.6448856893646371
+ukb-e-3077_MID	Seating box height	body height	EFO:0004339	0.6448856893646371
+ukb-e-48_AFR	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ukb-e-48_CSA	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ukb-e-48_EAS	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ukb-e-48_MID	Waist circumference	waist circumference	EFO:0004342	0.9918922767902656
+ukb-e-49_AFR	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ukb-e-49_CSA	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ukb-e-49_EAS	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ukb-e-49_MID	Hip circumference	hip circumference	EFO:0005093	0.9930824927523318
+ukb-e-50_AFR	Standing height	body height	EFO:0004339	0.707828703805082
+ukb-e-50_CSA	Standing height	body height	EFO:0004339	0.707828703805082
+ukb-e-50_EAS	Standing height	body height	EFO:0004339	0.707828703805082
+ukb-e-51_AFR	Seated height	body height	EFO:0004339	0.7929454709939845
+ukb-e-51_CSA	Seated height	body height	EFO:0004339	0.7929454709939845
+ukb-e-51_EAS	Seated height	body height	EFO:0004339	0.7929454709939845
+ukb-e-51_MID	Seated height	body height	EFO:0004339	0.7929454709939845

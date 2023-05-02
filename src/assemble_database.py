@@ -6,9 +6,9 @@ import pandas as pd
 from pathlib import Path
 from text2term import Mapper
 from generate_semql_ontology_tables import get_semsql_tables_for_ontology
-from mapping_report_generator import MappingReportGenerator
+from mapping_report_generator import get_mapping_counts
 
-__version__ = "0.3.1"
+__version__ = "0.4.0"
 
 
 # Assemble a SQLite database that contains:
@@ -29,7 +29,7 @@ def assemble_database():
     print("...working with EFO v" + ontology_version)
 
     # Create SQLite database
-    db_name = '../opengwas_trait_search.db'
+    db_name = "../opengwas_trait_search.db"
     Path(db_name).touch()
     db_connection = sqlite3.connect(db_name)
 
@@ -59,13 +59,11 @@ def assemble_database():
                                   "`Mapped Term IRI`,`Mapping Score`,Tags,Ontology")
 
     # Get counts of mappings
-    counts_df = MappingReportGenerator().get_mapping_counts(mappings_df=mappings,
-                                                            ontology_name=target_ontology_name,
-                                                            ontology_iri=efo_url)
+    counts_df = get_mapping_counts(mappings_df=mappings, ontology_name=target_ontology_name, ontology_iri=efo_url)
     counts_df.to_csv("../resources/opengwas_efo_mappings_counts.tsv", sep="\t", index=False)
 
     # Merge the counts table with the labels table on the "iri" column, and add the merged table to the database
-    merged_df = pd.merge(labels_df, counts_df, on="iri")
+    merged_df = pd.merge(labels_df, counts_df, on="IRI")
     import_df_to_db(db_connection, data_frame=merged_df, table_name="efo_labels", table_columns=semsql_tbl_cols + ",IRI")
 
 
@@ -73,7 +71,7 @@ def assemble_database():
 def import_df_to_db(connection, data_frame, table_name, table_columns):
     create_table_query = '''CREATE TABLE IF NOT EXISTS ''' + table_name + ''' (''' + table_columns + ''')'''
     connection.cursor().execute(create_table_query)
-    data_frame.to_sql(table_name, connection, if_exists='replace', index=False)
+    data_frame.to_sql(table_name, connection, if_exists="replace", index=False)
 
 
 # Map traits in OpenGWAS metadata to terms in EFO
@@ -85,6 +83,7 @@ def map_traits_to_efo(metadata_file, ontology_url):
                                   save_mappings=True, output_file="../resources/opengwas_efo_mappings.csv",
                                   base_iris=("http://www.ebi.ac.uk/efo/", "http://purl.obolibrary.org/obo/MONDO",
                                              "http://purl.obolibrary.org/obo/HP", "http://www.orpha.net/ORDO"))
+    mappings.columns = mappings.columns.str.replace(" ", "")  # remove spaces from column names
     return mappings
 
 
@@ -92,7 +91,7 @@ def map_traits_to_efo(metadata_file, ontology_url):
 def fetch_opengwas_metadata(metadata_output_file="../resources/opengwas_metadata.tsv"):
     print("Fetching OpenGWAS metadata...")
     metadata_dict = ieugwaspy.gwasinfo()
-    metadata_df = pd.DataFrame.from_dict(metadata_dict, orient='index')
+    metadata_df = pd.DataFrame.from_dict(metadata_dict, orient="index")
     metadata_df = metadata_df[metadata_df["id"].str.contains("eqtl-a") == False]  # Remove eqtl records
     metadata_df.to_csv(metadata_output_file, index=False, sep="\t")
     return metadata_output_file, metadata_df

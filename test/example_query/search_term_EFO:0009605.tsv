@@ -1,4 +1,4 @@
-OpenGWAS ID	OpenGWAS Trait	Ontology Term	Ontology Term ID	Mapping Confidence
-finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.7408638022650404
-finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.934514484644577
-prot-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.6157063078445665
+OpenGWASID	OpenGWASTrait	OntologyTerm	OntologyTermID	MappingConfidence
+finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.7408005954486141
+finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9344044008001602
+prot-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.6157982719041578

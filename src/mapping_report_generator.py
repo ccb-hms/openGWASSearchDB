@@ -2,64 +2,74 @@ from owlready2 import *
 from text2term import onto_utils
 import pandas as pd
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 
-class MappingReportGenerator:
+TERM_BLOCKLIST = ("BFO_", "CHEBI_", "PATO_", "NCBITaxon_", "dbpedia.org")
 
-    def __init__(self):
-        pass
 
-    def get_mapping_counts(self, mappings_df, ontology_iri, ontology_name):
-        print("Getting counts for mappings to " + ontology_name + " (" + ontology_iri + ")...")
-        ontology = get_ontology(ontology_iri).load()
-        self.create_instances(ontology, ontology_name, mappings_df=mappings_df, use_reasoning=False)
-        term_iri_column = "Mapped Term IRI"
-        output = []
-        for term in ontology.classes():
-            if "BFO_" not in term.iri and "PATO_" not in term.iri:
-                term_df = mappings_df[mappings_df[term_iri_column] == term.iri]
-                direct_mappings = term_df.shape[0]
-                instances = term.instances()
-                local_instances = []
-                for instance in instances:
-                    if onto_utils.BASE_IRI in instance.iri:
-                        local_instances.append(instance)
-                inferred_mappings = len(local_instances)
-                output.append((term.iri, direct_mappings, inferred_mappings))
-        output_df = pd.DataFrame(data=output, columns=['iri', 'direct mappings', 'inferred mappings'])
-        print("...done")
-        return output_df
+def get_mapping_counts(mappings_df, ontology_iri, ontology_name, source_term_id_col='SourceTermID',
+                       source_term_secondary_id_col='', save_ontology=False, use_reasoning=False,
+                       ontology_term_blocklist=TERM_BLOCKLIST):
+    print("Computing counts of direct and inherited mappings...")
+    mappings_df.columns = mappings_df.columns.str.replace(' ', '')  # remove spaces from column names
+    ontology = get_ontology(ontology_iri).load()
+    _create_instances(ontology, ontology_name, mappings_df, save_ontology=save_ontology, use_reasoning=use_reasoning,
+                      source_term_id_col=source_term_id_col, source_term_secondary_id_col=source_term_secondary_id_col)
+    term_iri_column = "MappedTermIRI"
+    output = []
+    for term in ontology.classes():
+        if not any([iri_bit in term.iri for iri_bit in ontology_term_blocklist]):
+            term_df = mappings_df[mappings_df[term_iri_column] == term.iri]
+            direct_mappings = term_df.shape[0]
+            instances = term.instances()
+            local_instances = []
+            for instance in instances:
+                if onto_utils.BASE_IRI in instance.iri:
+                    local_instances.append(instance)
+            inferred_mappings = len(local_instances)
+            output.append((term.iri, direct_mappings, inferred_mappings))
+    output_df = pd.DataFrame(data=output, columns=['IRI', 'Direct', 'Inherited'])
+    return output_df
 
-    def  create_instances(self, ontology, ontology_name, mappings_df, save_ontology=False, use_reasoning=False):
-        with ontology:
-            class table_id(Thing >> str):  # TODO: NHANES-specific
+
+def _create_instances(ontology, ontology_name, mappings_df, source_term_id_col, source_term_secondary_id_col='',
+                      save_ontology=False, use_reasoning=False):
+    with ontology:
+        if source_term_secondary_id_col != '':
+            class resource_secondary_id(Thing >> str):
                 pass
-            class resource_id(Thing >> str):
-                pass
-        for index, row in mappings_df.iterrows():
-            # table_id = row['Table']
-            # term_id = row['Variable']  # TODO: NHANES-specific
-            term = row['Source Term']
-            term_id = row['Source Term ID']
-            class_iri = row['Mapped Term IRI']
-            ontology_class = IRIS[class_iri]
+        class resource_id(Thing >> str):
+            pass
+    for index, row in mappings_df.iterrows():
+        source_term = row['SourceTerm']
+        source_term_id = row[source_term_id_col]
+        ontology_term_iri = row['MappedTermIRI']
+        ontology_term = IRIS[ontology_term_iri]
 
-            # term_iri = onto_utils.BASE_IRI + table_id + "_" + variable_id  # TODO: NHANES-specific
-            term_iri = onto_utils.BASE_IRI + term_id
-            if IRIS[term_iri] is not None:
-                labels = IRIS[term_iri].label
-                if term not in labels:
-                    labels.append(term)
+        if ontology_term is not None:
+            if source_term_secondary_id_col != '':
+                source_term_secondary_id = row[source_term_secondary_id_col]
+                new_instance_iri = onto_utils.BASE_IRI + source_term_secondary_id + "_" + source_term_id
             else:
-                new_instance = ontology_class(label=term, iri=term_iri)  # create OWL instance to represent mapping
-                new_instance.resource_id.append(term_id)
-                # new_instance.table_id.append(table_id)  # TODO: NHANES-specific
-        if save_ontology:
-            ontology.save(ontology_name + "_mappings.owl")
+                new_instance_iri = onto_utils.BASE_IRI + source_term_id
 
-        if use_reasoning:
-            print("...reasoning over ontology...")
-            owlready2.reasoning.JAVA_MEMORY = 20000  # TODO: even so the HermiT reasoner performs poorly on EFO+mappings
-            with ontology:
-                sync_reasoner()
+            if IRIS[new_instance_iri] is not None:
+                labels = IRIS[new_instance_iri].label
+                if source_term not in labels:
+                    labels.append(source_term)
+            else:
+                # create OWL instance to represent mapping
+                new_instance = ontology_term(label=source_term, iri=new_instance_iri)
+                new_instance.resource_id.append(source_term_id)
+
+                if source_term_secondary_id_col != '':
+                    new_instance.resource_secondary_id.append(source_term_secondary_id)
+    if save_ontology:
+        ontology.save(ontology_name + "_mappings.owl")
+
+    if use_reasoning:
+        print("...reasoning over ontology...")
+        owlready2.reasoning.JAVA_MEMORY = 20000  # TODO: even so the HermiT reasoner performs poorly on EFO+mappings
+        with ontology:
+            sync_reasoner()
