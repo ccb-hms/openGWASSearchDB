@@ -15,6 +15,7 @@ __version__ = "0.4.1"
 # 1) The original OpenGWAS metadata table containing all traits and associated OpenGWAS DB record identifiers
 # 2) text2term-generated mappings of traits in the OpenGWAS database to terms in the Experimental Factor Ontology (EFO)
 # 3) SemanticSQL tables of EFO that enable searching over traits by leveraging the EFO class hierarchy
+# 4) Counts of how many traits in the metadata were mapped—either directly or indirectly—to each ontology term
 def assemble_database():
     _clean_existing_resources()
     target_ontology_name = "EFO"
@@ -76,7 +77,7 @@ def import_df_to_db(connection, data_frame, table_name, table_columns):
 
 # Map traits in OpenGWAS metadata to terms in EFO
 def map_traits_to_efo(metadata_file, ontology_url):
-    print("Mapping traits in the OpenGWAS metadata to EFO...")
+    print("Mapping traits in OpenGWAS metadata to EFO...")
     mappings = text2term.map_file(input_file=metadata_file, csv_columns=("trait", "id"), separator="\t",
                                   target_ontology=ontology_url, excl_deprecated=True, save_graphs=False,
                                   max_mappings=1, min_score=0.6, mapper=Mapper.TFIDF,
