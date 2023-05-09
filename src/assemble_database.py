@@ -8,7 +8,7 @@ from text2term import Mapper
 from generate_semql_ontology_tables import get_semsql_tables_for_ontology
 from mapping_report_generator import get_mapping_counts
 
-__version__ = "0.4.1"
+__version__ = "0.5.0"
 
 
 # Assemble a SQLite database that contains:
@@ -38,14 +38,12 @@ def assemble_database():
     metadata_file, metadata_df = fetch_opengwas_metadata()
 
     # Add OpenGWAS metadata table to the database
-    metadata_tbl_cols = "idx,sex,category,population,group_name,build,author,year,trait,pmid,id,sample_size," \
-                        "mr,nsnp,priority,ncase,ncontrol,ontology,subcategory,consortium,note,unit,access,batch," \
-                        "units,sd,study_design,covariates,imputation_panel,qc_prior_to_upload,doi," \
-                        "coverage,beta_transformation"
+    metadata_tbl_cols = "ncase,group_name,year,author,consortium,sex,pmid,population,unit,sample_size,build,ncontrol," \
+                        "trait,id,category,subcategory,ontology,note,mr,nsnp,priority,sd"
     import_df_to_db(db_connection, data_frame=metadata_df, table_name="opengwas_metadata", table_columns=metadata_tbl_cols)
 
     # Add SemanticSQL tables to the database
-    semsql_tbl_cols = "subject,object"
+    semsql_tbl_cols = "Subject TEXT,Object TEXT"
     import_df_to_db(db_connection, data_frame=edges_df, table_name="efo_edges", table_columns=semsql_tbl_cols)
     import_df_to_db(db_connection, data_frame=entailed_edges_df, table_name="efo_entailed_edges", table_columns=semsql_tbl_cols)
     import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name="efo_dbxrefs", table_columns=semsql_tbl_cols)
@@ -56,8 +54,8 @@ def assemble_database():
     # Map the traits to EFO and add the resulting mappings table to the database
     mappings = map_traits_to_efo(metadata_file, efo_url)
     import_df_to_db(db_connection, data_frame=mappings, table_name="opengwas_trait_mappings",
-                    table_columns="`Source Term ID`,`Source Term`,`Mapped Term Label`,`Mapped Term CURIE`,"
-                                  "`Mapped Term IRI`,`Mapping Score`,Tags,Ontology")
+                    table_columns="SourceTermID TEXT,SourceTerm TEXT,MappedTermLabel TEXT,"
+                                  "MappedTermCURIE TEXT,MappedTermIRI TEXT,MappingScore REAL")
 
     # Get counts of mappings
     counts_df = get_mapping_counts(mappings_df=mappings, ontology_name=target_ontology_name, ontology_iri=efo_url)
@@ -65,7 +63,8 @@ def assemble_database():
 
     # Merge the counts table with the labels table on the "iri" column, and add the merged table to the database
     merged_df = pd.merge(labels_df, counts_df, on="IRI")
-    import_df_to_db(db_connection, data_frame=merged_df, table_name="efo_labels", table_columns=semsql_tbl_cols + ",IRI")
+    labels_tbl_cols = semsql_tbl_cols + ",IRI TEXT,Direct INT,Inherited INT"
+    import_df_to_db(db_connection, data_frame=merged_df, table_name="efo_labels", table_columns=labels_tbl_cols)
 
 
 # Import the given data frame to the SQLite database through the specified connection
