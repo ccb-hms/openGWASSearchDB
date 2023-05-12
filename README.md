@@ -11,11 +11,13 @@ This project aims to facilitate search for GWAS records in the OpenGWAS database
 ## Example Queries
 `src/example_query.py` contains a simple function to query the generated database for OpenGWAS records related to a user-given trait. Executing this script will perform example queries for three traits and print the results. 
 
-For example, when searching for OpenGWAS records about `pancreas disease` our approach finds more records than a keyword-based search over OpenGWAS traits:
+For example, when searching for OpenGWAS records about `pancreas disease`, our approach returns the following results:
 
 ![](resources/example_search_1.png)
 
-Furthermore, using our approach, one can search for records about any more specific kind of `pancreas disease`, basically by including subclasses of 'pancreas disease' in the search, thus obtaining results such as:
+A similar, keyword-based search in OpenGWAS would not have found these.  
+
+Furthermore, users can search for records mapped to any more specific type of 'pancreas disease'— under the hood this is done by including subclasses of the ontology term for 'pancreas disease' in the search, obtaining results such as:
 
 ![](resources/example_search_2.png)
 
@@ -50,6 +52,6 @@ base_iris=("http://www.ebi.ac.uk/efo/",
 
 ## Dependencies
 The latest ontology-based search database was built using:
-- OpenGWAS metadata snapshot from 04/27/2023
+- OpenGWAS metadata snapshot from 05/09/2023
 - Experimental Factor Ontology (EFO) v3.43.0
-- tex2term v2.2.1 
+- tex2term v2.3.0
