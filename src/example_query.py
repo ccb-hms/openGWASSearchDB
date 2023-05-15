@@ -148,55 +148,9 @@ if __name__ == '__main__':
     db_connection = sqlite3.connect("../opengwas_trait_search.db")
     db_cursor = db_connection.cursor()
 
-    do_example_queries(db_cursor, search_term="EFO:0009605")
-    """
-    Expected output of search for 'pancreas disease':
-    
-    include_subclasses=False
-        Resources annotated with EFO:0009605: 4
-            PROT-a-2554  finn-a-K11_PANCOTH finn-b-E4_PANCSECNAS    finn-b-K11_PANCOTH
-    
-    include_subclasses=True, direct_subclasses_only=True    
-        Resources annotated with EFO:0009605 or its direct (asserted) subclasses: 6
-            PROT-a-2554 ebi-a-GCST90016675  ebi-a-GCST90016676  finn-a-K11_PANCOTH  finn-b-E4_PANCSECNAS
-     
-    include_subclasses=True, direct_subclasses_only=False    
-        Resources annotated with EFO:0009605 or its indirect (inferred) subclasses: 109
-            EBI-a-GCST005047    EBI-a-GCST005413    EBI-a-GCST005536    EBI-a-GCST005898    EBI-a-GCST006867
-    """
-
-    do_example_queries(db_cursor, search_term="EFO:0005741")
-    """
-    Expected output of search for 'infectious disease' 
-    
-    include_subclasses=False
-        Resources annotated with EFO:0005741: 4
-            finn-a-AB1_OTHER_INFECTIONS finn-b-AB1_OTHER_INFECTIONS finn-b-Z21_CARRIER_INFECTIOUS_DISEA finn-b-Z21_CONTACT_W_EXPOS_COMMUNICAB_DISEA
-    
-    include_subclasses=True, direct_subclasses_only=True
-        Resources annotated with EFO:0005741 or its direct (asserted) subclasses: 58
-            UKB-b-188   UKB-b-266   UKB-b-3683  finn-a-AB1_INFECTIONS finn-a-AB1_BACT_BIR_OTHER_INF_AGENTS ...
-        
-    include_subclasses=True, direct_subclasses_only=False
-        Resources annotated with EFO:0005741 or its indirect (inferred) subclasses: 275
-            PROT-a-2379 PROT-a-2455 PROT-a-627  PROT-a-737  UKB-a-112 ...
-    """
-
-    do_example_queries(db_cursor, search_term="EFO:0004324")
-    """
-    Expected output of search for 'body weights and measures':
-    
-    include_subclasses=False
-        Resources annotated with EFO:0004324: 0
-    
-    include_subclasses=True, direct_subclasses_only=True
-        Resources annotated with EFO:0004324 or its direct (asserted) subclasses: 66
-            EBI-a-GCST004904    EBI-a-GCST006368    UKB-a-248   UKB-a-249   UKB-a-382 ...
-            
-    include_subclasses=True, direct_subclasses_only=False
-        Resources annotated with EFO:0004324 or its indirect (inferred) subclasses: 118
-            EBI-a-GCST003435    EBI-a-GCST004904    EBI-a-GCST005314    EBI-a-GCST006368    EBI-a-GCST007557 ...
-    """
+    do_example_queries(db_cursor, search_term="EFO:0009605")  # 'pancreas disease'
+    do_example_queries(db_cursor, search_term="EFO:0005741")  # 'infectious disease'
+    do_example_queries(db_cursor, search_term="EFO:0004324")  # 'body weights and measures'
 
     db_cursor.close()
     db_connection.close()
