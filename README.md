@@ -11,13 +11,13 @@ This project aims to facilitate search for GWAS records in the OpenGWAS database
 ## Example Queries
 `src/example_query.py` contains a simple function to query the generated database for OpenGWAS records related to a user-given trait. Executing this script will perform example queries for three traits and print the results. 
 
-For example, when searching for OpenGWAS records about `pancreas disease`, our approach returns the following results:
+For example, when searching for OpenGWAS records about `pancreas disease`, our approach returns the results:
 
 ![](resources/example_search_1.png)
 
 A similar, keyword-based search in OpenGWAS would not have found these.  
 
-Furthermore, users can search for records mapped to any more specific type of 'pancreas disease'— under the hood this is done by including subclasses of the ontology term for 'pancreas disease' in the search, obtaining results such as:
+Furthermore, users can search for records mapped to any more specific type of 'pancreas disease'— under the hood this is done by including subclasses of the ontology term for 'pancreas disease' in the search, obtaining the results:
 
 ![](resources/example_search_2.png)
 
@@ -28,7 +28,7 @@ The metadata are obtained directly from OpenGWAS using the [ieugwaspy](https://g
 
 ## Mapping Phenotypes to EFO
 The inputs to _text2term_ are the metadata table and the EFO ontology, and the tool is configured to: 
-- include only mappings with a score above a minimum threshold (`min_score=0.6` in a [0,1] scale where 1=exact match).
+- include only mappings with a score above a threshold (`min_score=0.6` in a [0,1] scale where 1=exact match).
 - compute only the highest scored mapping for each trait in the metadata (`max_mappings=1`). 
 - use the TFIDF mapper (`mapper=Mapper.TFIDF`), which computes TFIDF-based vector representations of traits and then uses cosine distance to determine how close each trait is to each ontology term. 
 - exclude terms that have been marked as deprecated (`excl_deprecated=True`) such that we only map to terms that are current and expected to be in EFO's future releases.
