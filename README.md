@@ -26,7 +26,7 @@ Furthermore, users can search for records mapped to any more specific type of 'p
 The metadata are obtained directly from OpenGWAS using the [ieugwaspy](https://github.com/MRCIEU/ieugwaspy) package—a Python interface to the OpenGWAS database API. The metadata preprocessing consists of removing all EQTL records—by discarding records whose `id` contains `eqtl-a`, which is the prefix for all such records. 
 
 
-## Mapping Phenotypes to EFO
+## Mapping Phenotypes in OpenGWAS Metadata to EFO
 The inputs to _text2term_ are the metadata table and the EFO ontology, and the tool is configured to: 
 - include only mappings with a score above a threshold (`min_score=0.6` in a [0,1] scale where 1=exact match).
 - compute only the highest scored mapping for each trait in the metadata (`max_mappings=1`). 
@@ -35,7 +35,7 @@ The inputs to _text2term_ are the metadata table and the EFO ontology, and the t
 
 EFO specifies relationships between terms that exist in external ontologies such as MONDO, ChEBI, etc. Since our goal is to map phenotypes to appropriate ontology terms, when they exist, we also configured _text2term_ to:
 
-- only map to terms from ontologies that describe phenotypes: EFO itself, the Monarch Disease Ontology (MONDO), the Human Phenotype Ontology (HPO), and the Orphanet Rare Disease Ontology (ORDO). This is done using the parameter `base_iris` which limits search to terms in the given namespace(s). 
+- only map to terms from ontologies that describe phenotypes: EFO itself, the Monarch Disease Ontology (MONDO), the Human Phenotype Ontology (HPO), the Orphanet Rare Disease Ontology (ORDO), and the Human Disease Ontology (DOID). This is done using the parameter `base_iris` which limits search to terms in the given namespace(s). 
 
 _text2term_ configuration:
 ```python
@@ -46,7 +46,8 @@ excl_deprecated=True,   # exclude deprecated ontology terms
 base_iris=("http://www.ebi.ac.uk/efo/", 
            "http://purl.obolibrary.org/obo/MONDO",
            "http://purl.obolibrary.org/obo/HP", 
-           "http://www.orpha.net/ORDO")
+           "http://www.orpha.net/ORDO",
+           "http://purl.obolibrary.org/obo/DOID")
 ```
 
 
