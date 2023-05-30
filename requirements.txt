@@ -1,5 +1,7 @@
-text2term~=2.3.0
+text2term~=2.3.2
 pandas~=2.0.1
 bioregistry~=0.9.8
 Owlready2~=0.41
 ieugwaspy~=0.1.8
+metapub~=0.5.5
+tqdm~=4.65.0
