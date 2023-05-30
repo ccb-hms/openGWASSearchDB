@@ -2,7 +2,7 @@ import os
 import sqlite3
 import pandas as pd
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 
 """
@@ -33,7 +33,7 @@ SQL:
         m.MappedTermLabel AS 'OntologyTerm', 
         m.MappedTermCURIE AS 'OntologyTermID',
         m.MappingScore AS 'MappingConfidence'
-    FROM opengwas_trait_mappings m
+    FROM opengwas_mappings m
     LEFT JOIN efo_edges ee ON (m.MappedTermCURIE = ee.Subject)
     WHERE (m.MappedTermCURIE = 'EFO:0009605')
 
@@ -49,7 +49,7 @@ SQL:
         m.MappedTermLabel AS 'OntologyTerm', 
         m.MappedTermCURIE AS 'OntologyTermID',
         m.MappingScore AS 'MappingConfidence'
-    FROM opengwas_trait_mappings m
+    FROM opengwas_mappings m
     LEFT JOIN efo_edges ee ON (m.MappedTermCURIE = ee.Subject)
     WHERE (m.MappedTermCURIE = 'EFO:0009605' OR ee.Object = 'EFO:0009605')
 
@@ -65,7 +65,7 @@ SQL:
         m.MappedTermLabel AS 'OntologyTerm', 
         m.MappedTermCURIE AS 'OntologyTermID',
         m.MappingScore AS 'MappingConfidence'
-    FROM opengwas_trait_mappings m
+    FROM opengwas_mappings m
     LEFT JOIN efo_entailed_edges ee ON (m.MappedTermCURIE = ee.Subject)
     WHERE (m.MappedTermCURIE = 'EFO:0009605' OR ee.Object = 'EFO:0009605')
 """
@@ -98,7 +98,7 @@ def resources_annotated_with_term(cursor, search_term, include_subclasses=True, 
                     m.MappedTermLabel AS 'OntologyTerm', 
                     m.MappedTermCURIE AS 'OntologyTermID',
                     m.MappingScore AS 'MappingConfidence'
-                FROM opengwas_trait_mappings m
+                FROM opengwas_mappings m
                 LEFT JOIN ''' + ontology_table + ''' ee ON (m.MappedTermCURIE = ee.Subject)
                 WHERE (m.MappedTermCURIE = \'''' + search_term + '''\'''' + \
             (''' OR ee.Object = \'''' + search_term + '''\'''' if include_subclasses else '''''') +\
@@ -145,7 +145,7 @@ def do_example_queries(cursor, search_term='EFO:0009605'):  # EFO:0009605 'pancr
 
 
 if __name__ == '__main__':
-    db_connection = sqlite3.connect("../opengwas_trait_search.db")
+    db_connection = sqlite3.connect("../opengwas_search.db")
     db_cursor = db_connection.cursor()
 
     do_example_queries(db_cursor, search_term="EFO:0009605")  # 'pancreas disease'

@@ -1,8 +1,5 @@
 OpenGWASID	OpenGWASTrait	OntologyTerm	OntologyTermID	MappingConfidence
-bbj-a-140	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.9869383715345765
-ebi-a-GCST90016675	Pancreas fat	pancreatic neoplasm	EFO:0003860	0.8639404752491574
-ebi-a-GCST90016676	Pancreas iron content	pancreatic neoplasm	EFO:0003860	0.6744093495501354
-finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.7408081402355954
-finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.9344176493716314
-ieu-a-822	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.9869383715345765
-prot-a-2554	Ribonuclease pancreatic	pancreas disease	EFO:0009605	0.6157818388186046
+ebi-a-GCST90016675	Pancreas fat	pancreatic neoplasm	EFO:0003860	0.862
+ebi-a-GCST90016676	Pancreas iron content	pancreatic neoplasm	EFO:0003860	0.673
+finn-b-E4_PANCSECNAS	Disorder of pancreatic internal secretion, other and/or unspecified	pancreas disease	EFO:0009605	0.741
+finn-b-K11_PANCOTH	Other diseases of pancreas	pancreas disease	EFO:0009605	0.931

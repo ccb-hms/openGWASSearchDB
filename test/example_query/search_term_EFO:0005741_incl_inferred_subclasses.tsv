@@ -1,228 +1,222 @@
 OpenGWASID	OpenGWASTrait	OntologyTerm	OntologyTermID	MappingConfidence
-bbj-a-101	Chronic hepatitis C	chronic hepatitis C virus infection	EFO:0004220	0.9918796006726741
-bbj-a-149	Pulmonary tuberculosis	pulmonary tuberculosis	EFO:1000049	0.99213983288852
-bbj-a-99	Chronic hepatitis B	chronic hepatitis B virus infection	EFO:0004239	0.9908831412858254
-ebi-a-GCST90006894	Cytomegalovirus pp28 antibody levels	cytomegalovirus infection	EFO:0001062	0.6097214968644695
-ebi-a-GCST90006895	Cytomegalovirus pp52 antibody levels	cytomegalovirus infection	EFO:0001062	0.6042066731468814
-ebi-a-GCST90006911	Helicobacter pylori CagA antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.636224753689316
-ebi-a-GCST90006912	Helicobacter pylori Catalase antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.6561411752426424
-ebi-a-GCST90006913	Helicobacter pylori GroEL antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.6343219095282271
-ebi-a-GCST90006914	Helicobacter pylori OMP antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.664730882350889
-ebi-a-GCST90006915	Helicobacter pylori UREA antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.6749242597862685
-ebi-a-GCST90006916	Helicobacter pylori VacA antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.6351570430314398
-ebi-a-GCST90010154	NF-kappa-B essential modulator levels	immunodeficiency 33	MONDO:0010386	0.7149410480088272
-ebi-a-GCST90011310	F_Bacteroidaceae abundance	commensal Bacteroidaceae infectious disease	EFO:1000872	0.6970222609392018
-ebi-a-GCST90011323	G_Bacteroides abundance	Bacteroides infectious disease	EFO:1000832	0.6065451517520491
-ebi-a-GCST90011349	O_Burkholderiales abundance	burkholderia infectious disease	MONDO:0043953	0.697324383633623
-ebi-a-GCST90011365	OTU97_119 (Desulfovibrio) abundance	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.6639192495760511
-ebi-a-GCST90011433	OTU99_140 (Desulfovibrio) abundance	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.6578165034717743
-ebi-a-GCST90011566	OTU97_119 (Desulfovibrio) prevalence	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.6478710957307813
-ebi-a-GCST90011634	OTU99_140 (Desulfovibrio) prevalence	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.6421965570864472
-ebi-a-GCST90012079	NF-kappa-B essential modulator levels	immunodeficiency 33	MONDO:0010386	0.7149410480088272
-ebi-a-GCST90016935	Gut microbiota abundance (family Desulfovibrionaceae id.3169)	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.6071134267887298
-ebi-a-GCST90017093	Gut microbiota abundance (order Bifidobacteriales id.432)	commensal Bifidobacteriales infectious disease	EFO:1000873	0.6024400724092989
-ebi-a-GCST90026455	HTLV-1 associated myelopathy	tropical spastic paraparesis	EFO:0007527	0.797527883608982
-finn-b-AB1_AMOEBIASIS	Amoebiasis	amebiasis	EFO:0007144	0.996361810351761
-finn-b-AB1_ANOGENITAL_HERPES_SIMPLEX	Anogenital herpesviral [herpes simplex] infection	Herpes simplex infection	EFO:1002022	0.7983439856524215
-finn-b-AB1_ARTHROPOD	Arthropod-borne viral fevers and viral haemorrhagic fevers	viral hemorrhagic fever	MONDO:0018087	0.7712132060579697
-finn-b-AB1_ASPERGILLOSIS	Aspergillosis	aspergillosis	EFO:0007157	0.9897080711549724
-finn-b-AB1_ATYPICAL_CNS_VIRUS	Atypical virus infections of central nervous system	central nervous system infection	EFO:1001456	0.7818610536116539
-finn-b-AB1_BACTINF_NOS	Bacterial infection, other or unspecified	bacterial disease	EFO:0000771	0.9877502067790348
-finn-b-AB1_BACT_BIR_OTHER_INF_AGENTS	Bacterial, viral and other infectious agents	bacterial disease	EFO:0000771	0.7084225156075469
-finn-b-AB1_BACT_INTEST_OTH	Other bacterial intestinal infections	bacterial disease	EFO:0000771	0.7799677945299253
-finn-b-AB1_CANDIDIASIS	Candidiasis	candidiasis	MONDO:0002026	0.9834137408567512
-finn-b-AB1_CHLAMYDIA_OTHER	Other sexually transmitted chlamydial diseases	sexually transmitted disease	MONDO:0021681	0.7837441299081767
-finn-b-AB1_CHOLERA	Cholera	Vibrio infectious disease	EFO:1001235	0.9947199883369144
-finn-b-AB1_CMV	Cytomegaloviral disease	cytomegalovirus infection	EFO:0001062	0.9927555797579065
-finn-b-AB1_DERMATOPHYTOSIS	Dermatophytosis	dermatophytosis	MONDO:0004678	0.9947727471457358
-finn-b-AB1_EARLY_SYPHILIS	Early syphilis	syphilis	EFO:0007504	0.796121102954657
-finn-b-AB1_EBV	Infectious mononucleosis	infectious mononucleosis	EFO:0007326	0.992354555240214
-finn-b-AB1_ERYSIPELAS	Erysipelas	erysipelas	EFO:1001462	0.9965907447482851
-finn-b-AB1_GHLAMY_OTHER	Other diseases caused by chlamydiae (AB1_GHLAMY_OTHER)	Chlamydophila infectious disease	EFO:1000863	0.6883731621904343
-finn-b-AB1_GONOCOCCAL	Gonococcal infection	meningococcal infection	EFO:0004249	0.6548967592739449
-finn-b-AB1_HELMINTIASES	Helminthiases	Helminthiasis	EFO:1001342	0.9003690128013797
-finn-b-AB1_HEPATITIS_OTHER_VIRAL	Other  viral hepatitis	viral human hepatitis infection	EFO:0004196	0.9972200154160308
-finn-b-AB1_HERPES_SIMPLEX	Herpesviral [herpes simplex] infections	Herpes simplex infection	EFO:1002022	0.8451339466422361
-finn-b-AB1_HIV	Human immunodeficiency virus [HIV] disease	HIV infection	EFO:0000764	0.9107881672914238
-finn-b-AB1_HIV_NOS	Unspecified human immunodeficiency virus [HIV] disease	HIV infection	EFO:0000764	0.9107881672914238
-finn-b-AB1_INFECTIONS	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.955573403757952
-finn-b-AB1_INTESTINAL_INFECTIONS	Intestinal infectious diseases	intestinal infectious disease	MONDO:0000916	0.9565104457337584
-finn-b-AB1_LATE_SYPHILIS	Late syphilis	tertiary syphilis	MONDO:0004497	0.9895937628533868
-finn-b-AB1_MALARIA	Malaria	malaria	EFO:0001068	0.9945579700294624
-finn-b-AB1_MEASLES	Measles	measles	EFO:1002025	0.9852648360727753
-finn-b-AB1_MENINGOCOCCAL	Meningococcal infection	meningococcal infection	EFO:0004249	0.9909797459378071
-finn-b-AB1_MUMPS	Mumps	Mumps virus infectious disease	EFO:0007383	0.9905898219902032
-finn-b-AB1_MYCOSES	Mycoses	fungal infectious disease	MONDO:0002041	0.9725931356505666
-finn-b-AB1_OTHER_BACTERIAL	Other bacterial diseases	bacterial disease	EFO:0000771	0.9212295822332689
-finn-b-AB1_OTHER_BACT_INOTHER	Other bacterial agents as the cause of diseases classified to other chapters	bacterial disease	EFO:0000771	0.6436664581877579
-finn-b-AB1_OTHER_CHLAMYDIAE	Other diseases caused by chlamydiae (AB1_OTHER_CHLAMYDIAE)	Chlamydia trachomatis infectious disease	EFO:0007205	0.7694660208979318
-finn-b-AB1_OTHER_CONDITIONS	Human immunodeficiency virus [HIV] disease resulting in other conditions	HIV infection	EFO:0000764	0.8480296829174828
-finn-b-AB1_OTHER_INFECTIONS	Other infectious diseases	infectious disease	EFO:0005741	0.9378832284272856
-finn-b-AB1_OTHER_MYCOBAC	Infection due to other mycobacteria	mycobacterial infectious disease	MONDO:0020590	0.8447139180475755
-finn-b-AB1_OTHER_PROTOZOAL	Other protozoal intestinal diseases	protozoa infectious disease	MONDO:0002428	0.6779533299651422
-finn-b-AB1_OTHER_SEPSIS	Other septicaemia	Pasteurella hemorrhagic septicemia	EFO:1001091	0.698731570341392
-finn-b-AB1_OTHER_SPIROCHAETAL	Other spirochaetal diseases	Spirochaetales Infections	EFO:0009567	0.7253502808544979
-finn-b-AB1_OTHER_SUPERF_MYCOSIS	Other superficial mycoses	superficial mycosis	MONDO:0024268	0.9029664222890776
-finn-b-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.9143902810891983
-finn-b-AB1_PARASITIC_NOS	Unspecified parasitic disease	parasitic infection	EFO:0001067	0.9870594018568668
-finn-b-AB1_PEDICULOSIS_ACARIASIS_OTHERINFEST	Pediculosis, acariasis and other infestations	lice infestation	MONDO:0003472	0.6703494250706802
-finn-b-AB1_PNEUMOCYSTOSIS	Pneumocystosis	pneumocystosis	EFO:0007448	0.9923920753965173
-finn-b-AB1_POLIOMYELITIS	Acute poliomyelitis	poliomyelitis	EFO:0007450	0.9924002348196478
-finn-b-AB1_PROTOZOAL	Protozoal diseases	protozoa infectious disease	MONDO:0002428	0.7522133897962172
-finn-b-AB1_RESP_TUBERCU	Respiratry tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.7642438901205661
-finn-b-AB1_RUBELLA	Rubella [German measles]	rubella	EFO:1002026	0.7645318973358647
-finn-b-AB1_SALMONELLA_OTH	Other salmonella infections	Salmonella Infections	EFO:1001418	0.9909186172721199
-finn-b-AB1_SCARLET_FEVER	Scarlet fever	scarlet fever	EFO:0007477	0.9936851426178708
-finn-b-AB1_SCHISTOSOMIASIS	Schistosomiasis [bilharziasis]	schistosomiasis	EFO:1001475	0.7883088679286038
-finn-b-AB1_SEPSIS	Septicaemia	Pasteurella hemorrhagic septicemia	EFO:1001091	0.698731570341392
-finn-b-AB1_SEQULAE_INF_NOS	Sequelae of other and unspecified infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7555990734807289
-finn-b-AB1_SEQULAE_POLIO	Sequelae of poliomyelitis	postpoliomyelitis syndrome	EFO:0007454	0.8425255556673726
-finn-b-AB1_SEQULAE_TUBERCU	Sequelae of tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.7190816972206318
-finn-b-AB1_SEQULEAE_OF_INFECTIONS_AND_PARASITES	Sequelae of infectious and parasitic diseases	parasitic infection	EFO:0001067	0.7555990734807289
-finn-b-AB1_SEXUAL_TRANSMISSION_NOS	Other predominantly sexually transmitted diseases, not elsewhere classified	sexually transmitted disease	MONDO:0021681	0.779451008033803
-finn-b-AB1_SPIROCHE_OTHER	Spirochaetal infections, other/unspecified	Spirochaetales Infections	EFO:0009567	0.9173769550042419
-finn-b-AB1_STREPTO_SEPSIS	Streptococcal septicaemia	streptococcal infection	EFO:1001476	0.6329129325197854
-finn-b-AB1_STREPTSTAPHYCOCC_INOTHER	Streptococcus and staphylococcus as the cause of diseases classified to other chapters	streptococcal infection	EFO:1001476	0.7322252812381861
-finn-b-AB1_SYPHILIS	Syphilis	syphilis	EFO:0007504	0.992368661738019
-finn-b-AB1_TOXOPLASMOSIS	Toxoplasmosis	toxoplasmosis	EFO:0007517	0.990115093355772
-finn-b-AB1_TRICHOMONIASIS	Trichomoniasis	trichomoniasis	DOID:1947	0.9913623859350642
-finn-b-AB1_TUBERCULOSIS	Tuberculosis	tuberculosis	MONDO:0018076	0.9882615429351284
-finn-b-AB1_TUBERCU_OTH_ORG	Tuberculosis of other organs	Tuberculosis	ORPHANET.ORDO:3389	0.8060105712385391
-finn-b-AB1_TULARAEMIA	Tularaemia	Tularemia	EFO:1001444	0.6817277711163356
-finn-b-AB1_VARICELLA	Varicella [chickenpox]	chickenpox	EFO:0007204	0.8190237894317783
-finn-b-AB1_VIRAAL_CONJUNCT	Viral conjunctivitis	acute hemorrhagic conjunctivitis	EFO:0007131	0.9956238213797195
-finn-b-AB1_VIRAL_CNS	Viral infections of the central nervous system	viral infection of central nervous system	MONDO:0024318	0.9644112797585563
-finn-b-AB1_VIRAL_ENCEPHALITIS_NOS	Viral encephalitis, not elsewhere classified/unspecified	viral encephalitis	EFO:0007538	0.9897253112524673
-finn-b-AB1_VIRAL_HEMOR_FEVER_NOS	Viral haemorrhagic fevers, not elsewhere classified/unspecified	viral hemorrhagic fever	MONDO:0018087	0.9591912581839619
-finn-b-AB1_VIRAL_HEPATITIS	Viral hepatitis	viral human hepatitis infection	EFO:0004196	0.9972200154160308
-finn-b-AB1_VIRAL_INOTHER	Viral agents as the cause of diseases classified to other chapters	viral disease	EFO:0000763	0.6184567797505325
-finn-b-AB1_VIRAL_MENINGITIS	Viral meningitis	viral meningitis	EFO:1001236	0.993889106443103
-finn-b-AB1_VIRAL_NOS	Other viral diseases, not elsewhere classified	viral disease	EFO:0000763	0.9143902810891983
-finn-b-AB1_VIRAL_OTHER_INTEST_INFECTIONS	Viral and other specified intestinal infections	viral disease	EFO:0000763	0.7669583513510315
-finn-b-AB1_VIRAL_WARTS	Viral warts	common wart	EFO:0009662	0.9881208541382073
-finn-b-AB1_VIRAN_CNS_INFECTIONS_NOS	Viral infections of central nervous system, not elsewhere classified/unspecified	viral infection of central nervous system	MONDO:0024318	0.9644112797585563
-finn-b-AB1_WHOOPCOUGH	Whooping cough	whooping cough	EFO:0000650	0.9902215618080779
-finn-b-AB1_ZOONOTIC_BACTERIAL	Certain zoonotic bacterial diseases	zoonotic bacterial infection	MONDO:0044746	0.9632468478311195
-finn-b-AB1_ZOSTER	Zoster [herpes zoster]	Herpes Zoster	EFO:0006510	0.9420747269596442
-finn-b-ASTHMA_ACUTE_RESPIRATORY_INFECTIONS	Asthma-related acute respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.7187853488816625
-finn-b-ASTHMA_INFECTIONS	Asthma-related infections	Prosthesis-Related Infections	EFO:1001406	0.6005359634808368
-finn-b-ASTHMA_PNEUMONIA	Asthma-related pneumonia	pneumonia	EFO:0003106	0.7137951076965986
-finn-b-ASTHMA_PNEUMONIA_AND_SEPSIS	Asthma-related pneumonia or sepsis	pneumonia	EFO:0003106	0.621708055984726
-finn-b-ASTHMA_SEPTICHE_PNEUMONIA	Pneumonia derived septichemia (ASTHMA_SEPTICHE_PNEUMONIA)	pneumonia	EFO:0003106	0.701637376802345
-finn-b-BACT_INTEST_INFECTION_NOS	Other specified/unspecified bacterial intestinal infections	bacterial disease	EFO:0000771	0.7799677945299253
-finn-b-CAMPYLOENTERITIS	Campylobacter enteritis	campylobacteriosis	EFO:0007190	0.8068537308532463
-finn-b-CMV_NOS	Other/unspecified cytomegaloviral diseases	cytomegalovirus infection	EFO:0001062	0.963793582187159
-finn-b-COPD_ASTHMA_PNEUMONIA_SEPSIS	COPD/asthma related pneumonia or pneumonia derived septichaemia	pneumonia	EFO:0003106	0.7487901218007822
-finn-b-C_DIFFICILE_ENTEROCOLITIS	Enterocolitis due to Clostridium difficile	clostridium difficile infection	EFO:0009130	0.7238261877714398
-finn-b-D3_HAEMORRHAGICNAS	Otherand unspecified haemorrhagic conditions	hemorrhagic fever	MONDO:0600002	0.6177380192879084
-finn-b-E4_DM1OPTH	Type 1 diabetes with ophthalmic complications	ophthalmic herpes zoster	EFO:0007403	0.6231672376577488
-finn-b-E4_DM2OPTH	Type 2 diabetes with ophthalmic complications	ophthalmic herpes zoster	EFO:0007403	0.6222955373188843
-finn-b-ENCEPHALITIS	Encephalitis	encephalitis	MONDO:0019956	0.9883054472129496
-finn-b-G6_CNSABSC	Intracranial and intraspinal abscess and granuloma	epidural abscess	EFO:0007260	0.6047506914945058
-finn-b-G6_ENCEPHOTH	Other encephalitis	encephalitis	MONDO:0019956	0.9883054472129496
-finn-b-G6_MENINGBACT	Bacterial meningitis	bacterial meningitis	EFO:1000831	0.9899127581274011
-finn-b-G6_MENINGOTH	Other meningitis	meningitis	MONDO:0021108	0.9920641100288623
-finn-b-G6_NEUATR	Systemic atrophies primarly affecting the central nervous system	central nervous system infection	EFO:1001456	0.630303083086978
-finn-b-G6_NEUINFL	Inflammatory diseases of the central nervous system	encephalomyelitis	EFO:0001423	0.8582532514628696
-finn-b-H7_CHALAZION	Chalazion	meibomian cyst	EFO:0007363	0.9928847084072536
-finn-b-H7_OPTNEURITIS	Optic neuritis	optic neuritis	EFO:0007405	0.9898989910625656
-finn-b-H8_EXTOTITIS	Otitis externa	otitis externa	EFO:0009560	0.9954141677868173
-finn-b-H8_EXT_CELLUL	Cellulitis of external ear	cellulitis	EFO:0003035	0.669557810109048
-finn-b-H8_EXT_INFNAS	Other infective otitis externa	otitis externa	EFO:0009560	0.8791278253987019
-finn-b-H8_EXT_NAS	Otitis externa, unspecified	otitis externa	EFO:0009560	0.9954141677868173
-finn-b-H8_EXT_NONINF	Acute otitis externa, noninfective	otitis externa	EFO:0009560	0.7299243687607313
-finn-b-H8_EXT_OTH	Other otitis externa (chronic)	otitis externa	EFO:0009560	0.8178247761061851
-finn-b-H8_PERCHRONDR	Perichondritis of external ear	perichondritis of auricle	MONDO:0002246	0.6205112388437015
-finn-b-INFLUENZA	All influenza (not pneumonia)	influenza	EFO:0007328	0.7575047263177198
-finn-b-J10_ABSCLUNGPNEUMO	Abscess of lung	Lung Abscess	EFO:1001362	0.968271751119341
-finn-b-J10_ACUTELOWERNAS	Unspecified acute lower respiratory infection	respiratory tract infectious disorder	MONDO:0024355	0.7202281214798625
-finn-b-J10_CHRONLARYNGITIS	Chronic laryngitis and laryngotracheitis	laryngotracheitis	MONDO:0000263	0.8491172116045295
-finn-b-J10_INFLUENZA	All influenza	influenza	EFO:0007328	0.9979651201343516
-finn-b-J10_INFLUPNEU	Influenza and pneumonia	influenza	EFO:0007328	0.7575047263177198
-finn-b-J10_LOWERINF	Other acute lower respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.7817096537254169
-finn-b-J10_PERITONSABSC	Peritonsillar abscess	peritonsillar abscess	EFO:0007429	0.9913982374151187
-finn-b-J10_PNEUMOBACT	Bacterial pneumoniae	bacterial pneumonia	EFO:1001272	0.8780127142152367
-finn-b-J10_PNEUMOBACTEROTH	Bacterial pneumonia, not elsewhere classified	bacterial pneumonia	EFO:1001272	0.9884457052254101
-finn-b-J10_PNEUMONAS	Pneumonia, organism unsepcified	pneumonia	EFO:0003106	0.6729868276718133
-finn-b-J10_PNEUMONIA	All pneumoniae	Mycoplasma pneumoniae pneumonia	EFO:0007387	0.8731564279502708
-finn-b-J10_PNEUMONONBACT	Pneumonia due to other infectious organisms, not elsewhere classified	pneumonia	EFO:0003106	0.6850827291395133
-finn-b-J10_PNEUMOPNEUMO	Pneumonia due to Streptococcus pneumoniae	streptococcal pneumonia	EFO:0007499	0.9502098601991839
-finn-b-J10_PULMEOS	Pulmonary eosinophilia, not elsewhere classified	eosinophilic pneumonia	EFO:0007257	0.9914298879978669
-finn-b-J10_UPPERINFEC	Acute upper respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.8326632844005353
-finn-b-J10_VIRALPNEUMO	Viral pneumonia	viral pneumonia	EFO:0007541	0.9935098501987807
-finn-b-K11_ENERCOLNONINF	Noninfective enteritis and colitis	noninfective encephalitis	EFO:0020926	0.7151657146723639
-finn-b-L12_CELLULITIS	Cellulitis	cellulitis	EFO:0003035	0.9961328447721071
-finn-b-L12_INFECT_SKIN	Infections of the skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.9061677559031048
-finn-b-L12_INFECT_SKIN_NAS	Other and unspecified local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.8484405302270515
-finn-b-L12_INFECT_SKIN_OTHER	Other local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.8484405302270515
-finn-b-M13_DISCITIS	Discitis, unspecified	discitis	EFO:1000900	0.995377148947452
-finn-b-M13_OSTEOMYELITIS	Osteomyelitis	osteomyelitis	EFO:0003102	0.996825063642452
-finn-b-M13_PYOGARTH	Pyogenic arthritis	infectious arthritis	EFO:1001351	0.9956990627719979
-finn-b-MENINGITIS	Meningitis	meningitis	MONDO:0021108	0.9920641100288623
-finn-b-MYCOBLUNGATYPICA	Atypical mycobacterium lung infection	mycobacterial infectious disease	MONDO:0020590	0.7592593420664481
-finn-b-N14_PROSTATITIS	Inflammatory diseases of prostate (prostatitis)	prostatitis	EFO:0003830	0.7023377506975887
-finn-b-O15_PREG_GU_INFECT	Infections of genitourinary tract in pregnancy	bacterial urinary tract infection	MONDO:0005247	0.616819688063256
-finn-b-O15_PUERP_INFECT_OTHER	Other puerperal infections	Puerperal Infection	EFO:1001407	0.9914425730882923
-finn-b-PNEUMOBACTKNOWN	Bacterial pneumonia (organism specified)	bacterial pneumonia	EFO:1001272	0.7933167126334236
-finn-b-PNEUMO_SEPTHICHE	Pneumococcal septichemia	pneumococcal pneumonia	EFO:1001474	0.7168094608519691
-finn-b-PULM_PNEUMONIA_SEPSIS	COPD/asthma/ILD related pneumonia or pneumonia derived septichaemia	pneumonia	EFO:0003106	0.7329038203051297
-finn-b-SEPTICHE_PNEUMONIA	Pneumonia derived septichemia (SEPTICHE_PNEUMONIA)	pneumonia	EFO:0003106	0.7266351361688573
-finn-b-TBC_RESP	Respiratory tuberculosis	Tuberculosis	ORPHANET.ORDO:3389	0.7727319213395599
-finn-b-VIRALPNEUMOKNOWN	Viral pneumonia (known virus, not influenza)	influenza	EFO:0007328	0.6549820334583961
-finn-b-VIRALPNEUMONAS	Viral pneumonia (unknown virus, not influenza)	influenza	EFO:0007328	0.6369763640825027
-finn-b-Z21_ANKLE_FOOT	Ankle and foot	osteomyelitis	EFO:0003102	0.7075758388855172
-finn-b-Z21_ASYMP_HUMAN_IMMUNODEFICIENCY_VIRUS_HIV_INFECTION_STATUS	Asymptomatic human immunodeficiency virus [HIV] infection status	HIV infection	EFO:0000764	0.8330900362981515
-finn-b-Z21_CARRIER_INFECTIOUS_DISEA	Carrier of infectious disease	infectious disease	EFO:0005741	0.7662374010278591
-finn-b-Z21_CONTACT_W_EXPOS_COMMUNICAB_DISEA	Contact with and exposure to communicable diseases	infectious disease	EFO:0005741	0.6778166222349561
-finn-b-Z21_SPECIAL_SCREEN_EXAM_INFECTIOUS_PARASITIC_DISEA	Special screening examination for infectious and parasitic diseases	parasitic infection	EFO:0001067	0.667266940639302
-ieu-b-4901	Anti-Epstein-Barr virus IgG levels	Epstein-Barr virus infection	EFO:0000769	0.704565784158913
-ieu-b-4903	Anti-Influenza virus subtype H1N1 IgG levels	swine influenza	EFO:0005226	0.7098479266609407
-ieu-b-4970	Cellulitis	cellulitis	EFO:0003035	0.9961328447721071
-ieu-b-4975	Osteomyelitis	osteomyelitis	EFO:0003102	0.996825063642452
-ieu-b-4976	Pneumonia	pneumonia	EFO:0003106	0.993460952844212
-ieu-b-4978	Pneumonia (critical care)	pneumonia	EFO:0003106	0.7350442359601685
-ieu-b-4979	Pneumonia (death)	pneumonia	EFO:0003106	0.8511999374010473
-ieu-b-5065	UTI	bacterial urinary tract infection	MONDO:0005247	0.9941897018433701
-prot-a-2379	Major prion protein	prion disease	EFO:0004720	0.6458484431692386
-prot-a-2455	Poliovirus receptor	poliovirus infection	MONDO:0024618	0.7087462129615758
-prot-a-627	Collectin-10	empyema	EFO:0003097	0.6092528326740888
-prot-a-737	Coxsackievirus and adenovirus receptor	coxsackievirus infectious disease	EFO:0007226	0.7452341771246368
-prot-c-2623_54_4	HPV E7 Type 16	human papilloma virus infection	EFO:0001668	0.6682122062715676
-prot-c-2624_31_2	HPV E7 Type18	human papilloma virus infection	EFO:0001668	0.6048176702658952
-prot-c-2769_3_2	HIV-2 Rev	HIV infection	EFO:0000764	0.7199789994242871
-prot-c-3173_49_2	ASAHL	acute hemorrhagic leukoencephalitis	EFO:0007132	0.621897963298834
-ukb-a-112	Non-cancer illness code  self-reported: polio / poliomyelitis	poliomyelitis	EFO:0007450	0.7100437378604167
-ukb-a-517	Diagnoses - main ICD10: B37 Candidiasis	candidiasis	MONDO:0002026	0.6582486575549239
-ukb-b-14027	Non-cancer illness code, self-reported: chickenpox	chickenpox	EFO:0007204	0.6856586574712188
-ukb-b-15606	Diagnoses - main ICD10: J18.9 Pneumonia, unspecified	pneumonia	EFO:0003106	0.6324820669907828
-ukb-b-188	Private healthcare	nosocomial infection	MONDO:0043544	0.6149552657828713
-ukb-b-20213	Non-cancer illness code, self-reported: measles / morbillivirus	measles	EFO:1002025	0.6345554569008692
-ukb-b-266	Current eye infection	eye infectious disorder	MONDO:0043885	0.7666781367996666
-ukb-b-3683	Diagnoses - main ICD10: B34.9 Viral infection, unspecified	viral disease	EFO:0000763	0.6143182202295867
-ukb-b-4442	Ham intake	tropical spastic paraparesis	EFO:0007527	0.7466828189869289
-ukb-b-4637	Diagnoses - main ICD10: H00.1 Chalazion	meibomian cyst	EFO:0007363	0.6722469317437961
-ukb-b-531	Non-cancer illness code, self-reported: helicobacter pylori	Helicobacter pylori infectious disease	EFO:1000961	0.6538686228096613
-ukb-b-6077	Diagnoses - secondary ICD10: N39.0 Urinary tract infection, site not specified	bacterial urinary tract infection	MONDO:0005247	0.6335106976751489
-ukb-b-7150	Non-cancer illness code, self-reported: urinary tract infection/kidney infection	pyelonephritis	EFO:1001141	0.6937261019970108
-ukb-b-8814	Diagnoses - main ICD10: N39.0 Urinary tract infection, site not specified	bacterial urinary tract infection	MONDO:0005247	0.6547207768940542
-ukb-d-AB1_INTESTINAL_INFECTIONS	Intestinal infectious diseases	intestinal infectious disease	MONDO:0000916	0.9565104457337584
-ukb-d-AB1_OTHER_BACTERIAL	Other bacterial diseases	bacterial disease	EFO:0000771	0.9212295822332689
-ukb-d-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.9143902810891983
-ukb-d-ASTHMA_PNEUMONIA	Asthma-related pneumonia	pneumonia	EFO:0003106	0.7137951076965986
-ukb-d-COLITNONINFNAS	Noninfectious colitis NAS	infectious colitis	EFO:1000035	0.8052496948625711
-ukb-d-H7_CHALAZION	Chalazion	meibomian cyst	EFO:0007363	0.9928847084072536
-ukb-d-I_INFECT_PARASIT	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.955573403757952
-ukb-e-103080_AFR	Ham intake	tropical spastic paraparesis	EFO:0007527	0.7466828189869289
-ukb-e-103080_CSA	Ham intake	tropical spastic paraparesis	EFO:0007527	0.7466828189869289
-ukb-e-41_AFR	Bacterial infection NOS	bacterial disease	EFO:0000771	0.8774760614120668
-ukb-e-41_CSA	Bacterial infection NOS	bacterial disease	EFO:0000771	0.8774760614120668
-ukb-e-4674_AFR	Private healthcare	nosocomial infection	MONDO:0043544	0.6149552657828713
-ukb-e-4674_CSA	Private healthcare	nosocomial infection	MONDO:0043544	0.6149552657828713
-ukb-e-4674_EAS	Private healthcare	nosocomial infection	MONDO:0043544	0.6149552657828713
-ukb-e-480_AFR	Pneumonia	pneumonia	EFO:0003106	0.993460952844212
-ukb-e-480_CSA	Pneumonia	pneumonia	EFO:0003106	0.993460952844212
-ukb-e-591_AFR	Urinary tract infection	bacterial urinary tract infection	MONDO:0005247	0.9928070787800823
-ukb-e-591_CSA	Urinary tract infection	bacterial urinary tract infection	MONDO:0005247	0.9928070787800823
-ukb-e-8_AFR	Intestinal infection	intestinal infectious disease	MONDO:0000916	0.7963996638161297
-ukb-e-8_CSA	Intestinal infection	intestinal infectious disease	MONDO:0000916	0.7963996638161297
-ukb-e-J18_CSA	J18 Pneumonia, organism unspecified	bronchiolitis obliterans	EFO:0007183	0.6683944121704963
+bbj-a-101	Chronic hepatitis C	chronic hepatitis C virus infection	EFO:0004220	0.993
+bbj-a-149	Pulmonary tuberculosis	pulmonary tuberculosis	EFO:1000049	0.993
+bbj-a-99	Chronic hepatitis B	chronic hepatitis B virus infection	EFO:0004239	0.992
+ebi-a-GCST90006894	Cytomegalovirus pp28 antibody levels	cytomegalovirus infection	EFO:0001062	0.61
+ebi-a-GCST90006895	Cytomegalovirus pp52 antibody levels	cytomegalovirus infection	EFO:0001062	0.604
+ebi-a-GCST90006911	Helicobacter pylori CagA antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.637
+ebi-a-GCST90006912	Helicobacter pylori Catalase antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.657
+ebi-a-GCST90006913	Helicobacter pylori GroEL antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.635
+ebi-a-GCST90006914	Helicobacter pylori OMP antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.665
+ebi-a-GCST90006915	Helicobacter pylori UREA antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.675
+ebi-a-GCST90006916	Helicobacter pylori VacA antibody levels	Helicobacter pylori infectious disease	EFO:1000961	0.636
+ebi-a-GCST90010154	NF-kappa-B essential modulator levels	immunodeficiency 33	MONDO:0010386	0.714
+ebi-a-GCST90011310	F_Bacteroidaceae abundance	commensal Bacteroidaceae infectious disease	EFO:1000872	0.698
+ebi-a-GCST90011323	G_Bacteroides abundance	Bacteroides infectious disease	EFO:1000832	0.607
+ebi-a-GCST90011349	O_Burkholderiales abundance	burkholderia infectious disease	MONDO:0043953	0.696
+ebi-a-GCST90011365	OTU97_119 (Desulfovibrio) abundance	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.663
+ebi-a-GCST90011433	OTU99_140 (Desulfovibrio) abundance	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.657
+ebi-a-GCST90011566	OTU97_119 (Desulfovibrio) prevalence	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.647
+ebi-a-GCST90011634	OTU99_140 (Desulfovibrio) prevalence	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.641
+ebi-a-GCST90012079	NF-kappa-B essential modulator levels	immunodeficiency 33	MONDO:0010386	0.714
+ebi-a-GCST90016935	Gut microbiota abundance (family Desulfovibrionaceae id.3169)	commensal Desulfovibrionaceae infectious disease	EFO:1000875	0.607
+ebi-a-GCST90017093	Gut microbiota abundance (order Bifidobacteriales id.432)	commensal Bifidobacteriales infectious disease	EFO:1000873	0.603
+ebi-a-GCST90026455	HTLV-1 associated myelopathy	tropical spastic paraparesis	EFO:0007527	0.799
+finn-b-AB1_AMOEBIASIS	Amoebiasis	amebiasis	EFO:0007144	0.997
+finn-b-AB1_ANOGENITAL_HERPES_SIMPLEX	Anogenital herpesviral [herpes simplex] infection	Herpes simplex infection	EFO:1002022	0.799
+finn-b-AB1_ARTHROPOD	Arthropod-borne viral fevers and viral haemorrhagic fevers	viral hemorrhagic fever	MONDO:0018087	0.771
+finn-b-AB1_ASPERGILLOSIS	Aspergillosis	aspergillosis	EFO:0007157	0.99
+finn-b-AB1_ATYPICAL_CNS_VIRUS	Atypical virus infections of central nervous system	central nervous system infection	EFO:1001456	0.782
+finn-b-AB1_BACTINF_NOS	Bacterial infection, other or unspecified	bacterial disease	EFO:0000771	0.988
+finn-b-AB1_BACT_BIR_OTHER_INF_AGENTS	Bacterial, viral and other infectious agents	bacterial disease	EFO:0000771	0.71
+finn-b-AB1_BACT_INTEST_OTH	Other bacterial intestinal infections	bacterial disease	EFO:0000771	0.78
+finn-b-AB1_CANDIDIASIS	Candidiasis	candidiasis	MONDO:0002026	0.985
+finn-b-AB1_CHLAMYDIA_OTHER	Other sexually transmitted chlamydial diseases	sexually transmitted disease	MONDO:0021681	0.784
+finn-b-AB1_CHOLERA	Cholera	Vibrio infectious disease	EFO:1001235	0.996
+finn-b-AB1_CMV	Cytomegaloviral disease	cytomegalovirus infection	EFO:0001062	0.993
+finn-b-AB1_DERMATOPHYTOSIS	Dermatophytosis	dermatophytosis	MONDO:0004678	0.995
+finn-b-AB1_EARLY_SYPHILIS	Early syphilis	syphilis	EFO:0007504	0.796
+finn-b-AB1_EBV	Infectious mononucleosis	infectious mononucleosis	EFO:0007326	0.994
+finn-b-AB1_ERYSIPELAS	Erysipelas	erysipelas	EFO:1001462	0.997
+finn-b-AB1_GHLAMY_OTHER	Other diseases caused by chlamydiae (AB1_GHLAMY_OTHER)	Chlamydophila infectious disease	EFO:1000863	0.687
+finn-b-AB1_GONOCOCCAL	Gonococcal infection	meningococcal infection	EFO:0004249	0.661
+finn-b-AB1_HELMINTIASES	Helminthiases	Helminthiasis	EFO:1001342	0.898
+finn-b-AB1_HEPATITIS_OTHER_VIRAL	Other  viral hepatitis	viral human hepatitis infection	EFO:0004196	0.997
+finn-b-AB1_HERPES_SIMPLEX	Herpesviral [herpes simplex] infections	Herpes simplex infection	EFO:1002022	0.846
+finn-b-AB1_HIV	Human immunodeficiency virus [HIV] disease	HIV infection	EFO:0000764	0.912
+finn-b-AB1_HIV_NOS	Unspecified human immunodeficiency virus [HIV] disease	HIV infection	EFO:0000764	0.912
+finn-b-AB1_INFECTIONS	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.956
+finn-b-AB1_INTESTINAL_INFECTIONS	Intestinal infectious diseases	intestinal infectious disease	MONDO:0000916	0.956
+finn-b-AB1_LATE_SYPHILIS	Late syphilis	tertiary syphilis	MONDO:0004497	0.99
+finn-b-AB1_MALARIA	Malaria	malaria	EFO:0001068	0.995
+finn-b-AB1_MEASLES	Measles	measles	EFO:1002025	0.976
+finn-b-AB1_MENINGOCOCCAL	Meningococcal infection	meningococcal infection	EFO:0004249	0.991
+finn-b-AB1_MUMPS	Mumps	Mumps virus infectious disease	EFO:0007383	0.991
+finn-b-AB1_MYCOSES	Mycoses	fungal infectious disease	MONDO:0002041	0.973
+finn-b-AB1_OTHER_BACTERIAL	Other bacterial diseases	bacterial disease	EFO:0000771	0.92
+finn-b-AB1_OTHER_BACT_INOTHER	Other bacterial agents as the cause of diseases classified to other chapters	bacterial disease	EFO:0000771	0.643
+finn-b-AB1_OTHER_CHLAMYDIAE	Other diseases caused by chlamydiae (AB1_OTHER_CHLAMYDIAE)	Chlamydia trachomatis infectious disease	EFO:0007205	0.769
+finn-b-AB1_OTHER_CONDITIONS	Human immunodeficiency virus [HIV] disease resulting in other conditions	HIV infection	EFO:0000764	0.849
+finn-b-AB1_OTHER_INFECTIONS	Other infectious diseases	infectious disease	EFO:0005741	0.937
+finn-b-AB1_OTHER_MYCOBAC	Infection due to other mycobacteria	mycobacterial infectious disease	MONDO:0020590	0.844
+finn-b-AB1_OTHER_PROTOZOAL	Other protozoal intestinal diseases	protozoa infectious disease	MONDO:0002428	0.677
+finn-b-AB1_OTHER_SEPSIS	Other septicaemia	Pasteurella hemorrhagic septicemia	EFO:1001091	0.7
+finn-b-AB1_OTHER_SPIROCHAETAL	Other spirochaetal diseases	Spirochaetales Infections	EFO:0009567	0.725
+finn-b-AB1_OTHER_SUPERF_MYCOSIS	Other superficial mycoses	superficial mycosis	MONDO:0024268	0.903
+finn-b-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.913
+finn-b-AB1_PARASITIC_NOS	Unspecified parasitic disease	parasitic infection	EFO:0001067	0.987
+finn-b-AB1_PEDICULOSIS_ACARIASIS_OTHERINFEST	Pediculosis, acariasis and other infestations	lice infestation	MONDO:0003472	0.671
+finn-b-AB1_PNEUMOCYSTOSIS	Pneumocystosis	pneumocystosis	EFO:0007448	0.993
+finn-b-AB1_POLIOMYELITIS	Acute poliomyelitis	poliomyelitis	EFO:0007450	0.993
+finn-b-AB1_PROTOZOAL	Protozoal diseases	protozoa infectious disease	MONDO:0002428	0.75
+finn-b-AB1_RESP_TUBERCU	Respiratry tuberculosis	tuberculosis	MONDO:0018076	0.765
+finn-b-AB1_RUBELLA	Rubella [German measles]	rubella	EFO:1002026	0.762
+finn-b-AB1_SALMONELLA_OTH	Other salmonella infections	Salmonella Infections	EFO:1001418	0.991
+finn-b-AB1_SCARLET_FEVER	Scarlet fever	scarlet fever	EFO:0007477	0.994
+finn-b-AB1_SCHISTOSOMIASIS	Schistosomiasis [bilharziasis]	schistosomiasis	EFO:1001475	0.789
+finn-b-AB1_SEPSIS	Septicaemia	Pasteurella hemorrhagic septicemia	EFO:1001091	0.7
+finn-b-AB1_SEQULAE_INF_NOS	Sequelae of other and unspecified infectious and parasitic diseases	parasitic infection	EFO:0001067	0.756
+finn-b-AB1_SEQULAE_POLIO	Sequelae of poliomyelitis	postpoliomyelitis syndrome	EFO:0007454	0.843
+finn-b-AB1_SEQULAE_TUBERCU	Sequelae of tuberculosis	tuberculosis	MONDO:0018076	0.72
+finn-b-AB1_SEQULEAE_OF_INFECTIONS_AND_PARASITES	Sequelae of infectious and parasitic diseases	parasitic infection	EFO:0001067	0.756
+finn-b-AB1_SEXUAL_TRANSMISSION_NOS	Other predominantly sexually transmitted diseases, not elsewhere classified	sexually transmitted disease	MONDO:0021681	0.78
+finn-b-AB1_SPIROCHE_OTHER	Spirochaetal infections, other/unspecified	Spirochaetales Infections	EFO:0009567	0.917
+finn-b-AB1_STREPTO_SEPSIS	Streptococcal septicaemia	streptococcal infection	EFO:1001476	0.632
+finn-b-AB1_STREPTSTAPHYCOCC_INOTHER	Streptococcus and staphylococcus as the cause of diseases classified to other chapters	streptococcal infection	EFO:1001476	0.733
+finn-b-AB1_SYPHILIS	Syphilis	syphilis	EFO:0007504	0.993
+finn-b-AB1_TOXOPLASMOSIS	Toxoplasmosis	toxoplasmosis	EFO:0007517	0.992
+finn-b-AB1_TRICHOMONIASIS	Trichomoniasis	trichomoniasis	DOID:1947	0.992
+finn-b-AB1_TUBERCULOSIS	Tuberculosis	tuberculosis	MONDO:0018076	0.989
+finn-b-AB1_TUBERCU_OTH_ORG	Tuberculosis of other organs	tuberculosis	MONDO:0018076	0.807
+finn-b-AB1_TULARAEMIA	Tularaemia	Tularemia	EFO:1001444	0.692
+finn-b-AB1_VARICELLA	Varicella [chickenpox]	chickenpox	EFO:0007204	0.819
+finn-b-AB1_VIRAAL_CONJUNCT	Viral conjunctivitis	acute hemorrhagic conjunctivitis	EFO:0007131	0.996
+finn-b-AB1_VIRAL_CNS	Viral infections of the central nervous system	viral infection of central nervous system	MONDO:0024318	0.965
+finn-b-AB1_VIRAL_ENCEPHALITIS_NOS	Viral encephalitis, not elsewhere classified/unspecified	viral encephalitis	EFO:0007538	0.99
+finn-b-AB1_VIRAL_HEMOR_FEVER_NOS	Viral haemorrhagic fevers, not elsewhere classified/unspecified	viral hemorrhagic fever	MONDO:0018087	0.959
+finn-b-AB1_VIRAL_HEPATITIS	Viral hepatitis	viral human hepatitis infection	EFO:0004196	0.997
+finn-b-AB1_VIRAL_INOTHER	Viral agents as the cause of diseases classified to other chapters	viral disease	EFO:0000763	0.618
+finn-b-AB1_VIRAL_MENINGITIS	Viral meningitis	viral meningitis	EFO:1001236	0.994
+finn-b-AB1_VIRAL_NOS	Other viral diseases, not elsewhere classified	viral disease	EFO:0000763	0.913
+finn-b-AB1_VIRAL_OTHER_INTEST_INFECTIONS	Viral and other specified intestinal infections	viral disease	EFO:0000763	0.767
+finn-b-AB1_VIRAL_WARTS	Viral warts	common wart	EFO:0009662	0.988
+finn-b-AB1_VIRAN_CNS_INFECTIONS_NOS	Viral infections of central nervous system, not elsewhere classified/unspecified	viral infection of central nervous system	MONDO:0024318	0.965
+finn-b-AB1_WHOOPCOUGH	Whooping cough	whooping cough	EFO:0000650	0.991
+finn-b-AB1_ZOSTER	Zoster [herpes zoster]	Herpes Zoster	EFO:0006510	0.943
+finn-b-ASTHMA_ACUTE_RESPIRATORY_INFECTIONS	Asthma-related acute respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.719
+finn-b-ASTHMA_INFECTIONS	Asthma-related infections	Prosthesis-Related Infections	EFO:1001406	0.602
+finn-b-ASTHMA_PNEUMONIA	Asthma-related pneumonia	pneumonia	EFO:0003106	0.714
+finn-b-ASTHMA_PNEUMONIA_AND_SEPSIS	Asthma-related pneumonia or sepsis	pneumonia	EFO:0003106	0.622
+finn-b-ASTHMA_SEPTICHE_PNEUMONIA	Pneumonia derived septichemia (ASTHMA_SEPTICHE_PNEUMONIA)	pneumonia	EFO:0003106	0.702
+finn-b-BACT_INTEST_INFECTION_NOS	Other specified/unspecified bacterial intestinal infections	bacterial disease	EFO:0000771	0.78
+finn-b-CAMPYLOENTERITIS	Campylobacter enteritis	campylobacteriosis	EFO:0007190	0.806
+finn-b-CMV_NOS	Other/unspecified cytomegaloviral diseases	cytomegalovirus infection	EFO:0001062	0.964
+finn-b-COPD_ASTHMA_PNEUMONIA_SEPSIS	COPD/asthma related pneumonia or pneumonia derived septichaemia	pneumonia	EFO:0003106	0.749
+finn-b-C_DIFFICILE_ENTEROCOLITIS	Enterocolitis due to Clostridium difficile	clostridium difficile infection	EFO:0009130	0.725
+finn-b-D3_HAEMORRHAGICNAS	Otherand unspecified haemorrhagic conditions	hemorrhagic fever	MONDO:0600002	0.618
+finn-b-E4_DM1OPTH	Type 1 diabetes with ophthalmic complications	ophthalmic herpes zoster	EFO:0007403	0.624
+finn-b-E4_DM2OPTH	Type 2 diabetes with ophthalmic complications	ophthalmic herpes zoster	EFO:0007403	0.623
+finn-b-ENCEPHALITIS	Encephalitis	encephalomyelitis	EFO:0001423	0.989
+finn-b-G6_CNSABSC	Intracranial and intraspinal abscess and granuloma	epidural abscess	EFO:0007260	0.603
+finn-b-G6_ENCEPHOTH	Other encephalitis	encephalomyelitis	EFO:0001423	0.989
+finn-b-G6_MENINGBACT	Bacterial meningitis	bacterial meningitis	EFO:1000831	0.99
+finn-b-G6_MENINGOTH	Other meningitis	infectious meningitis	EFO:0000584	0.993
+finn-b-G6_NEUATR	Systemic atrophies primarly affecting the central nervous system	central nervous system infection	EFO:1001456	0.631
+finn-b-G6_NEUINFL	Inflammatory diseases of the central nervous system	encephalomyelitis	EFO:0001423	0.858
+finn-b-H7_CHALAZION	Chalazion	meibomian cyst	EFO:0007363	0.993
+finn-b-H7_OPTNEURITIS	Optic neuritis	optic neuritis	EFO:0007405	0.99
+finn-b-H8_EXTOTITIS	Otitis externa	otitis externa	EFO:0009560	0.994
+finn-b-H8_EXT_CELLUL	Cellulitis of external ear	cellulitis	EFO:0003035	0.67
+finn-b-H8_EXT_INFNAS	Other infective otitis externa	otitis externa	EFO:0009560	0.877
+finn-b-H8_EXT_NAS	Otitis externa, unspecified	otitis externa	EFO:0009560	0.994
+finn-b-H8_EXT_NONINF	Acute otitis externa, noninfective	otitis externa	EFO:0009560	0.726
+finn-b-H8_EXT_OTH	Other otitis externa (chronic)	otitis externa	EFO:0009560	0.813
+finn-b-H8_PERCHRONDR	Perichondritis of external ear	perichondritis of auricle	MONDO:0002246	0.621
+finn-b-INFLUENZA	All influenza (not pneumonia)	influenza	EFO:0007328	0.757
+finn-b-J10_ABSCLUNGPNEUMO	Abscess of lung	Lung Abscess	EFO:1001362	0.968
+finn-b-J10_ACUTELOWERNAS	Unspecified acute lower respiratory infection	respiratory tract infectious disorder	MONDO:0024355	0.72
+finn-b-J10_CHRONLARYNGITIS	Chronic laryngitis and laryngotracheitis	laryngotracheitis	MONDO:0000263	0.849
+finn-b-J10_INFLUENZA	All influenza	influenza	EFO:0007328	0.998
+finn-b-J10_INFLUPNEU	Influenza and pneumonia	influenza	EFO:0007328	0.757
+finn-b-J10_LOWERINF	Other acute lower respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.782
+finn-b-J10_PERITONSABSC	Peritonsillar abscess	peritonsillar abscess	EFO:0007429	0.991
+finn-b-J10_PNEUMOBACT	Bacterial pneumoniae	bacterial pneumonia	EFO:1001272	0.878
+finn-b-J10_PNEUMOBACTEROTH	Bacterial pneumonia, not elsewhere classified	bacterial pneumonia	EFO:1001272	0.989
+finn-b-J10_PNEUMONAS	Pneumonia, organism unsepcified	pneumonia	EFO:0003106	0.672
+finn-b-J10_PNEUMONIA	All pneumoniae	Mycoplasma pneumoniae pneumonia	EFO:0007387	0.873
+finn-b-J10_PNEUMONONBACT	Pneumonia due to other infectious organisms, not elsewhere classified	pneumonia	EFO:0003106	0.687
+finn-b-J10_PNEUMOPNEUMO	Pneumonia due to Streptococcus pneumoniae	streptococcal pneumonia	EFO:0007499	0.951
+finn-b-J10_PULMEOS	Pulmonary eosinophilia, not elsewhere classified	eosinophilic pneumonia	EFO:0007257	0.992
+finn-b-J10_UPPERINFEC	Acute upper respiratory infections	respiratory tract infectious disorder	MONDO:0024355	0.834
+finn-b-J10_VIRALPNEUMO	Viral pneumonia	viral pneumonia	EFO:0007541	0.994
+finn-b-K11_ENERCOLNONINF	Noninfective enteritis and colitis	noninfective encephalitis	EFO:0020926	0.714
+finn-b-L12_CELLULITIS	Cellulitis	cellulitis	EFO:0003035	0.996
+finn-b-L12_INFECT_SKIN	Infections of the skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.907
+finn-b-L12_INFECT_SKIN_NAS	Other and unspecified local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.849
+finn-b-L12_INFECT_SKIN_OTHER	Other local infections of skin and subcutaneous tissue	subcutaneous tissue infection	EFO:0010692	0.849
+finn-b-M13_DISCITIS	Discitis, unspecified	discitis	EFO:1000900	0.995
+finn-b-M13_OSTEOMYELITIS	Osteomyelitis	osteomyelitis	EFO:0003102	0.997
+finn-b-M13_PYOGARTH	Pyogenic arthritis	infectious arthritis	EFO:1001351	0.996
+finn-b-MENINGITIS	Meningitis	infectious meningitis	EFO:0000584	0.993
+finn-b-MYCOBLUNGATYPICA	Atypical mycobacterium lung infection	mycobacterial infectious disease	MONDO:0020590	0.76
+finn-b-N14_PROSTATITIS	Inflammatory diseases of prostate (prostatitis)	prostatitis	EFO:0003830	0.702
+finn-b-O15_PREG_GU_INFECT	Infections of genitourinary tract in pregnancy	urinary tract infection	EFO:0003103	0.617
+finn-b-O15_PUERP_INFECT_OTHER	Other puerperal infections	Puerperal Infection	EFO:1001407	0.992
+finn-b-PNEUMOBACTKNOWN	Bacterial pneumonia (organism specified)	bacterial pneumonia	EFO:1001272	0.794
+finn-b-PNEUMO_SEPTHICHE	Pneumococcal septichemia	pneumococcal pneumonia	EFO:1001474	0.717
+finn-b-PULM_PNEUMONIA_SEPSIS	COPD/asthma/ILD related pneumonia or pneumonia derived septichaemia	pneumonia	EFO:0003106	0.733
+finn-b-SEPTICHE_PNEUMONIA	Pneumonia derived septichemia (SEPTICHE_PNEUMONIA)	pneumonia	EFO:0003106	0.727
+finn-b-TBC_RESP	Respiratory tuberculosis	tuberculosis	MONDO:0018076	0.773
+finn-b-VIRALPNEUMOKNOWN	Viral pneumonia (known virus, not influenza)	influenza	EFO:0007328	0.655
+finn-b-VIRALPNEUMONAS	Viral pneumonia (unknown virus, not influenza)	influenza	EFO:0007328	0.637
+finn-b-Z21_ANKLE_FOOT	Ankle and foot	osteomyelitis	EFO:0003102	0.708
+finn-b-Z21_ASYMP_HUMAN_IMMUNODEFICIENCY_VIRUS_HIV_INFECTION_STATUS	Asymptomatic human immunodeficiency virus [HIV] infection status	HIV infection	EFO:0000764	0.834
+finn-b-Z21_CARRIER_INFECTIOUS_DISEA	Carrier of infectious disease	infectious disease	EFO:0005741	0.766
+finn-b-Z21_CONTACT_W_EXPOS_COMMUNICAB_DISEA	Contact with and exposure to communicable diseases	infectious disease	EFO:0005741	0.677
+finn-b-Z21_SPECIAL_SCREEN_EXAM_INFECTIOUS_PARASITIC_DISEA	Special screening examination for infectious and parasitic diseases	parasitic infection	EFO:0001067	0.668
+ieu-b-4901	Anti-Epstein-Barr virus IgG levels	Epstein-Barr virus infection	EFO:0000769	0.705
+ieu-b-4970	Cellulitis	cellulitis	EFO:0003035	0.996
+ieu-b-4975	Osteomyelitis	osteomyelitis	EFO:0003102	0.997
+ieu-b-4976	Pneumonia	pneumonia	EFO:0003106	0.994
+ieu-b-4978	Pneumonia (critical care)	pneumonia	EFO:0003106	0.735
+ieu-b-4979	Pneumonia (death)	pneumonia	EFO:0003106	0.851
+prot-a-627	Collectin-10	empyema	EFO:0003097	0.608
+prot-c-2623_54_4	HPV E7 Type 16	human papilloma virus infection	EFO:0001668	0.668
+prot-c-2624_31_2	HPV E7 Type18	human papilloma virus infection	EFO:0001668	0.605
+prot-c-2769_3_2	HIV-2 Rev	HIV infection	EFO:0000764	0.72
+prot-c-3173_49_2	ASAHL	acute hemorrhagic leukoencephalitis	EFO:0007132	0.618
+ukb-a-112	Non-cancer illness code  self-reported: polio / poliomyelitis	poliomyelitis	EFO:0007450	0.71
+ukb-a-517	Diagnoses - main ICD10: B37 Candidiasis	candidiasis	MONDO:0002026	0.659
+ukb-b-14027	Non-cancer illness code, self-reported: chickenpox	chickenpox	EFO:0007204	0.686
+ukb-b-15606	Diagnoses - main ICD10: J18.9 Pneumonia, unspecified	pneumonia	EFO:0003106	0.633
+ukb-b-188	Private healthcare	nosocomial infection	MONDO:0043544	0.616
+ukb-b-20213	Non-cancer illness code, self-reported: measles / morbillivirus	measles	EFO:1002025	0.632
+ukb-b-266	Current eye infection	eye infectious disorder	MONDO:0043885	0.767
+ukb-b-3683	Diagnoses - main ICD10: B34.9 Viral infection, unspecified	viral disease	EFO:0000763	0.615
+ukb-b-4442	Ham intake	tropical spastic paraparesis	EFO:0007527	0.746
+ukb-b-4637	Diagnoses - main ICD10: H00.1 Chalazion	meibomian cyst	EFO:0007363	0.672
+ukb-b-531	Non-cancer illness code, self-reported: helicobacter pylori	Helicobacter pylori infectious disease	EFO:1000961	0.654
+ukb-b-6077	Diagnoses - secondary ICD10: N39.0 Urinary tract infection, site not specified	urinary tract infection	EFO:0003103	0.634
+ukb-b-7150	Non-cancer illness code, self-reported: urinary tract infection/kidney infection	pyelonephritis	EFO:1001141	0.694
+ukb-b-8814	Diagnoses - main ICD10: N39.0 Urinary tract infection, site not specified	urinary tract infection	EFO:0003103	0.655
+ukb-d-AB1_INTESTINAL_INFECTIONS	Intestinal infectious diseases	intestinal infectious disease	MONDO:0000916	0.956
+ukb-d-AB1_OTHER_BACTERIAL	Other bacterial diseases	bacterial disease	EFO:0000771	0.92
+ukb-d-AB1_OTHER_VIRAL	Other viral diseases	viral disease	EFO:0000763	0.913
+ukb-d-ASTHMA_PNEUMONIA	Asthma-related pneumonia	pneumonia	EFO:0003106	0.714
+ukb-d-COLITNONINFNAS	Noninfectious colitis NAS	infectious colitis	EFO:1000035	0.813
+ukb-d-H7_CHALAZION	Chalazion	meibomian cyst	EFO:0007363	0.993
+ukb-d-I_INFECT_PARASIT	Certain infectious and parasitic diseases	parasitic infection	EFO:0001067	0.956
+ukb-e-103080_AFR	Ham intake	tropical spastic paraparesis	EFO:0007527	0.746
+ukb-e-103080_CSA	Ham intake	tropical spastic paraparesis	EFO:0007527	0.746
+ukb-e-41_AFR	Bacterial infection NOS	bacterial disease	EFO:0000771	0.878
+ukb-e-41_CSA	Bacterial infection NOS	bacterial disease	EFO:0000771	0.878
+ukb-e-4674_AFR	Private healthcare	nosocomial infection	MONDO:0043544	0.616
+ukb-e-4674_CSA	Private healthcare	nosocomial infection	MONDO:0043544	0.616
+ukb-e-4674_EAS	Private healthcare	nosocomial infection	MONDO:0043544	0.616
+ukb-e-480_AFR	Pneumonia	pneumonia	EFO:0003106	0.994
+ukb-e-480_CSA	Pneumonia	pneumonia	EFO:0003106	0.994
+ukb-e-591_AFR	Urinary tract infection	urinary tract infection	EFO:0003103	0.993
+ukb-e-591_CSA	Urinary tract infection	urinary tract infection	EFO:0003103	0.993
+ukb-e-8_AFR	Intestinal infection	intestinal infectious disease	MONDO:0000916	0.798
+ukb-e-8_CSA	Intestinal infection	intestinal infectious disease	MONDO:0000916	0.798
+ukb-e-J18_CSA	J18 Pneumonia, organism unspecified	bronchiolitis obliterans	EFO:0007183	0.668
