@@ -8,7 +8,7 @@ from metapub import PubMedFetcher
 from generate_ontology_tables import get_semsql_tables_for_ontology
 from generate_mapping_report import get_mapping_counts
 
-__version__ = "1.0.3"
+__version__ = "1.1.0"
 
 text2term_mapping_source_term_col = "SourceTerm"
 text2term_mapping_source_term_id_col = "SourceTermID"
@@ -21,10 +21,10 @@ text2term_mapping_score_col = "MappingScore"
 # 3) SemanticSQL tables of the specified ontology that enable search by leveraging the ontology class hierarchy
 # 4) Mappings of the values in the specified column of the metadata table to terms in the specified ontology
 # 5) Counts of how many data points in the metadata were mapped—either directly or indirectly—to each ontology term
-def assemble_database(metadata_df, dataset_name, ontology_name, resource_col, resource_id_col,
-                      ontology_term_iri_col=text2term_mapping_target_term_iri_col,
-                      ontology_semsql_db_url="", ontology_url="", pmid_col="",
-                      ontology_mappings_df=None, mapping_minimum_score=0.7, mapping_base_iris=()):
+def build_database(metadata_df, dataset_name, ontology_name, resource_col, resource_id_col,
+                   ontology_term_iri_col=text2term_mapping_target_term_iri_col,
+                   ontology_semsql_db_url="", ontology_url="", pmid_col="",
+                   ontology_mappings_df=None, mapping_minimum_score=0.7, mapping_base_iris=()):
     ontology_name = ontology_name.lower()
 
     # Get target ontology URL from the specified ontology name
