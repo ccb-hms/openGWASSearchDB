@@ -8,9 +8,9 @@ This project aims to facilitate search for GWAS records in the OpenGWAS database
 
 ## Database Tables
 ![](resources/opengwas_search_tables.png)
-- `opengwas_metadata` contains the original GWAS Catalog metadata table.
-- `opengwas_references` contains details obtained from PubMed about the articles in the `PUBMEDID` column of the `gwascatalog_metadata` table.
-- `opengwas_mappings` contains the text2term-generated mappings of the phenotypes in `trait` column of the metadata table to EFO.
+- `opengwas_metadata` contains the original OpenGWAS metadata table.
+- `opengwas_references` contains details obtained from PubMed about the articles in the `pmid` column of the metadata table.
+- `opengwas_mappings` contains the text2term-generated mappings of the phenotypes in the `trait` column of the metadata table to EFO.
 - `efo_labels` contains the terms in EFO (`Subject` column), their labels (`Object` column), IRIs, and the counts of how many rows/records in the metadata are directly mapped to those terms (`Direct` column), or indirectly mapped to those terms via a more specific term in the hierarchy (`Inherited` column).
 - `efo_edges` and `efo_entailed_edges` contain, respectively, the asserted and entailed hierarchical (IS-A/SubClassOf) relationships between terms in EFO.
 - `efo_dbxrefs` contains database cross-references between terms in EFO and terms in other ontologies or controlled vocabularies, such as MeddRA, OMIM, MeSH, etc. 
