@@ -1,4 +1,5 @@
 import sqlite3
+import time
 import text2term
 import bioregistry
 import pandas as pd
@@ -36,10 +37,11 @@ def build_database(metadata_df, dataset_name, ontology_name, resource_col, resou
     Path(db_name).touch()
     db_connection = sqlite3.connect(db_name)
 
-    # Add the user-given metadata table to the database
+    # Add the given metadata table to the database
     import_df_to_db(db_connection, data_frame=metadata_df, table_name=dataset_name + "_metadata")
 
     # Get SemanticSQL ontology tables and add them to the database
+    start = time.time()
     if ontology_semsql_db_url == "":
         ontology_semsql_db_url = "https://s3.amazonaws.com/bbop-sqlite/" + ontology_name + ".db"
     edges_df, entailed_edges_df, labels_df, dbxrefs_df, ontology_version = get_semsql_tables_for_ontology(
@@ -49,6 +51,7 @@ def build_database(metadata_df, dataset_name, ontology_name, resource_col, resou
         db_output_folder="../resources/",
         save_tables=True)
     print(f"...working with SemanticSQL build of {ontology_name.upper()} v{ontology_version}")
+    print(f"...done ({time.time() - start:.1f} seconds)")
     import_df_to_db(db_connection, data_frame=edges_df, table_name=ontology_name + "_edges")
     import_df_to_db(db_connection, data_frame=entailed_edges_df, table_name=ontology_name + "_entailed_edges")
     import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name=ontology_name + "_dbxrefs")
@@ -103,6 +106,7 @@ def import_df_to_db(connection, data_frame, table_name):
 def map_metadata_to_ontologies(metadata_df, dataset_name, ontology_url, min_score, source_term_col,
                                source_term_id_col, base_iris=()):
     print(f"Mapping values in metadata column '{source_term_col}' to terms in '{ontology_url}'...")
+    start = time.time()
     source_terms = metadata_df[source_term_col].tolist()
     if source_term_id_col != "":
         source_term_ids = metadata_df[source_term_id_col].tolist()
@@ -115,12 +119,14 @@ def map_metadata_to_ontologies(metadata_df, dataset_name, ontology_url, min_scor
                                    base_iris=base_iris)
     mappings.columns = mappings.columns.str.replace(" ", "")  # remove spaces from column names
     mappings[text2term_mapping_score_col] = mappings[text2term_mapping_score_col].astype(float).round(decimals=3)
+    print(f"...done ({time.time() - start:.1f} seconds)")
     return mappings
 
 
 # Get publication details from PubMed (title, abstract, journal, etc) for the PMIDS in the specified column
 def get_pubmed_details(metadata_df, dataset_name, pmid_col):
     print("Fetching publication metadata from PubMed...")
+    start = time.time()
     pmids = metadata_df[pmid_col].dropna().unique()
     fetch = PubMedFetcher()
     articles = []
@@ -139,4 +145,5 @@ def get_pubmed_details(metadata_df, dataset_name, pmid_col):
                 print(e)
     references_df = pd.DataFrame(articles, columns=['PMID', 'Journal', 'Title', 'Abstract', 'Year', 'URL'])
     references_df.to_csv("../resources/" + dataset_name + "_references.tsv", sep="\t", index=False)
+    print(f"...done ({time.time() - start:.1f} seconds)")
     return references_df

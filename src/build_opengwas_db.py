@@ -1,4 +1,5 @@
 import os
+import time
 import ieugwaspy
 import pandas as pd
 from build_database import build_database
@@ -22,6 +23,7 @@ def _delete_file(file):
         os.remove(file)
 
 
+# TODO: Set NCBI API Key before for faster querying:  export NCBI_API_KEY="4aee425053eca0157ca1f30b84555e016XYZ"
 if __name__ == "__main__":
     delete_existing_resources()
 
@@ -32,6 +34,7 @@ if __name__ == "__main__":
     metadata_df["pmid"] = metadata_df["pmid"].astype(str).str.replace(".0", "", regex=False)  # remove '.0' from PMIDs
     metadata_df.to_csv("../resources/opengwas_metadata.tsv", index=False, sep="\t")
 
+    start = time.time()
     build_database(dataset_name="opengwas",
                    metadata_df=metadata_df,
                    ontology_name="EFO",
@@ -42,3 +45,4 @@ if __name__ == "__main__":
                    mapping_base_iris=("http://www.ebi.ac.uk/efo/", "http://purl.obolibrary.org/obo/MONDO",
                                       "http://purl.obolibrary.org/obo/HP", "http://www.orpha.net/ORDO",
                                       "http://purl.obolibrary.org/obo/DOID"))
+    print(f"Finished building database ({time.time() - start:.1f} seconds)")
