@@ -1,7 +1,7 @@
 # Ontology-based OpenGWAS Search
 This project aims to facilitate search for GWAS records in the OpenGWAS database. This is achieved by first computing ontology mappings of the traits specified in the OpenGWAS metadata, and then combining the mappings with tabular representations of ontology relationships such that users can search over traits by leveraging the ontology class hierarchy. 
 
-`src/build_database.py` generates the SQLite3 database `opengwas_trait_search.db` that contains:
+`src/build_opengwas_db.py` generates the SQLite3 database `opengwas_search.db` that contains:
 - The original OpenGWAS metadata table with all traits and associated OpenGWAS DB record identifiers
 - [text2term](https://github.com/ccb-hms/ontology-mapper)-generated mappings of OpenGWAS traits to Experimental Factor Ontology (EFO) terms
 - Tables that specify EFO terms—their labels, identifiers and mapping counts—and the asserted and inferred hierarchical (SubclassOf) relationships between EFO terms (extracted from a [SemanticSQL](https://github.com/INCATools/semantic-sql) EFO build). 
