@@ -4,7 +4,7 @@ import urllib.request
 import bioregistry
 import pandas as pd
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 
 SUBJECT_COL = "Subject"
 OBJECT_COL = "Object"
@@ -16,21 +16,24 @@ IRI_PRIORITY_LIST = ["obofoundry", "default", "bioregistry"]
 def get_semsql_tables_for_ontologies(ontologies,
                                      tables_output_folder='../ontology-tables',
                                      db_output_folder="../ontology-db",
-                                     save_tables=False):
+                                     save_tables=False, single_table_for_all_ontologies=False):
     all_edges = all_entailed_edges = all_labels = all_dbxrefs = pd.DataFrame()
     for ontology in ontologies:
+        ontology_url = "https://s3.amazonaws.com/bbop-sqlite/" + ontology.lower() + ".db"
+        print(f"Downloading database file for {ontology} from {ontology_url}...")
         edges, entailed_edges, labels, dbxrefs, version = \
-            get_semsql_tables_for_ontology(ontology_url="https://s3.amazonaws.com/bbop-sqlite/" + ontology + ".db",
+            get_semsql_tables_for_ontology(ontology_url=ontology_url,
                                            ontology_name=ontology,
                                            db_output_folder=db_output_folder,
-                                           save_tables=False)
-        labels[ONTOLOGY_COL] = edges[ONTOLOGY_COL] = entailed_edges[ONTOLOGY_COL] = dbxrefs[ONTOLOGY_COL] = ontology
-        all_labels = pd.concat([all_labels, labels])
-        all_edges = pd.concat([all_edges, edges])
-        all_entailed_edges = pd.concat([all_entailed_edges, entailed_edges])
-        all_dbxrefs = pd.concat([all_dbxrefs, dbxrefs])
+                                           save_tables=(not single_table_for_all_ontologies))
+        if single_table_for_all_ontologies:
+            labels[ONTOLOGY_COL] = edges[ONTOLOGY_COL] = entailed_edges[ONTOLOGY_COL] = dbxrefs[ONTOLOGY_COL] = ontology
+            all_labels = pd.concat([all_labels, labels])
+            all_edges = pd.concat([all_edges, edges])
+            all_entailed_edges = pd.concat([all_entailed_edges, entailed_edges])
+            all_dbxrefs = pd.concat([all_dbxrefs, dbxrefs])
 
-    if save_tables:
+    if save_tables and single_table_for_all_ontologies:
         save_table(all_labels, "ontology_labels.tsv", tables_output_folder)
         save_table(all_edges, "ontology_edges.tsv", tables_output_folder)
         save_table(all_entailed_edges, "ontology_entailed_edges.tsv", tables_output_folder)
@@ -44,9 +47,8 @@ def get_semsql_tables_for_ontology(ontology_url, ontology_name, tables_output_fo
     if not os.path.isfile(db_file):
         if not os.path.exists(db_output_folder):
             os.makedirs(db_output_folder)
-        print("Downloading database file for " + ontology_name + "...")
         urllib.request.urlretrieve(ontology_url, db_file)
-    print("Generating tables for " + ontology_name + "...")
+    print(f"Generating tables for {ontology_name}...")
     conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
     # Get the tables from the sqlite database
@@ -55,6 +57,8 @@ def get_semsql_tables_for_ontology(ontology_url, ontology_name, tables_output_fo
     labels_df = _get_labels_table(cursor)
     dbxrefs_df = _get_db_cross_references_table(cursor)
     onto_version = _get_ontology_version(cursor)
+    if onto_version != "":
+        print(f"\tversion: {onto_version}")
     cursor.close()
     conn.close()
     if save_tables:
@@ -167,4 +171,5 @@ def save_table(df, output_filename, tables_output_folder):
 
 
 if __name__ == "__main__":
-    get_semsql_tables_for_ontologies(ontologies=["EFO", "FOODON", "NCIT"], save_tables=True)
+    get_semsql_tables_for_ontologies(ontologies=["EFO", "FOODON", "NCIT"], save_tables=True,
+                                     single_table_for_all_ontologies=True)
