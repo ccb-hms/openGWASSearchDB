@@ -1,8 +1,10 @@
 import os
+import sys
 import time
 import ieugwaspy
 import pandas as pd
-from build_database import build_database
+
+__version__ = "0.2.0"
 
 
 def delete_existing_resources():
@@ -23,9 +25,16 @@ def _delete_file(file):
         os.remove(file)
 
 
-# TODO: Set NCBI API Key before for faster querying:  export NCBI_API_KEY="4aee425053eca0157ca1f30b84555e016XYZ"
+# Takes an optional argument that is an NCBI API KEY, which is used to query PubMed faster.
 if __name__ == "__main__":
     delete_existing_resources()
+
+    # Check if an NCBI API Key is provided
+    if len(sys.argv) > 1:
+        os.environ["NCBI_API_KEY"] = sys.argv[1]
+        print(f"Using NCBI API Key: {os.environ.get('NCBI_API_KEY')}")
+    else:
+        print("NCBI API Key not provided—PubMed queries will be slower. Provide API Key as a parameter to this module.")
 
     # Fetch the OpenGWAS metadata directly from OpenGWAS using ieugwaspy package
     metadata_dict = ieugwaspy.gwasinfo()
@@ -34,7 +43,9 @@ if __name__ == "__main__":
     metadata_df["pmid"] = metadata_df["pmid"].astype(str).str.replace(".0", "", regex=False)  # remove '.0' from PMIDs
     metadata_df.to_csv("../resources/opengwas_metadata.tsv", index=False, sep="\t")
 
+    # Build the database
     start = time.time()
+    from build_database import build_database
     build_database(dataset_name="opengwas",
                    metadata_df=metadata_df,
                    ontology_name="EFO",
