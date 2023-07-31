@@ -1,10 +1,17 @@
 # Ontology-based OpenGWAS Search
-This project aims to facilitate search for GWAS records in the OpenGWAS database. This is achieved by first computing ontology mappings of the traits specified in the OpenGWAS metadata, and then combining the mappings with tabular representations of ontology relationships such that users can search over traits by leveraging the ontology class hierarchy. 
+This repository generates a database intended to facilitate search for GWAS records in the OpenGWAS database. This is achieved by first computing ontology mappings of the traits specified in the OpenGWAS metadata, and then combining the mappings with tabular representations of ontology relationships such that users can search over traits by leveraging the ontology class hierarchy. 
 
-`src/build_opengwas_db.py` generates the SQLite3 database `opengwas_search.db` that contains:
-- The original OpenGWAS metadata table with all traits and associated OpenGWAS DB record identifiers
-- [text2term](https://github.com/ccb-hms/ontology-mapper)-generated mappings of OpenGWAS traits to Experimental Factor Ontology (EFO) terms
-- Tables that specify EFO terms—their labels, identifiers and mapping counts—and the asserted and inferred hierarchical (SubclassOf) relationships between EFO terms (extracted from a [SemanticSQL](https://github.com/INCATools/semantic-sql) EFO build). 
+## Building the database
+The database can be built by executing the module `src/build_opengwas_db.py`. There is an optional parameter to specify an NCBI API Key for faster querying of PubMed articles.
+
+```python
+python3 build_opengwas_db.py <NCBI_API_Key>
+```
+
+This generates the SQLite3 database `opengwas_search.db` that contains:
+- The original OpenGWAS metadata table with all traits and associated OpenGWAS DB record identifiers.
+- [text2term](https://github.com/ccb-hms/ontology-mapper)-generated mappings of OpenGWAS traits to Experimental Factor Ontology (EFO) terms.
+- Tables that contain details of EFO terms—their labels, identifiers, synonyms, database cross-references, and mapping counts—and the asserted and inferred hierarchical (SubclassOf) relationships between EFO terms (extracted from a [SemanticSQL](https://github.com/INCATools/semantic-sql) EFO build). 
 
 ## Database Tables
 ![](resources/opengwas_search_tables.png)
@@ -13,7 +20,8 @@ This project aims to facilitate search for GWAS records in the OpenGWAS database
 - `opengwas_mappings` contains the text2term-generated mappings of the phenotypes in the `trait` column of the metadata table to EFO.
 - `efo_labels` contains the terms in EFO (`Subject` column), their labels (`Object` column), IRIs, and the counts of how many rows/records in the metadata are directly mapped to those terms (`Direct` column), or indirectly mapped to those terms via a more specific term in the hierarchy (`Inherited` column).
 - `efo_edges` and `efo_entailed_edges` contain, respectively, the asserted and entailed hierarchical (IS-A/SubClassOf) relationships between terms in EFO.
-- `efo_dbxrefs` contains database cross-references between terms in EFO and terms in other ontologies or controlled vocabularies, such as MeddRA, OMIM, MeSH, etc. 
+- `efo_dbxrefs` contains database cross-references between terms in EFO and terms in other ontologies or controlled vocabularies, such as MeddRA, OMIM, MeSH, etc.
+- `efo_synonyms` contains the terms in EFO (`Subject` column) and their synonyms (`Object` column).
 
 ## Example Queries
 `src/example_query.py` contains a simple function to query the generated database for OpenGWAS records related to a user-given trait. Executing this script will perform example queries for three traits and print the results. 
@@ -58,8 +66,8 @@ base_iris=("http://www.ebi.ac.uk/efo/",
 ```
 
 
-## Dependencies
+### Resource versions
 The latest ontology-based search database was built using:
-- OpenGWAS metadata snapshot from 05/09/2023
+- OpenGWAS metadata snapshot from July 31, 2023
 - Experimental Factor Ontology (EFO) v3.43.0
-- tex2term v2.3.0
+- text2term v2.3.2
