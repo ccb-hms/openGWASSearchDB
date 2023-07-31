@@ -33136,49 +33136,49 @@ ZFA:0001389	regeneration epithelium	http://purl.obolibrary.org/obo/ZFA_0001389
 ZFA:0001484	superficial blastomere	http://purl.obolibrary.org/obo/ZFA_0001484
 ZFA:0005040	posterior lateral mesoderm	http://purl.obolibrary.org/obo/ZFA_0005040
 ZFA:0009150	Rohon-Beard neuron	http://purl.obolibrary.org/obo/ZFA_0009150
-obo:EFO_0011021	BRCA1 mutation carier status	
-obo:EFO_0011022	BRCA2 mutation carier statu	
-obo:EO_0001001	plant treatment	
-obo:EO_0001004	inorganic chemical treatment	
-obo:EO_0001020	carbon dioxide treatment	
-obo:EO_0001038	osmotic stress treatment	
-obo:EO_0001046	limited phosphate treatment	
-obo:EO_0001047	limited iron regimen	
-obo:EO_0001054	limited nitrate regimen	
-obo:EO_0001055	inorganic gas treatment	
-obo:EO_0001056	elevated carbon dioxide treatment	
-obo:EO_0007048	sodium chloride regimen	
-obo:EO_0007049	soil environment	
-obo:EO_0007067	hydroponic plant culture media	
-obo:EO_0007068	ethylene treatment	
-obo:EO_0007078	light quantity regimen	
-obo:EO_0007105	abscisic acid treatment	
-obo:EO_0007129	UV-C light regimen	
-obo:EO_0007153	radiation quantity regimen	
-obo:EO_0007154	radiation quality treatment	
-obo:EO_0007162	continuous light regimen	
-obo:EO_0007165	growth hormone treatment	
-obo:EO_0007171	pH regimen	
-obo:EO_0007173	warm/hot temperature regimen	
-obo:EO_0007174	cold temperature regimen	
-obo:EO_0007185	salt treatment	
-obo:EO_0007189	chemical treatment	
-obo:EO_0007191	abiotic plant treatment	
-obo:EO_0007196	light regimen	
-obo:EO_0007199	long day length regimen	
-obo:EO_0007200	short day length regimen	
-obo:EO_0007203	far red light regimen	
-obo:EO_0007207	red light regimen	
-obo:EO_0007222	UV light regimen	
-obo:EO_0007231	study type (plant)	
-obo:EO_0007241	plant nutrient treatment	
-obo:EO_0007248	green house study	
-obo:EO_0007256	field study	
-obo:EO_0007269	growth chamber study	
-obo:EO_0007270	continuous dark (no light) regimen	
-obo:EO_0007317	Nilaparvata lugens	
-obo:EO_0007319	warm/hot air temperature regimen	
-obo:EO_0007337	Nematoda	
-obo:EO_0007357	biotic plant treatment	
-obo:EO_0007404	drought environment	
-obo:ZEA_0015075	cob	
+obo:EFO_0011021	BRCA1 mutation carier status	http://purl.obolibrary.org/obo/EFO_0011021
+obo:EFO_0011022	BRCA2 mutation carier statu	http://purl.obolibrary.org/obo/EFO_0011022
+obo:EO_0001001	plant treatment	http://purl.obolibrary.org/obo/EO_0001001
+obo:EO_0001004	inorganic chemical treatment	http://purl.obolibrary.org/obo/EO_0001004
+obo:EO_0001020	carbon dioxide treatment	http://purl.obolibrary.org/obo/EO_0001020
+obo:EO_0001038	osmotic stress treatment	http://purl.obolibrary.org/obo/EO_0001038
+obo:EO_0001046	limited phosphate treatment	http://purl.obolibrary.org/obo/EO_0001046
+obo:EO_0001047	limited iron regimen	http://purl.obolibrary.org/obo/EO_0001047
+obo:EO_0001054	limited nitrate regimen	http://purl.obolibrary.org/obo/EO_0001054
+obo:EO_0001055	inorganic gas treatment	http://purl.obolibrary.org/obo/EO_0001055
+obo:EO_0001056	elevated carbon dioxide treatment	http://purl.obolibrary.org/obo/EO_0001056
+obo:EO_0007048	sodium chloride regimen	http://purl.obolibrary.org/obo/EO_0007048
+obo:EO_0007049	soil environment	http://purl.obolibrary.org/obo/EO_0007049
+obo:EO_0007067	hydroponic plant culture media	http://purl.obolibrary.org/obo/EO_0007067
+obo:EO_0007068	ethylene treatment	http://purl.obolibrary.org/obo/EO_0007068
+obo:EO_0007078	light quantity regimen	http://purl.obolibrary.org/obo/EO_0007078
+obo:EO_0007105	abscisic acid treatment	http://purl.obolibrary.org/obo/EO_0007105
+obo:EO_0007129	UV-C light regimen	http://purl.obolibrary.org/obo/EO_0007129
+obo:EO_0007153	radiation quantity regimen	http://purl.obolibrary.org/obo/EO_0007153
+obo:EO_0007154	radiation quality treatment	http://purl.obolibrary.org/obo/EO_0007154
+obo:EO_0007162	continuous light regimen	http://purl.obolibrary.org/obo/EO_0007162
+obo:EO_0007165	growth hormone treatment	http://purl.obolibrary.org/obo/EO_0007165
+obo:EO_0007171	pH regimen	http://purl.obolibrary.org/obo/EO_0007171
+obo:EO_0007173	warm/hot temperature regimen	http://purl.obolibrary.org/obo/EO_0007173
+obo:EO_0007174	cold temperature regimen	http://purl.obolibrary.org/obo/EO_0007174
+obo:EO_0007185	salt treatment	http://purl.obolibrary.org/obo/EO_0007185
+obo:EO_0007189	chemical treatment	http://purl.obolibrary.org/obo/EO_0007189
+obo:EO_0007191	abiotic plant treatment	http://purl.obolibrary.org/obo/EO_0007191
+obo:EO_0007196	light regimen	http://purl.obolibrary.org/obo/EO_0007196
+obo:EO_0007199	long day length regimen	http://purl.obolibrary.org/obo/EO_0007199
+obo:EO_0007200	short day length regimen	http://purl.obolibrary.org/obo/EO_0007200
+obo:EO_0007203	far red light regimen	http://purl.obolibrary.org/obo/EO_0007203
+obo:EO_0007207	red light regimen	http://purl.obolibrary.org/obo/EO_0007207
+obo:EO_0007222	UV light regimen	http://purl.obolibrary.org/obo/EO_0007222
+obo:EO_0007231	study type (plant)	http://purl.obolibrary.org/obo/EO_0007231
+obo:EO_0007241	plant nutrient treatment	http://purl.obolibrary.org/obo/EO_0007241
+obo:EO_0007248	green house study	http://purl.obolibrary.org/obo/EO_0007248
+obo:EO_0007256	field study	http://purl.obolibrary.org/obo/EO_0007256
+obo:EO_0007269	growth chamber study	http://purl.obolibrary.org/obo/EO_0007269
+obo:EO_0007270	continuous dark (no light) regimen	http://purl.obolibrary.org/obo/EO_0007270
+obo:EO_0007317	Nilaparvata lugens	http://purl.obolibrary.org/obo/EO_0007317
+obo:EO_0007319	warm/hot air temperature regimen	http://purl.obolibrary.org/obo/EO_0007319
+obo:EO_0007337	Nematoda	http://purl.obolibrary.org/obo/EO_0007337
+obo:EO_0007357	biotic plant treatment	http://purl.obolibrary.org/obo/EO_0007357
+obo:EO_0007404	drought environment	http://purl.obolibrary.org/obo/EO_0007404
+obo:ZEA_0015075	cob	http://purl.obolibrary.org/obo/ZEA_0015075

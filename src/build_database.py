@@ -9,7 +9,7 @@ from metapub import PubMedFetcher
 from generate_ontology_tables import get_semsql_tables_for_ontology
 from generate_mapping_report import get_mapping_counts
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 
 text2term_mapping_source_term_col = "SourceTerm"
 text2term_mapping_source_term_id_col = "SourceTermID"
@@ -44,17 +44,17 @@ def build_database(metadata_df, dataset_name, ontology_name, resource_col, resou
     start = time.time()
     if ontology_semsql_db_url == "":
         ontology_semsql_db_url = "https://s3.amazonaws.com/bbop-sqlite/" + ontology_name + ".db"
-    edges_df, entailed_edges_df, labels_df, dbxrefs_df, ontology_version = get_semsql_tables_for_ontology(
+    edges_df, entailed_edges_df, labels_df, dbxrefs_df, synonyms_df, ontology_version = get_semsql_tables_for_ontology(
         ontology_url=ontology_semsql_db_url,
         ontology_name=ontology_name.upper(),
         tables_output_folder="../resources/",
         db_output_folder="../resources/",
         save_tables=True)
-    print(f"...working with SemanticSQL build of {ontology_name.upper()} v{ontology_version}")
     print(f"...done ({time.time() - start:.1f} seconds)")
     import_df_to_db(db_connection, data_frame=edges_df, table_name=ontology_name + "_edges")
     import_df_to_db(db_connection, data_frame=entailed_edges_df, table_name=ontology_name + "_entailed_edges")
     import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name=ontology_name + "_dbxrefs")
+    import_df_to_db(db_connection, data_frame=synonyms_df, table_name=ontology_name + "_synonyms")
 
     # Get details (title, abstract, journal) from PubMed about references in the specified PMID column
     references_df = get_pubmed_details(metadata_df=metadata_df, dataset_name=dataset_name, pmid_col=pmid_col)
