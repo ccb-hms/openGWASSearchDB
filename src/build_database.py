@@ -1,3 +1,4 @@
+import os
 import sqlite3
 import time
 import text2term
@@ -9,7 +10,9 @@ from metapub import PubMedFetcher
 from generate_ontology_tables import get_semsql_tables_for_ontology
 from generate_mapping_report import get_mapping_counts
 
-__version__ = "1.2.0"
+__version__ = "1.2.2"
+
+DB_RESOURCES_FOLDER = "../resources/"
 
 text2term_mapping_source_term_col = "SourceTerm"
 text2term_mapping_source_term_id_col = "SourceTermID"
@@ -22,7 +25,9 @@ text2term_mapping_score_col = "MappingScore"
 # 3) SemanticSQL tables of the specified ontology that enable search by leveraging the ontology class hierarchy
 # 4) Mappings of the values in the specified column of the metadata table to terms in the specified ontology
 # 5) Counts of how many data points in the metadata were mapped—either directly or indirectly—to each ontology term
-def build_database(metadata_df, dataset_name, ontology_name, resource_col, resource_id_col,
+def build_database(metadata_df, dataset_name, ontology_name,
+                   resource_col=text2term_mapping_source_term_col,
+                   resource_id_col=text2term_mapping_source_term_id_col,
                    ontology_term_iri_col=text2term_mapping_target_term_iri_col,
                    ontology_semsql_db_url="", ontology_url="", pmid_col="",
                    ontology_mappings_df=None, mapping_minimum_score=0.7, mapping_base_iris=()):
@@ -47,17 +52,23 @@ def build_database(metadata_df, dataset_name, ontology_name, resource_col, resou
     edges_df, entailed_edges_df, labels_df, dbxrefs_df, synonyms_df, ontology_version = get_semsql_tables_for_ontology(
         ontology_url=ontology_semsql_db_url,
         ontology_name=ontology_name.upper(),
-        tables_output_folder="../resources/",
-        db_output_folder="../resources/",
+        tables_output_folder=DB_RESOURCES_FOLDER,
+        db_output_folder=DB_RESOURCES_FOLDER,
         save_tables=True)
     print(f"...done ({time.time() - start:.1f} seconds)")
     import_df_to_db(db_connection, data_frame=edges_df, table_name=ontology_name + "_edges")
     import_df_to_db(db_connection, data_frame=entailed_edges_df, table_name=ontology_name + "_entailed_edges")
-    import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name=ontology_name + "_dbxrefs")
     import_df_to_db(db_connection, data_frame=synonyms_df, table_name=ontology_name + "_synonyms")
+    # TODO perhaps make inclusion of database cross-references optional
+    # import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name=ontology_name + "_dbxrefs")
 
     # Get details (title, abstract, journal) from PubMed about references in the specified PMID column
-    references_df = get_pubmed_details(metadata_df=metadata_df, dataset_name=dataset_name, pmid_col=pmid_col)
+    references_table_filename = DB_RESOURCES_FOLDER + dataset_name + "_references.tsv"
+    if not os.path.isfile(references_table_filename):
+        references_df = get_pubmed_details(metadata_df=metadata_df, dataset_name=dataset_name, pmid_col=pmid_col)
+    else:
+        # TODO incrementally update the existing table with any new references in the metadata
+        references_df = pd.read_csv(references_table_filename, sep="\t")
     import_df_to_db(db_connection, data_frame=references_df, table_name=dataset_name + "_references")
 
     # Map the values in the specified metadata table column to the specified ontology
@@ -71,14 +82,14 @@ def build_database(metadata_df, dataset_name, ontology_name, resource_col, resou
         resource_id_col = text2term_mapping_source_term_id_col
         ontology_term_iri_col = text2term_mapping_target_term_iri_col
         ontology_mappings_df.columns = ontology_mappings_df.columns.str.replace(' ', '')
-        import_df_to_db(db_connection, data_frame=ontology_mappings_df, table_name=dataset_name + "_mappings")
+    import_df_to_db(db_connection, data_frame=ontology_mappings_df, table_name=dataset_name + "_mappings")
 
     # Get counts of mappings
     counts_df = get_mapping_counts(mappings_df=ontology_mappings_df, ontology_iri=ontology_url,
-                                   source_term_col=resource_col,
+                                   source_term_col=resource_col, save_ontology=True,
                                    source_term_id_col=resource_id_col,
                                    mapped_term_iri_col=ontology_term_iri_col)
-    counts_df.to_csv("../resources/" + ontology_name + "_mappings_counts.tsv", sep="\t", index=False)
+    counts_df.to_csv(DB_RESOURCES_FOLDER + ontology_name + "_mappings_counts.tsv", sep="\t", index=False)
 
     # Merge the counts table with the labels table on the "iri" column, and add the merged table to the database
     merged_df = pd.merge(labels_df, counts_df, on="IRI")
@@ -115,7 +126,7 @@ def map_metadata_to_ontologies(metadata_df, dataset_name, ontology_url, min_scor
     mappings = text2term.map_terms(source_terms=source_terms, source_terms_ids=source_term_ids,
                                    target_ontology=ontology_url, excl_deprecated=True, save_graphs=False,
                                    max_mappings=1, min_score=min_score, save_mappings=True,
-                                   output_file="../resources/" + dataset_name + "_mappings.csv",
+                                   output_file=DB_RESOURCES_FOLDER + dataset_name + "_mappings.csv",
                                    base_iris=base_iris)
     mappings.columns = mappings.columns.str.replace(" ", "")  # remove spaces from column names
     mappings[text2term_mapping_score_col] = mappings[text2term_mapping_score_col].astype(float).round(decimals=3)
@@ -131,19 +142,23 @@ def get_pubmed_details(metadata_df, dataset_name, pmid_col):
     fetch = PubMedFetcher()
     articles = []
     for pmid in tqdm(pmids):
-        if pmid != "0" and pmid != "nan":
-            try:
-                article = fetch.article_by_pmid(pmid)
-                title = article.title
-                journal = article.journal
-                year = article.year
-                abstract = article.abstract
-                url = article.url
-                articles.append((pmid, journal, title, abstract, year, url))
-            except Exception as e:
-                print("Unable to fetch article for PMID: " + str(pmid))
-                print(e)
-    references_df = pd.DataFrame(articles, columns=['PMID', 'Journal', 'Title', 'Abstract', 'Year', 'URL'])
-    references_df.to_csv("../resources/" + dataset_name + "_references.tsv", sep="\t", index=False)
+        articles.append(get_pubmed_article_details(fetch, pmid))
+    references_df = pd.DataFrame(articles, columns=[pmid_col, 'Journal', 'Title', 'Abstract', 'Year', 'URL'])
+    references_df.to_csv(DB_RESOURCES_FOLDER + dataset_name + "_references.tsv", sep="\t", index=False)
     print(f"...done ({time.time() - start:.1f} seconds)")
     return references_df
+
+
+def get_pubmed_article_details(pubmed_fetcher, pmid):
+    if pmid != "0" and pmid != "nan":
+        try:
+            article = pubmed_fetcher.article_by_pmid(pmid)
+            title = article.title
+            journal = article.journal
+            year = article.year
+            abstract = article.abstract
+            url = article.url
+            return pmid, journal, title, abstract, year, url
+        except Exception as e:
+            # Try to fetch details again. Sometimes the NCBI API errors out, but the second attempt (usually) succeeds
+            return get_pubmed_article_details(pubmed_fetcher, pmid)
