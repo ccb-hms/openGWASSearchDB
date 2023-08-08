@@ -2,7 +2,7 @@
 This repository generates a database intended to facilitate search for GWAS records in the OpenGWAS database. This is achieved by first computing ontology mappings of the traits specified in the OpenGWAS metadata, and then combining the mappings with tabular representations of ontology relationships such that users can search over traits by leveraging the ontology class hierarchy. 
 
 ## Building the database
-The database can be built by executing the module `src/build_opengwas_db.py`. There is an optional parameter to specify an NCBI API Key for faster querying of PubMed articles.
+The database can be built by executing the module `src/build_opengwas_db.py` as specified below. There is an optional parameter to specify an NCBI API Key for faster querying of PubMed articles.
 
 ```python
 python3 build_opengwas_db.py <NCBI_API_Key>
@@ -11,17 +11,22 @@ python3 build_opengwas_db.py <NCBI_API_Key>
 This generates the SQLite3 database `opengwas_search.db` that contains:
 - The original OpenGWAS metadata table with all traits and associated OpenGWAS DB record identifiers.
 - [text2term](https://github.com/ccb-hms/ontology-mapper)-generated mappings of OpenGWAS traits to Experimental Factor Ontology (EFO) terms.
-- Tables that contain details of EFO terms—their labels, identifiers, synonyms, database cross-references, and mapping counts—and the asserted and inferred hierarchical (SubclassOf) relationships between EFO terms (extracted from a [SemanticSQL](https://github.com/INCATools/semantic-sql) EFO build). 
+- Tables that contain details of EFO terms—their labels, identifiers, synonyms, associated anatomical locations, and mapping counts—and the asserted and inferred hierarchical (SubclassOf) relationships between EFO terms (extracted from a [SemanticSQL](https://github.com/INCATools/semantic-sql) EFO build). 
 
 ## Database Tables
 ![](resources/opengwas_search_tables.png)
 - `opengwas_metadata` contains the original OpenGWAS metadata table.
 - `opengwas_references` contains details obtained from PubMed about the articles in the `pmid` column of the metadata table.
 - `opengwas_mappings` contains the text2term-generated mappings of the phenotypes in the `trait` column of the metadata table to EFO.
-- `efo_labels` contains the terms in EFO (`Subject` column), their labels (`Object` column), IRIs, and the counts of how many rows/records in the metadata are directly mapped to those terms (`Direct` column), or indirectly mapped to those terms via a more specific term in the hierarchy (`Inherited` column).
+- `efo_labels` contains the following details:
+  - all terms in EFO, represented by their CURIEs (`Subject` column). 
+  - term labels (`Object` column). 
+  - term IRIs (`IRI` column).
+  - disease locations associated with each term, if available (`DiseaseLocation` column). 
+  - count of how many metadata points are directly mapped to those ontology terms (`Direct` column). 
+  - count of how many metadata points are indirectly mapped to those terms via a more specific term in the hierarchy (`Inherited` column).
 - `efo_edges` and `efo_entailed_edges` contain, respectively, the asserted and entailed hierarchical (IS-A/SubClassOf) relationships between terms in EFO.
-- `efo_dbxrefs` contains database cross-references between terms in EFO and terms in other ontologies or controlled vocabularies, such as MeddRA, OMIM, MeSH, etc.
-- `efo_synonyms` contains the terms in EFO (`Subject` column) and their synonyms (`Object` column).
+- `efo_synonyms` contains the potentially multiple synonyms (in the `Object` column) of each EFO term (given in the `Subject` column).
 
 ## Example Queries
 `src/example_query.py` contains a simple function to query the generated database for OpenGWAS records related to a user-given trait. Executing this script will perform example queries for three traits and print the results. 
@@ -68,6 +73,6 @@ base_iris=("http://www.ebi.ac.uk/efo/",
 
 ### Resource versions
 The latest ontology-based search database was built using:
-- OpenGWAS metadata snapshot from July 31, 2023
+- OpenGWAS metadata snapshot from August 7, 2023
 - Experimental Factor Ontology (EFO) v3.43.0
-- text2term v2.3.2
+- text2term v3.0.0
