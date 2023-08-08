@@ -10,7 +10,7 @@ from metapub import PubMedFetcher
 from generate_ontology_tables import get_semsql_tables_for_ontology
 from generate_mapping_report import get_mapping_counts
 
-__version__ = "1.2.2"
+__version__ = "1.2.3"
 
 DB_RESOURCES_FOLDER = "../resources/"
 
@@ -142,7 +142,9 @@ def get_pubmed_details(metadata_df, dataset_name, pmid_col):
     fetch = PubMedFetcher()
     articles = []
     for pmid in tqdm(pmids):
-        articles.append(get_pubmed_article_details(fetch, pmid))
+        article_details = get_pubmed_article_details(fetch, pmid)
+        if article_details != "":
+            articles.append(article_details)
     references_df = pd.DataFrame(articles, columns=[pmid_col, 'Journal', 'Title', 'Abstract', 'Year', 'URL'])
     references_df.to_csv(DB_RESOURCES_FOLDER + dataset_name + "_references.tsv", sep="\t", index=False)
     print(f"...done ({time.time() - start:.1f} seconds)")
@@ -162,3 +164,4 @@ def get_pubmed_article_details(pubmed_fetcher, pmid):
         except Exception as e:
             # Try to fetch details again. Sometimes the NCBI API errors out, but the second attempt (usually) succeeds
             return get_pubmed_article_details(pubmed_fetcher, pmid)
+    return ""
