@@ -10,7 +10,7 @@ from metapub import PubMedFetcher
 from generate_ontology_tables import get_semsql_tables_for_ontology
 from generate_mapping_report import get_mapping_counts
 
-__version__ = "1.2.3"
+__version__ = "1.2.7"
 
 DB_RESOURCES_FOLDER = "../resources/"
 
@@ -28,9 +28,11 @@ text2term_mapping_score_col = "MappingScore"
 def build_database(metadata_df, dataset_name, ontology_name,
                    resource_col=text2term_mapping_source_term_col,
                    resource_id_col=text2term_mapping_source_term_id_col,
+                   output_database_filepath="",
                    ontology_term_iri_col=text2term_mapping_target_term_iri_col,
                    ontology_semsql_db_url="", ontology_url="", pmid_col="",
-                   ontology_mappings_df=None, mapping_minimum_score=0.7, mapping_base_iris=()):
+                   ontology_mappings_df=None, mapping_minimum_score=0.7, mapping_base_iris=(),
+                   include_cross_ontology_references_table=False, additional_tables=()):
     ontology_name = ontology_name.lower()
 
     # Get target ontology URL from the specified ontology name
@@ -38,9 +40,10 @@ def build_database(metadata_df, dataset_name, ontology_name,
         ontology_url = bioregistry.get_owl_download(ontology_name)
 
     # Create SQLite database
-    db_name = "../" + dataset_name + "_search.db"
-    Path(db_name).touch()
-    db_connection = sqlite3.connect(db_name)
+    if output_database_filepath == "":
+        output_database_filepath = "../" + dataset_name + "_search.db"
+    Path(output_database_filepath).touch()
+    db_connection = sqlite3.connect(output_database_filepath)
 
     # Add the given metadata table to the database
     import_df_to_db(db_connection, data_frame=metadata_df, table_name=dataset_name + "_metadata")
@@ -59,8 +62,8 @@ def build_database(metadata_df, dataset_name, ontology_name,
     import_df_to_db(db_connection, data_frame=edges_df, table_name=ontology_name + "_edges")
     import_df_to_db(db_connection, data_frame=entailed_edges_df, table_name=ontology_name + "_entailed_edges")
     import_df_to_db(db_connection, data_frame=synonyms_df, table_name=ontology_name + "_synonyms")
-    # TODO perhaps make inclusion of database cross-references optional
-    # import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name=ontology_name + "_dbxrefs")
+    if include_cross_ontology_references_table:
+        import_df_to_db(db_connection, data_frame=dbxrefs_df, table_name=ontology_name + "_dbxrefs")
 
     # Get details (title, abstract, journal) from PubMed about references in the specified PMID column
     references_table_filename = DB_RESOURCES_FOLDER + dataset_name + "_references.tsv"
@@ -91,9 +94,17 @@ def build_database(metadata_df, dataset_name, ontology_name,
                                    mapped_term_iri_col=ontology_term_iri_col)
     counts_df.to_csv(DB_RESOURCES_FOLDER + ontology_name + "_mappings_counts.tsv", sep="\t", index=False)
 
-    # Merge the counts table with the labels table on the "iri" column, and add the merged table to the database
+    # Merge the counts table with the labels table on the "IRI" column
     merged_df = pd.merge(labels_df, counts_df, on="IRI")
+
+    # Save the merged table to disk and add it to the database
+    merged_df.to_csv(DB_RESOURCES_FOLDER + ontology_name + "_labels.tsv", sep="\t", index=False)
     import_df_to_db(db_connection, data_frame=merged_df, table_name=ontology_name + "_labels")
+
+    # Add any additional tables given
+    if len(additional_tables) > 0:
+        for table_name in additional_tables.keys():
+            import_df_to_db(db_connection, data_frame=additional_tables[table_name], table_name=table_name)
 
 
 dtypes = {'int64': 'INTEGER', 'float64': 'REAL', 'object': 'TEXT', 'datetime64': 'TEXT'}
@@ -129,7 +140,6 @@ def map_metadata_to_ontologies(metadata_df, dataset_name, ontology_url, min_scor
                                    output_file=DB_RESOURCES_FOLDER + dataset_name + "_mappings.csv",
                                    base_iris=base_iris)
     mappings.columns = mappings.columns.str.replace(" ", "")  # remove spaces from column names
-    mappings[text2term_mapping_score_col] = mappings[text2term_mapping_score_col].astype(float).round(decimals=3)
     print(f"...done ({time.time() - start:.1f} seconds)")
     return mappings
 
@@ -151,7 +161,7 @@ def get_pubmed_details(metadata_df, dataset_name, pmid_col):
     return references_df
 
 
-def get_pubmed_article_details(pubmed_fetcher, pmid):
+def get_pubmed_article_details(pubmed_fetcher, pmid, repeat=True):
     if pmid != "0" and pmid != "nan":
         try:
             article = pubmed_fetcher.article_by_pmid(pmid)
@@ -162,6 +172,7 @@ def get_pubmed_article_details(pubmed_fetcher, pmid):
             url = article.url
             return pmid, journal, title, abstract, year, url
         except Exception as e:
-            # Try to fetch details again. Sometimes the NCBI API errors out, but the second attempt (usually) succeeds
-            return get_pubmed_article_details(pubmed_fetcher, pmid)
+            # Try to fetch details once more. Sometimes the NCBI API errors out, but a second attempt (usually) succeeds
+            if repeat:
+                return get_pubmed_article_details(pubmed_fetcher, pmid, repeat=False)
     return ""
