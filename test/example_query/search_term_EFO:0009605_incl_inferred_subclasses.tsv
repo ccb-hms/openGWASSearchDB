@@ -1,5 +1,5 @@
 OpenGWASID	OpenGWASTrait	OntologyTerm	OntologyTermID	MappingConfidence
-bbj-a-140	Pancreatic cancer	Malignant Pancreatic Neoplasm	EFO:1000359	0.987
+bbj-a-140	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.987
 bbj-a-153	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
 bbj-a-77	Type 2 Diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
 ebi-a-GCST005047	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
@@ -19,11 +19,11 @@ ebi-a-GCST90016675	Pancreas fat	pancreatic neoplasm	EFO:0003860	0.862
 ebi-a-GCST90016676	Pancreas iron content	pancreatic neoplasm	EFO:0003860	0.673
 finn-b-ALCOPANCACU	Acohol-induced acute pancreatitis	acute pancreatitis	EFO:1000652	0.731
 finn-b-ALCOPANCCHRON	Alcohol-induced chronic pancreatitis	chronic pancreatitis	EFO:0000342	0.732
-finn-b-C3_PANCREAS	Malignant neoplasm of pancreas	Malignant Pancreatic Neoplasm	EFO:1000359	0.99
+finn-b-C3_PANCREAS	Malignant neoplasm of pancreas	Malignant Pancreatic Neoplasm	EFO:1000359	0.989
 finn-b-C3_PANCREAS_EXALLC	Malignant neoplasm of pancreas (all cancers excluded)	Malignant Pancreatic Neoplasm	EFO:1000359	0.92
 finn-b-CD2_BENIGN_PANCREAS	Benign neoplasm: Pancreas	benign neoplasm of pancreas	MONDO:0021470	0.99
 finn-b-CD2_BENIGN_PANCREAS_EXALLC	Benign neoplasm: Pancreas (all cancers excluded)	benign neoplasm of pancreas	MONDO:0021470	0.912
-finn-b-DIABETES_FG	Diabetes, varying definitions	diabetes mellitus	EFO:0000400	0.655
+finn-b-DIABETES_FG	Diabetes, varying definitions	diabetes mellitus	EFO:0000400	0.656
 finn-b-DM_KETOACIDOSIS	Diabetic ketoacidosis	diabetic ketoacidosis	EFO:1000897	0.993
 finn-b-DM_OTHER_WIDE	Other diabetes, wide definition	diabetes mellitus	EFO:0000400	0.997
 finn-b-E4_DIABETES	Diabetes mellitus	diabetes mellitus	EFO:0000400	0.993
@@ -45,10 +45,10 @@ finn-b-O15_PREG_DM	Diabetes mellitus in pregnancy	diabetes mellitus	EFO:0000400	
 finn-b-T1D	Type1 diabetes, definitions combined	type 1 diabetes mellitus	MONDO:0005147	0.711
 finn-b-T1D_STRICT	Type 1 diabetes, strict definition	type 1 diabetes mellitus	MONDO:0005147	0.986
 finn-b-T1D_STRICT1	Type 1 diabetes, strict definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.682
-finn-b-T1D_STRICT2	Type 1 diabetes, strict definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.655
+finn-b-T1D_STRICT2	Type 1 diabetes, strict definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.656
 finn-b-T1D_WIDE	Type 1 diabetes, wide definition	type 1 diabetes mellitus	MONDO:0005147	0.986
 finn-b-T1D_WIDE1	Type 1 diabetes, wide definition, subgroup 1	type 1 diabetes mellitus	MONDO:0005147	0.682
-finn-b-T1D_WIDE2	Type 1 diabetes, wide definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.655
+finn-b-T1D_WIDE2	Type 1 diabetes, wide definition, subgroup 2	type 2 diabetes mellitus	MONDO:0005148	0.656
 finn-b-T2D	Type 2 diabetes, definitions combined	type 2 diabetes mellitus	MONDO:0005148	0.986
 finn-b-T2D_WIDE	Type 2 diabetes, wide definition	type 2 diabetes mellitus	MONDO:0005148	0.986
 ieu-a-1090	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
@@ -56,7 +56,7 @@ ieu-a-23	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
 ieu-a-24	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
 ieu-a-25	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
 ieu-a-26	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
-ieu-a-822	Pancreatic cancer	Malignant Pancreatic Neoplasm	EFO:1000359	0.987
+ieu-a-822	Pancreatic cancer	pancreatic neoplasm	EFO:0003860	0.987
 ieu-a-976	Type 2 diabetes	type 2 diabetes mellitus	MONDO:0005148	0.986
 met-a-631	Bilirubin (E,Z or Z,E)*	Zollinger-Ellison Syndrome	EFO:0007549	0.641
 prot-a-1558	Insulin	pancreatic insulinoma	MONDO:0024677	0.845
@@ -64,7 +64,7 @@ prot-a-2846	Somatostatin-28	somatostatinoma	EFO:1001187	0.748
 prot-c-3037_62_1	IL-1b	idiopathic type 1 diabetes	EFO:0009757	0.7
 prot-c-3729_16_2	Somatostatin-28	somatostatinoma	EFO:1001187	0.748
 prot-c-3839_60_2	AIP	autoimmune pancreatitis	MONDO:0015175	0.999
-prot-c-3854_24_1	NACA	permanent neonatal diabetes mellitus-pancreatic and cerebellar agenesis syndrome	MONDO:0012192	0.601
+prot-c-3854_24_1	NACA	permanent neonatal diabetes mellitus-pancreatic and cerebellar agenesis syndrome	MONDO:0012192	0.602
 prot-c-4851_25_1	IL-1a	autoimmune type 1 diabetes	EFO:0009756	0.696
 prot-c-4883_56_2	Insulin	pancreatic insulinoma	MONDO:0024677	0.845
 ukb-a-208	Illnesses of father: Diabetes	diabetes mellitus	EFO:0000400	0.629

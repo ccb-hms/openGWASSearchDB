@@ -3,4 +3,4 @@ search_term='EFO:0009605'
 include_subclasses=True
 direct_subclasses_only=True
 
-# query results count: 4
+# query results count: 6

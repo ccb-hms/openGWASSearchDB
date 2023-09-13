@@ -4,18 +4,18 @@ bbj-a-2	Body mass index	body mass index	EFO:0004340	0.995
 bbj-a-3	Body mass index	body mass index	EFO:0004340	0.995
 bbj-a-70	Height	body height	EFO:0004339	0.992
 ebi-a-GCST002783	Body mass index	body mass index	EFO:0004340	0.995
-ebi-a-GCST003435	Body fat percentage	body fat percentage	EFO:0007800	0.995
+ebi-a-GCST003435	Body fat percentage	body fat percentage	EFO:0007800	0.996
 ebi-a-GCST004904	Body mass index	body mass index	EFO:0004340	0.995
 ebi-a-GCST005314	Offspring birth weight	birth weight	EFO:0004344	0.674
 ebi-a-GCST006368	Body mass index	body mass index	EFO:0004340	0.995
 ebi-a-GCST006655	Breast size	breast size	EFO:0004884	0.992
 ebi-a-GCST006802	Body mass index	body mass index	EFO:0004340	0.995
-ebi-a-GCST007557	Birth weight	birth weight	EFO:0004344	0.994
+ebi-a-GCST007557	Birth weight	birth weight	EFO:0004344	0.995
 ebi-a-GCST008025	Body mass index	body mass index	EFO:0004340	0.995
 ebi-a-GCST008050	Waist-hip ratio	waist-hip ratio	EFO:0004343	0.784
 ebi-a-GCST008051	Waist-hip ratio	waist-hip ratio	EFO:0004343	0.784
 ebi-a-GCST008052	Waist-hip ratio	waist-hip ratio	EFO:0004343	0.784
-ebi-a-GCST90000030	Birth weight	birth weight	EFO:0004344	0.994
+ebi-a-GCST90000030	Birth weight	birth weight	EFO:0004344	0.995
 ebi-a-GCST90002224	Height	body height	EFO:0004339	0.992
 ebi-a-GCST90002409	Childhood body mass index	body mass index	EFO:0004340	0.708
 ebi-a-GCST90017133	Neck circumference	neck circumference	EFO:0011043	0.993
@@ -40,13 +40,13 @@ ieu-a-1070	Sitting height ratio	sitting height ratio	EFO:0007118	0.993
 ieu-a-1071	Sitting height ratio	sitting height ratio	EFO:0007118	0.993
 ieu-a-1072	Sitting height ratio	sitting height ratio	EFO:0007118	0.993
 ieu-a-108	Waist-to-hip ratio	waist-hip ratio	EFO:0004343	0.745
-ieu-a-1083	Birth weight	birth weight	EFO:0004344	0.994
+ieu-a-1083	Birth weight	birth weight	EFO:0004344	0.995
 ieu-a-1089	Body mass index	body mass index	EFO:0004340	0.995
 ieu-a-109	Waist-to-hip ratio	waist-hip ratio	EFO:0004343	0.745
 ieu-a-110	Waist-to-hip ratio	waist-hip ratio	EFO:0004343	0.745
 ieu-a-111	Waist-to-hip ratio	waist-hip ratio	EFO:0004343	0.745
 ieu-a-2	Body mass index	body mass index	EFO:0004340	0.995
-ieu-a-27	Birth weight	birth weight	EFO:0004344	0.994
+ieu-a-27	Birth weight	birth weight	EFO:0004344	0.995
 ieu-a-28	Infant head circumference	infant head circumference	EFO:0004577	0.972
 ieu-a-29	Birth length	body height at birth	EFO:0006784	0.992
 ieu-a-48	Hip circumference	hip circumference	EFO:0005093	0.993
@@ -105,15 +105,15 @@ ieu-b-4816	Body mass index	body mass index	EFO:0004340	0.995
 ieu-b-4829	Waist-hip ratio	waist-hip ratio	EFO:0004343	0.784
 ieu-b-4830	Waist-hip ratio	waist-hip ratio	EFO:0004343	0.784
 ukb-a-195	Sitting height	sitting height ratio	EFO:0007118	0.887
-ukb-a-198	Birth weight	birth weight	EFO:0004344	0.994
-ukb-a-248	Body mass index (BMI)	body mass index	EFO:0004340	0.839
+ukb-a-198	Birth weight	birth weight	EFO:0004344	0.995
+ukb-a-248	Body mass index (BMI)	body mass index	EFO:0004340	0.838
 ukb-a-249	Weight	body weight	EFO:0004338	0.996
-ukb-a-264	Body fat percentage	body fat percentage	EFO:0007800	0.995
-ukb-a-274	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.657
-ukb-a-278	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.654
-ukb-a-282	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.652
-ukb-a-286	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.667
-ukb-a-290	Trunk fat percentage	body fat percentage	EFO:0007800	0.678
+ukb-a-264	Body fat percentage	body fat percentage	EFO:0007800	0.996
+ukb-a-274	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.655
+ukb-a-278	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.652
+ukb-a-282	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.65
+ukb-a-286	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.664
+ukb-a-290	Trunk fat percentage	body fat percentage	EFO:0007800	0.676
 ukb-a-318	Birth weight of first child	birth weight	EFO:0004344	0.695
 ukb-a-382	Waist circumference	waist circumference	EFO:0004342	0.992
 ukb-a-388	Hip circumference	hip circumference	EFO:0005093	0.993
@@ -121,24 +121,24 @@ ukb-a-389	Standing height	body height	EFO:0004339	0.708
 ukb-b-10787	Standing height	body height	EFO:0004339	0.708
 ukb-b-11842	Weight	body weight	EFO:0004338	0.996
 ukb-b-12039	Weight	body weight	EFO:0004338	0.996
-ukb-b-12854	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.652
-ukb-b-13330	Food weight	body weight	EFO:0004338	0.755
-ukb-b-13378	Birth weight	birth weight	EFO:0004344	0.994
+ukb-b-12854	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.65
+ukb-b-13330	Food weight	body weight	EFO:0004338	0.756
+ukb-b-13378	Birth weight	birth weight	EFO:0004344	0.995
 ukb-b-15590	Hip circumference	hip circumference	EFO:0005093	0.993
-ukb-b-16407	Trunk fat percentage	body fat percentage	EFO:0007800	0.678
+ukb-b-16407	Trunk fat percentage	body fat percentage	EFO:0007800	0.676
 ukb-b-16881	Sitting height	sitting height ratio	EFO:0007118	0.887
-ukb-b-18377	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.654
-ukb-b-19953	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-b-20188	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.667
-ukb-b-20531	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.657
-ukb-b-2303	Body mass index (BMI)	body mass index	EFO:0004340	0.839
+ukb-b-18377	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.652
+ukb-b-19953	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-b-20188	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.664
+ukb-b-20531	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.655
+ukb-b-2303	Body mass index (BMI)	body mass index	EFO:0004340	0.838
 ukb-b-3357	Birth weight of first child	birth weight	EFO:0004344	0.695
-ukb-b-8909	Body fat percentage	body fat percentage	EFO:0007800	0.995
+ukb-b-8909	Body fat percentage	body fat percentage	EFO:0007800	0.996
 ukb-b-9405	Waist circumference	waist circumference	EFO:0004342	0.992
 ukb-d-20536_2	Weight change during worst episode of depression: Lost weight	body weight	EFO:0004338	0.642
 ukb-d-3160_irnt	Weight, manual entry	body weight	EFO:0004338	0.623
-ukb-e-100001_AFR	Food weight	body weight	EFO:0004338	0.755
-ukb-e-100001_CSA	Food weight	body weight	EFO:0004338	0.755
+ukb-e-100001_AFR	Food weight	body weight	EFO:0004338	0.756
+ukb-e-100001_CSA	Food weight	body weight	EFO:0004338	0.756
 ukb-e-120_p1_AFR	Birth weight known	birth weight	EFO:0004344	0.765
 ukb-e-120_p1_CSA	Birth weight known	birth weight	EFO:0004344	0.765
 ukb-e-120_p1_EAS	Birth weight known	birth weight	EFO:0004344	0.765
@@ -152,13 +152,13 @@ ukb-e-20015_AFR	Sitting height	sitting height ratio	EFO:0007118	0.887
 ukb-e-20015_CSA	Sitting height	sitting height ratio	EFO:0007118	0.887
 ukb-e-20015_EAS	Sitting height	sitting height ratio	EFO:0007118	0.887
 ukb-e-20015_MID	Sitting height	sitting height ratio	EFO:0007118	0.887
-ukb-e-20022_AFR	Birth weight	birth weight	EFO:0004344	0.994
-ukb-e-20022_CSA	Birth weight	birth weight	EFO:0004344	0.994
-ukb-e-20022_EAS	Birth weight	birth weight	EFO:0004344	0.994
-ukb-e-21001_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-e-21001_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-e-21001_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-e-21001_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.839
+ukb-e-20022_AFR	Birth weight	birth weight	EFO:0004344	0.995
+ukb-e-20022_CSA	Birth weight	birth weight	EFO:0004344	0.995
+ukb-e-20022_EAS	Birth weight	birth weight	EFO:0004344	0.995
+ukb-e-21001_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-e-21001_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-e-21001_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-e-21001_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.838
 ukb-e-21002_AFR	Weight	body weight	EFO:0004338	0.996
 ukb-e-21002_CSA	Weight	body weight	EFO:0004338	0.996
 ukb-e-21002_EAS	Weight	body weight	EFO:0004338	0.996
@@ -167,34 +167,34 @@ ukb-e-23098_AFR	Weight	body weight	EFO:0004338	0.996
 ukb-e-23098_CSA	Weight	body weight	EFO:0004338	0.996
 ukb-e-23098_EAS	Weight	body weight	EFO:0004338	0.996
 ukb-e-23098_MID	Weight	body weight	EFO:0004338	0.996
-ukb-e-23099_AFR	Body fat percentage	body fat percentage	EFO:0007800	0.995
-ukb-e-23099_CSA	Body fat percentage	body fat percentage	EFO:0007800	0.995
-ukb-e-23099_EAS	Body fat percentage	body fat percentage	EFO:0007800	0.995
-ukb-e-23099_MID	Body fat percentage	body fat percentage	EFO:0007800	0.995
-ukb-e-23104_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-e-23104_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-e-23104_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-e-23104_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.839
-ukb-e-23111_AFR	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.657
-ukb-e-23111_CSA	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.657
-ukb-e-23111_EAS	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.657
-ukb-e-23111_MID	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.657
-ukb-e-23115_AFR	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.654
-ukb-e-23115_CSA	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.654
-ukb-e-23115_EAS	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.654
-ukb-e-23115_MID	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.654
-ukb-e-23119_AFR	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.652
-ukb-e-23119_CSA	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.652
-ukb-e-23119_EAS	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.652
-ukb-e-23119_MID	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.652
-ukb-e-23123_AFR	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.667
-ukb-e-23123_CSA	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.667
-ukb-e-23123_EAS	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.667
-ukb-e-23123_MID	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.667
-ukb-e-23127_AFR	Trunk fat percentage	body fat percentage	EFO:0007800	0.678
-ukb-e-23127_CSA	Trunk fat percentage	body fat percentage	EFO:0007800	0.678
-ukb-e-23127_EAS	Trunk fat percentage	body fat percentage	EFO:0007800	0.678
-ukb-e-23127_MID	Trunk fat percentage	body fat percentage	EFO:0007800	0.678
+ukb-e-23099_AFR	Body fat percentage	body fat percentage	EFO:0007800	0.996
+ukb-e-23099_CSA	Body fat percentage	body fat percentage	EFO:0007800	0.996
+ukb-e-23099_EAS	Body fat percentage	body fat percentage	EFO:0007800	0.996
+ukb-e-23099_MID	Body fat percentage	body fat percentage	EFO:0007800	0.996
+ukb-e-23104_AFR	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-e-23104_CSA	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-e-23104_EAS	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-e-23104_MID	Body mass index (BMI)	body mass index	EFO:0004340	0.838
+ukb-e-23111_AFR	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.655
+ukb-e-23111_CSA	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.655
+ukb-e-23111_EAS	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.655
+ukb-e-23111_MID	Leg fat percentage (right)	body fat percentage	EFO:0007800	0.655
+ukb-e-23115_AFR	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.652
+ukb-e-23115_CSA	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.652
+ukb-e-23115_EAS	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.652
+ukb-e-23115_MID	Leg fat percentage (left)	body fat percentage	EFO:0007800	0.652
+ukb-e-23119_AFR	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.65
+ukb-e-23119_CSA	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.65
+ukb-e-23119_EAS	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.65
+ukb-e-23119_MID	Arm fat percentage (right)	body fat percentage	EFO:0007800	0.65
+ukb-e-23123_AFR	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.664
+ukb-e-23123_CSA	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.664
+ukb-e-23123_EAS	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.664
+ukb-e-23123_MID	Arm fat percentage (left)	body fat percentage	EFO:0007800	0.664
+ukb-e-23127_AFR	Trunk fat percentage	body fat percentage	EFO:0007800	0.676
+ukb-e-23127_CSA	Trunk fat percentage	body fat percentage	EFO:0007800	0.676
+ukb-e-23127_EAS	Trunk fat percentage	body fat percentage	EFO:0007800	0.676
+ukb-e-23127_MID	Trunk fat percentage	body fat percentage	EFO:0007800	0.676
 ukb-e-2744_AFR	Birth weight of first child	birth weight	EFO:0004344	0.695
 ukb-e-2744_CSA	Birth weight of first child	birth weight	EFO:0004344	0.695
 ukb-e-2744_EAS	Birth weight of first child	birth weight	EFO:0004344	0.695
