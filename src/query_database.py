@@ -1,8 +1,9 @@
 import os
 import sqlite3
+import tarfile
 import pandas as pd
 
-__version__ = "0.4.0"
+__version__ = "0.5.0"
 
 
 """
@@ -28,11 +29,11 @@ arguments:
 
 SQL:
     SELECT DISTINCT 
-        m.SourceTermID AS 'OpenGWASID', 
-        m.SourceTerm AS 'OpenGWASTrait',
-        m.MappedTermLabel AS 'OntologyTerm', 
-        m.MappedTermCURIE AS 'OntologyTermID',
-        m.MappingScore AS 'MappingConfidence'
+        m.SourceTermID, 
+        m.SourceTerm,
+        m.MappedTermLabel, 
+        m.MappedTermCURIE,
+        m.MappingScore'
     FROM opengwas_mappings m
     LEFT JOIN efo_edges ee ON (m.MappedTermCURIE = ee.Subject)
     WHERE (m.MappedTermCURIE = 'EFO:0009605')
@@ -44,11 +45,11 @@ arguments:
     direct_subclasses_only=True
 
 SQL:
-    SELECT DISTINCT m.SourceTermID AS 'OpenGWASID', 
-        m.SourceTerm AS 'OpenGWASTrait',
-        m.MappedTermLabel AS 'OntologyTerm', 
-        m.MappedTermCURIE AS 'OntologyTermID',
-        m.MappingScore AS 'MappingConfidence'
+    SELECT DISTINCT m.SourceTermID, 
+        m.SourceTerm,
+        m.MappedTermLabel, 
+        m.MappedTermCURIE,
+        m.MappingScore
     FROM opengwas_mappings m
     LEFT JOIN efo_edges ee ON (m.MappedTermCURIE = ee.Subject)
     WHERE (m.MappedTermCURIE = 'EFO:0009605' OR ee.Object = 'EFO:0009605')
@@ -61,10 +62,10 @@ arguments:
 
 SQL:
     SELECT DISTINCT m.SourceTermID AS 'OpenGWASID', 
-        m.SourceTerm AS 'OpenGWASTrait',
-        m.MappedTermLabel AS 'OntologyTerm', 
-        m.MappedTermCURIE AS 'OntologyTermID',
-        m.MappingScore AS 'MappingConfidence'
+        m.SourceTerm,
+        m.MappedTermLabel, 
+        m.MappedTermCURIE,
+        m.MappingScore
     FROM opengwas_mappings m
     LEFT JOIN efo_entailed_edges ee ON (m.MappedTermCURIE = ee.Subject)
     WHERE (m.MappedTermCURIE = 'EFO:0009605' OR ee.Object = 'EFO:0009605')
@@ -145,7 +146,13 @@ def do_example_queries(cursor, search_term='EFO:0009605'):  # EFO:0009605 'pancr
 
 
 if __name__ == '__main__':
-    db_connection = sqlite3.connect("../opengwas_search.db")
+    tar_file_path = os.path.join("..", "opengwas_search.db.tar.xz")
+    database_file_name = "opengwas_search.db"
+
+    with tarfile.open(tar_file_path, "r:xz") as tar:
+        tar.extract(database_file_name, path="..")
+
+    db_connection = sqlite3.connect(os.path.join("..", database_file_name))
     db_cursor = db_connection.cursor()
 
     do_example_queries(db_cursor, search_term="EFO:0009605")  # 'pancreas disease'
