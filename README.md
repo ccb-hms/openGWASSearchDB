@@ -1,6 +1,16 @@
 # Ontology-based OpenGWAS Search
 This repository generates a database intended to facilitate search for GWAS records in the OpenGWAS database. This is achieved by first computing ontology mappings of the traits specified in the OpenGWAS metadata, and then combining the mappings with tabular representations of ontology relationships such that users can search over traits by leveraging the ontology class hierarchy. 
 
+### Latest database build
+
+| Resource       | Version             | 
+|----------------|---------------------|
+| _SearchDB_     | 0.10.0              |
+| _EFO_          | 3.57.0              |
+| _UBERON_       | 2023-07-25          |
+| _Metadata_     | 2023-09-12T13:50:43 |
+
+
 ## Building the database
 The database can be built by executing the module `src/build_opengwas_db.py` as specified below. There is an optional parameter to specify an NCBI API Key for faster querying of PubMed articles.
 
@@ -69,10 +79,3 @@ base_iris=("http://www.ebi.ac.uk/efo/",
            "http://www.orpha.net/ORDO",
            "http://purl.obolibrary.org/obo/DOID")
 ```
-
-
-### Resource versions
-The latest ontology-based search database was built using:
-- OpenGWAS metadata snapshot from August 7, 2023
-- Experimental Factor Ontology (EFO) v3.43.0
-- text2term v3.0.0
